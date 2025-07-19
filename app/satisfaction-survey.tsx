@@ -55,13 +55,15 @@ export default function SatisfactionSurvey() {
     <div className="flex min-h-screen items-center justify-center p-4 bg-black">
       <Card className="w-full max-w-md rounded-2xl border-2 border-red-600 bg-white text-black shadow-2xl shadow-red-600/20">
         <CardHeader className="flex flex-col items-center space-y-6 p-8">
-          {/* Logo Placeholder Estilizado */}
-          <div className="w-full max-w-[350px] h-[180px] relative flex items-center justify-center bg-gradient-to-br from-red-50 to-red-100 rounded-xl border-3 border-red-600 shadow-lg shadow-red-600/30">
-            <div className="text-center">
-              <h1 className="text-3xl font-bold text-red-600 mb-2">PAKITOS</h1>
-              <h2 className="text-2xl font-bold text-red-700">DANCE</h2>
-              <div className="mt-2 text-sm font-semibold text-red-500">ACADEMIA</div>
-            </div>
+          <div className="w-full max-w-[350px] h-[180px] relative flex items-center justify-center rounded-xl border-3 border-red-600 shadow-lg shadow-red-600/30 overflow-hidden">
+            <img
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/files-blob/academiapakitosdance-main/public/logo/pakitos-dance-logo-GHgd7tBfEFqyykKsKS3aQXRAi9vp40.png"
+              alt="Academia Pakitos Dance Logo"
+              className="w-full h-full object-contain"
+              onError={(e) => {
+                console.error("Erro ao carregar imagem:", e)
+              }}
+            />
           </div>
 
           <CardTitle className="text-3xl font-bold text-red-600 tracking-tight">AVALIE NOSSO SERVIÇO</CardTitle>
