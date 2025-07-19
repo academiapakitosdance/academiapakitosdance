@@ -24,7 +24,7 @@ jobs:
           node-version: '20' # Use uma versão LTS do Node.js
 
       - name: Install dependencies
-        run: npm install
+        run: npm install --legacy-peer-deps # <-- ESTA LINHA DEVE ESTAR ASSIM
 
       - name: Build Next.js project
         run: npm run build
