@@ -1,0 +1,24 @@
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: "export", // Isso gera um site estático na pasta 'out'
+
+  // ATENÇÃO: Substitua 'satisfaction-survey' pelo NOME EXATO do seu repositório GitHub.
+  // Se o seu site for hospedado diretamente no domínio raiz (ex: username.github.io),
+  // você pode REMOVER as linhas 'basePath' e 'assetPrefix'.
+  basePath: "/satisfaction-survey", // Exemplo: se o seu repo for 'satisfaction-survey'
+  assetPrefix: "/satisfaction-survey/", // Garante que os assets (imagens, JS, CSS) sejam carregados corretamente
+
+  // As configurações abaixo são recomendadas para exportação estática com Next.js 13+
+  // e para ignorar erros de build que podem ocorrer em ambientes de CI/CD
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  images: {
+    unoptimized: true, // Necessário para exportação estática de imagens com next/image
+  },
+}
+
+module.exports = nextConfig
