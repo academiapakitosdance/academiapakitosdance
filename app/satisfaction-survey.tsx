@@ -1,21 +1,10 @@
 "use client"
 
+import type React from "react"
 import { useState } from "react"
 import Image from "next/image"
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle
-} from "@/components/ui/card"
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue
-} from "@/components/ui/select"
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import Textarea from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
@@ -52,25 +41,28 @@ export default function SatisfactionSurvey() {
         setRating("")
         setSuggestion("")
       } else {
-        alert("Erro ao enviar sua pesquisa. Tente novamente.")
+        alert("Ocorreu um erro ao enviar sua pesquisa. Por favor, tente novamente.")
+        console.error("Erro ao enviar formulário:", response.statusText)
       }
     } catch (error) {
-      alert("Erro de rede. Verifique sua conexão.")
+      alert("Ocorreu um erro de rede. Por favor, verifique sua conexão e tente novamente.")
+      console.error("Erro de rede:", error)
     } finally {
       setIsSubmitting(false)
     }
   }
 
   return (
-    <main className="min-h-screen flex items-center justify-center p-4 bg-black">
+    <div className="flex min-h-screen items-center justify-center p-4 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-black to-red-700">
       <Card className="w-full max-w-md rounded-xl border-transparent bg-white text-black shadow-2xl">
         <CardHeader className="flex flex-col items-center space-y-4 p-6">
-          <div className="w-16 h-16 relative">
+          <div className="w-full max-w-[400px] h-[200px] relative">
             <Image
               src="/logo/pakitos-dance-logo.png"
-              alt="Pakitos Dance"
-              fill
-              className="rounded-md object-contain"
+              alt="Academia Pakitos Dance Logo"
+              layout="fill"
+              objectFit="contain"
+              className="rounded-xl border-2 border-red-600"
             />
           </div>
           <CardTitle className="text-3xl font-bold text-red-600">AVALIE NOSSO SERVIÇO</CardTitle>
@@ -82,6 +74,7 @@ export default function SatisfactionSurvey() {
             </p>
           </div>
         </CardHeader>
+
         <CardContent className="p-6 pt-0">
           {!submitted ? (
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -101,6 +94,7 @@ export default function SatisfactionSurvey() {
                   </SelectContent>
                 </Select>
               </div>
+
               <div className="grid gap-2">
                 <Label htmlFor="suggestion" className="text-lg font-medium">
                   Deixe sua sugestão para melhorar nossa academia:
@@ -114,6 +108,7 @@ export default function SatisfactionSurvey() {
                   name="suggestion"
                 />
               </div>
+
               <Button
                 type="submit"
                 className="w-full bg-red-600 text-white hover:bg-red-700 focus:ring-red-600"
@@ -129,6 +124,7 @@ export default function SatisfactionSurvey() {
             </div>
           )}
         </CardContent>
+
         {submitted && (
           <CardFooter className="flex justify-center p-6 pt-0">
             <Button
@@ -140,6 +136,6 @@ export default function SatisfactionSurvey() {
           </CardFooter>
         )}
       </Card>
-    </main>
+    </div>
   )
 }
