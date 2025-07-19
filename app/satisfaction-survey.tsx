@@ -55,11 +55,11 @@ export default function SatisfactionSurvey() {
     <div className="flex min-h-screen items-center justify-center p-4 bg-black">
       <Card className="w-full max-w-md rounded-2xl border-2 border-red-600 bg-white text-black shadow-2xl shadow-red-600/20">
         <CardHeader className="flex flex-col items-center space-y-6 p-8">
-          <div className="w-full max-w-[350px] h-[180px] relative flex items-center justify-center rounded-xl border-3 border-red-600 shadow-lg shadow-red-600/30 overflow-hidden">
+          <div className="inline-block rounded-xl border-3 border-red-600 shadow-lg shadow-red-600/30 overflow-hidden">
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/files-blob/academiapakitosdance-main/public/logo/pakitos-dance-logo-GHgd7tBfEFqyykKsKS3aQXRAi9vp40.png"
               alt="Academia Pakitos Dance Logo"
-              className="w-full h-full object-contain"
+              className="block max-w-[280px] h-auto"
               onError={(e) => {
                 console.error("Erro ao carregar imagem:", e)
               }}
