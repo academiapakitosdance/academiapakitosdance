@@ -47,7 +47,7 @@ export default function SatisfactionSurvey() {
           {!submitted ? (
             // ATENÇÃO: Substitua 'seu-email@example.com' pelo seu endereço de e-mail real
             <form
-              action="https://formsubmit.co/Rafaelnunesgasperine@gmail.com" // <-- AQUI VOCÊ COLOCA SEU E-MAIL
+              action="https://formsubmit.co/academiapakitosdance@gmail.com" // <-- AQUI VOCÊ COLOCA SEU E-MAIL
               method="POST"
               className="space-y-6"
               onSubmit={(e) => {
