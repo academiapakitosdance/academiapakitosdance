@@ -71,7 +71,7 @@ export default function SatisfactionSurvey() {
               alt="Academia Pakitos Dance Logo"
               layout="fill"
               objectFit="contain"
-              className="rounded-xl border-2 border-red-600" // <-- MANTIDO AQUI: cantos arredondados e borda vermelha na logo
+              className="rounded-xl border-2 border-red-600" // <-- MANTIDO AQUI: cantos arredondados e borda
             />
           </div>
           <CardTitle className="text-3xl font-bold text-red-600">AVALIE NOSSO SERVIÇO</CardTitle>{" "}
