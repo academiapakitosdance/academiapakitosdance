@@ -2,7 +2,6 @@
 
 import type React from "react"
 import { useState } from "react"
-import Image from "next/image"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import Textarea from "@/components/ui/textarea"
@@ -56,13 +55,16 @@ export default function SatisfactionSurvey() {
     <div className="flex min-h-screen items-center justify-center p-4 bg-black">
       <Card className="w-full max-w-md rounded-2xl border-2 border-red-600 bg-white text-black shadow-2xl shadow-red-600/20">
         <CardHeader className="flex flex-col items-center space-y-6 p-8">
-          <div className="w-full max-w-[350px] h-[180px] relative">
-            <Image
-              src="/logo/pakitos-dance-logo.png"
+          <div className="w-full max-w-[350px] h-[180px] relative flex items-center justify-center">
+            <img
+              src="/academiapakitosdance-main/public/logo/pakitos-dance-logo.png"
               alt="Academia Pakitos Dance Logo"
-              layout="fill"
-              objectFit="contain"
-              className="rounded-xl border-3 border-red-600 shadow-lg shadow-red-600/30"
+              className="max-w-full max-h-full object-contain rounded-xl border-3 border-red-600 shadow-lg shadow-red-600/30"
+              onError={(e) => {
+                console.log("Erro ao carregar imagem:", e)
+                // Fallback para um placeholder ou texto
+                e.currentTarget.style.display = "none"
+              }}
             />
           </div>
           <CardTitle className="text-3xl font-bold text-red-600 tracking-tight">AVALIE NOSSO SERVIÇO</CardTitle>
