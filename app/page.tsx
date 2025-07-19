@@ -1,8 +1,7 @@
 "use client"
 
-import { useState } from "react"
-
 import type React from "react"
+import { useState } from "react"
 import Image from "next/image"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
@@ -64,8 +63,8 @@ export default function SatisfactionSurvey() {
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center p-4 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-black to-red-700">
-      {/* <-- GRADIENTE AJUSTADO AQUI: de preto para vermelho-700 para mais vivacidade */}
+    <div className="flex min-h-screen items-center justify-center p-4 bg-black">
+      {/* <-- ALTERADO AQUI: Fundo preto sólido */}
       <Card className="w-full max-w-md rounded-xl border-2 border-red-600 bg-white text-black shadow-2xl">
         <CardHeader className="flex flex-col items-center space-y-4 p-6">
           <div className="w-full max-w-[400px] h-[200px] relative">
@@ -74,10 +73,10 @@ export default function SatisfactionSurvey() {
               alt="Academia Pakitos Dance Logo"
               layout="fill"
               objectFit="contain"
-              className="rounded-md"
+              className="rounded-full"
             />
           </div>
-          <CardTitle className="text-3xl font-bold text-red-600">Pesquisa de Satisfação</CardTitle>
+          <CardTitle className="text-3xl font-bold text-red-600">Pesquisa de satisfação</CardTitle>
           <div className="text-center mt-4 max-w-sm">
             <p className="text-gray-700 text-base leading-relaxed">
               Sua opinião é muito importante para nós! Por favor, dedique alguns minutos para responder às perguntas
@@ -128,9 +127,7 @@ export default function SatisfactionSurvey() {
             </form>
           ) : (
             <div className="text-center py-10">
-              <h3 className="text-3xl font-extrabold text-red-600 mb-4 animate-bounce">
-                Obrigado pela sua colaboração!
-              </h3>
+              <h3 className="text-3xl font-extrabold text-red-600 mb-4">Obrigado pela sua colaboração!</h3>
               <p className="mt-4 text-lg text-gray-800">Sua opinião é fundamental para o nosso crescimento.</p>
             </div>
           )}
