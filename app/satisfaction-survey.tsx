@@ -66,13 +66,16 @@ export default function SatisfactionSurvey() {
         {/* <-- ALTERADO AQUI: borda transparente no Card */}
         <CardHeader className="flex flex-col items-center space-y-4 p-6">
           <div className="w-full max-w-[400px] h-[200px] relative">
-        <Image
-          src="/logo/pakitos-dance-logo.png"
-          alt="Pakitos Dance"
-          width={80}
-          height={80}
-          style={{ borderRadius: '8px', objectFit: 'contain' }}
-        />
+     import Image from "next/image";
+
+<Image
+  src="/logo/pakitos-dance-logo.png"
+  alt="Pakitos Dance"
+  width={64}
+  height={64}
+  className="rounded-lg"
+/>
+
 
           </div>
           <CardTitle className="text-3xl font-bold text-red-600">AVALIE NOSSO SERVIÇO</CardTitle>{" "}
