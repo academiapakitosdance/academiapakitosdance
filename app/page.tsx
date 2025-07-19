@@ -64,13 +64,15 @@ export default function SatisfactionSurvey() {
     <div className="flex min-h-screen items-center justify-center p-4 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-900 via-black to-red-900">
       <Card className="w-full max-w-md rounded-xl border-2 border-red-600 bg-white text-black shadow-2xl">
         <CardHeader className="flex flex-col items-center space-y-4 p-6">
-          <div className="w-full max-w-[200px] h-[100px] relative">
+          <div className="w-full max-w-[250px] h-[120px] relative">
+            {" "}
+            {/* <-- DIMENSÕES AUMENTADAS AQUI */}
             <Image
-              src="/logo/pakitos-dance-logo.png" // <-- CAMINHO DA LOGO ATUALIZADO AQUI
+              src="/logo/pakitos-dance-logo.png"
               alt="Academia Pakitos Dance Logo"
               layout="fill"
               objectFit="contain"
-              className="rounded-md bg-black p-2"
+              className="rounded-md"
             />
           </div>
           <CardTitle className="text-3xl font-bold text-red-600">Pesquisa de Satisfação</CardTitle>
