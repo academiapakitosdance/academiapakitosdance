@@ -10,6 +10,9 @@ import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
 
+// Importe a imagem diretamente aqui
+import PakitosDanceLogo from "../public/logo/pakitos-dance-logo.png"
+
 export default function SatisfactionSurvey() {
   const [rating, setRating] = useState("")
   const [suggestion, setSuggestion] = useState("")
@@ -68,7 +71,7 @@ export default function SatisfactionSurvey() {
             {" "}
             {/* <-- DIMENSÕES AUMENTADAS AQUI */}
             <Image
-              src="/logo/pakitos-dance-logo.png"
+              src={PakitosDanceLogo || "/placeholder.svg"} // <-- AGORA USANDO A IMAGEM IMPORTADA DIRETAMENTE
               alt="Academia Pakitos Dance Logo"
               layout="fill"
               objectFit="contain"
