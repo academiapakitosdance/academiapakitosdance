@@ -67,11 +67,11 @@ export default function SatisfactionSurvey() {
     <div className="flex min-h-screen items-center justify-center p-4 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-900 via-black to-red-900">
       <Card className="w-full max-w-md rounded-xl border-2 border-red-600 bg-white text-black shadow-2xl">
         <CardHeader className="flex flex-col items-center space-y-4 p-6">
-          <div className="w-full max-w-[250px] h-[120px] relative">
+          <div className="w-full max-w-[400px] h-[200px] relative">
             {" "}
-            {/* <-- DIMENSÕES AUMENTADAS AQUI */}
+            {/* <-- DIMENSÕES AUMENTADAS SIGNIFICATIVAMENTE AQUI */}
             <Image
-              src={PakitosDanceLogo || "/placeholder.svg"} // <-- AGORA USANDO A IMAGEM IMPORTADA DIRETAMENTE
+              src={PakitosDanceLogo || "/placeholder.svg"}
               alt="Academia Pakitos Dance Logo"
               layout="fill"
               objectFit="contain"
