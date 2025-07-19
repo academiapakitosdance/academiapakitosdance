@@ -66,7 +66,7 @@ export default function SatisfactionSurvey() {
         <CardHeader className="flex flex-col items-center space-y-4 p-6">
           <div className="w-full max-w-[200px] h-[100px] relative">
             <Image
-              src="/pakitos-dance-logo.png"
+              src="public/pakitos-dance-logo.png"
               alt="Academia Pakitos Dance Logo"
               layout="fill"
               objectFit="contain"
