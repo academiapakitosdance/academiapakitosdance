@@ -84,8 +84,6 @@ export default function SatisfactionSurvey() {
         </CardHeader>
         <CardContent className="p-6 pt-0">
           {!submitted ? (
-            // Removemos o atributo 'action' e 'method' do formulário HTML
-            // e os inputs hidden do Formsubmit.co, pois o envio será via JS
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid gap-2">
                 <Label htmlFor="rating" className="text-lg font-medium">
@@ -96,11 +94,10 @@ export default function SatisfactionSurvey() {
                     <SelectValue placeholder="Selecione" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="excelente">Excelente</SelectItem>
-                    <SelectItem value="muito-bom">Muito Bom</SelectItem>
-                    <SelectItem value="bom">Bom</SelectItem>
-                    <SelectItem value="regular">Regular</SelectItem>
-                    <SelectItem value="ruim">Ruim</SelectItem>
+                    <SelectItem value="excelente-indicaria">Excelente, até indicaria para uma pessoa.</SelectItem>
+                    <SelectItem value="otimo-trabalho">Ótimo, excelente trabalho.</SelectItem>
+                    <SelectItem value="bom-melhorar">Bom, mas daria para melhorar.</SelectItem>
+                    <SelectItem value="ruim-precisa-melhora">Ruim, precisa de melhora.</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
