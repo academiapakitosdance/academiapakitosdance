@@ -74,7 +74,10 @@ const config = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       fontFamily: {
-        sans: ["var(--font-poppins)"], // <-- Usando Poppins
+        sans: ["var(--font-inter)", "Inter", "system-ui", "sans-serif"],
+      },
+      borderWidth: {
+        "3": "3px",
       },
     },
   },

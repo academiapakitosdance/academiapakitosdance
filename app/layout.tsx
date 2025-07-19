@@ -1,23 +1,23 @@
 import type React from "react"
 import "./globals.css"
-import { Poppins } from "next/font/google" // <-- Importação da fonte Poppins
+import { Inter } from "next/font/google"
 
-const poppins = Poppins({
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"], // <-- Pesos comuns para Poppins
-  variable: "--font-poppins",
-}) // <-- Carregamento da fonte Poppins
+  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-inter",
+})
 
 export const metadata = {
   title: "Pesquisa de Satisfação Academia Pakitos Dance",
   description: "Sua opinião é muito importante para nós! Ajude-nos a melhorar a Academia Pakitos Dance.",
-    generator: 'v0.dev'
+  generator: "v0.dev",
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-BR">
-      <body className={poppins.variable}>{children}</body> {/* <-- Aplicação da fonte Poppins */}
+      <body className={inter.variable}>{children}</body>
     </html>
   )
 }

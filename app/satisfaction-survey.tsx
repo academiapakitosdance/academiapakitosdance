@@ -53,50 +53,60 @@ export default function SatisfactionSurvey() {
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center p-4 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-black to-red-700">
-      <Card className="w-full max-w-md rounded-xl border-transparent bg-white text-black shadow-2xl">
-        <CardHeader className="flex flex-col items-center space-y-4 p-6">
-          <div className="w-full max-w-[400px] h-[200px] relative">
+    <div className="flex min-h-screen items-center justify-center p-4 bg-black">
+      <Card className="w-full max-w-md rounded-2xl border-2 border-red-600 bg-white text-black shadow-2xl shadow-red-600/20">
+        <CardHeader className="flex flex-col items-center space-y-6 p-8">
+          <div className="w-full max-w-[350px] h-[180px] relative">
             <Image
               src="/logo/pakitos-dance-logo.png"
               alt="Academia Pakitos Dance Logo"
               layout="fill"
               objectFit="contain"
-              className="rounded-xl border-2 border-red-600"
+              className="rounded-xl border-3 border-red-600 shadow-lg shadow-red-600/30"
             />
           </div>
-          <CardTitle className="text-3xl font-bold text-red-600">AVALIE NOSSO SERVIÇO</CardTitle>
+          <CardTitle className="text-3xl font-bold text-red-600 tracking-tight">AVALIE NOSSO SERVIÇO</CardTitle>
           <div className="text-center mt-4 max-w-sm">
-            <p className="text-gray-700 text-base leading-relaxed">
+            <p className="text-gray-700 text-base leading-relaxed font-medium">
               Sua opinião é muito importante para nós! Por favor, dedique alguns minutos para responder às perguntas
-              abaixo e nos ajudar a melhorar a{" "}
-              <span className="font-semibold text-red-600">Academia Pakitos Dance</span>.
+              abaixo e nos ajudar a melhorar a <span className="font-bold text-red-600">Academia Pakitos Dance</span>.
             </p>
           </div>
         </CardHeader>
 
-        <CardContent className="p-6 pt-0">
+        <CardContent className="p-8 pt-0">
           {!submitted ? (
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid gap-2">
-                <Label htmlFor="rating" className="text-lg font-medium">
+            <form onSubmit={handleSubmit} className="space-y-8">
+              <div className="grid gap-3">
+                <Label htmlFor="rating" className="text-lg font-semibold text-gray-800">
                   Como você avalia o atendimento da academia?
                 </Label>
                 <Select value={rating} onValueChange={setRating} name="rating">
-                  <SelectTrigger id="rating" className="border-gray-300 focus:border-red-600 focus:ring-red-600">
-                    <SelectValue placeholder="Selecione" />
+                  <SelectTrigger
+                    id="rating"
+                    className="border-2 border-red-600 focus:border-red-700 focus:ring-red-600 rounded-xl h-12 font-medium"
+                  >
+                    <SelectValue placeholder="Selecione sua avaliação" />
                   </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="excelente-indicaria">Excelente, até indicaria para uma pessoa.</SelectItem>
-                    <SelectItem value="otimo-trabalho">Ótimo, excelente trabalho.</SelectItem>
-                    <SelectItem value="bom-melhorar">Bom, mas daria para melhorar.</SelectItem>
-                    <SelectItem value="ruim-precisa-melhora">Ruim, precisa de melhora.</SelectItem>
+                  <SelectContent className="border-2 border-red-600 rounded-xl">
+                    <SelectItem value="excelente-indicaria" className="font-medium">
+                      Excelente, até indicaria para uma pessoa.
+                    </SelectItem>
+                    <SelectItem value="otimo-trabalho" className="font-medium">
+                      Ótimo, excelente trabalho.
+                    </SelectItem>
+                    <SelectItem value="bom-melhorar" className="font-medium">
+                      Bom, mas daria para melhorar.
+                    </SelectItem>
+                    <SelectItem value="ruim-precisa-melhora" className="font-medium">
+                      Ruim, precisa de melhora.
+                    </SelectItem>
                   </SelectContent>
                 </Select>
               </div>
 
-              <div className="grid gap-2">
-                <Label htmlFor="suggestion" className="text-lg font-medium">
+              <div className="grid gap-3">
+                <Label htmlFor="suggestion" className="text-lg font-semibold text-gray-800">
                   Deixe sua sugestão para melhorar nossa academia:
                 </Label>
                 <Textarea
@@ -104,32 +114,34 @@ export default function SatisfactionSurvey() {
                   placeholder="Sua sugestão aqui..."
                   value={suggestion}
                   onChange={(e) => setSuggestion(e.target.value)}
-                  className="min-h-[100px] border-gray-300 focus:border-red-600 focus:ring-red-600"
+                  className="min-h-[120px] border-2 border-red-600 focus:border-red-700 focus:ring-red-600 rounded-xl font-medium resize-none"
                   name="suggestion"
                 />
               </div>
 
               <Button
                 type="submit"
-                className="w-full bg-red-600 text-white hover:bg-red-700 focus:ring-red-600"
+                className="w-full bg-red-600 text-white hover:bg-red-700 focus:ring-red-600 h-12 rounded-xl font-bold text-lg transition-all duration-200 shadow-lg hover:shadow-xl"
                 disabled={isSubmitting || !rating}
               >
-                {isSubmitting ? "Enviando..." : "Enviar"}
+                {isSubmitting ? "Enviando..." : "Enviar Avaliação"}
               </Button>
             </form>
           ) : (
-            <div className="text-center py-10">
-              <h3 className="text-3xl font-extrabold text-red-600 mb-4">Obrigado pela sua colaboração!</h3>
-              <p className="mt-4 text-lg text-gray-800">Sua opinião é fundamental para o nosso crescimento.</p>
+            <div className="text-center py-12">
+              <h3 className="text-4xl font-bold text-red-600 mb-6">Obrigado pela sua colaboração!</h3>
+              <p className="mt-4 text-lg text-gray-800 font-medium">
+                Sua opinião é fundamental para o nosso crescimento.
+              </p>
             </div>
           )}
         </CardContent>
 
         {submitted && (
-          <CardFooter className="flex justify-center p-6 pt-0">
+          <CardFooter className="flex justify-center p-8 pt-0">
             <Button
               onClick={() => setSubmitted(false)}
-              className="bg-gray-200 text-black hover:bg-gray-300"
+              className="bg-gray-200 text-black hover:bg-gray-300 border-2 border-red-600 rounded-xl font-bold px-8 py-3"
             >
               Fazer outra pesquisa
             </Button>
