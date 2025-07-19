@@ -27,7 +27,7 @@ jobs:
         run: npm install
 
       - name: Build Next.js project
-        run: npm npm run build
+        run: npm run build # <-- CORRIGIDO AQUI: Removido o 'npm' extra
 
       - name: Upload Pages artifact
         # Esta etapa faz o upload da sua pasta 'out' como um artefato
