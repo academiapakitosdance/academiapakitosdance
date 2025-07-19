@@ -66,13 +66,18 @@ export default function SatisfactionSurvey() {
             />
           </div>
 
-          <CardTitle className="text-3xl font-bold text-red-600 tracking-tight">AVALIE NOSSO SERVIÇO</CardTitle>
-          <div className="text-center mt-4 max-w-sm">
-            <p className="text-gray-700 text-base leading-relaxed font-medium">
-              Sua opinião é muito importante para nós! Por favor, dedique alguns minutos para responder às perguntas
-              abaixo e nos ajudar a melhorar a <span className="font-bold text-red-600">Academia Pakitos Dance</span>.
-            </p>
-          </div>
+          {!submitted && (
+            <>
+              <CardTitle className="text-3xl font-bold text-red-600 tracking-tight">AVALIE NOSSO SERVIÇO</CardTitle>
+              <div className="text-center mt-4 max-w-sm">
+                <p className="text-gray-700 text-base leading-relaxed font-medium">
+                  Sua opinião é muito importante para nós! Por favor, dedique alguns minutos para responder às perguntas
+                  abaixo e nos ajudar a melhorar a{" "}
+                  <span className="font-bold text-red-600">Academia Pakitos Dance</span>.
+                </p>
+              </div>
+            </>
+          )}
         </CardHeader>
 
         <CardContent className="p-8 pt-0">
@@ -129,11 +134,24 @@ export default function SatisfactionSurvey() {
               </Button>
             </form>
           ) : (
-            <div className="text-center py-12">
-              <h3 className="text-4xl font-bold text-red-600 mb-6">Obrigado pela sua colaboração!</h3>
-              <p className="mt-4 text-lg text-gray-800 font-medium">
-                Sua opinião é fundamental para o nosso crescimento.
-              </p>
+            <div className="text-center space-y-6">
+              <h3 className="text-3xl font-bold text-red-600 mb-6">Obrigado por sua colaboração!</h3>
+              <div className="space-y-4 text-gray-800 leading-relaxed">
+                <p className="font-medium">
+                  Sua opinião é essencial para que possamos evoluir e oferecer sempre o melhor para você.
+                </p>
+                <p className="font-medium">
+                  Agradecemos por dedicar um momento do seu dia para responder à nossa pesquisa de satisfação. É através
+                  do seu feedback que conseguimos melhorar nossos serviços, ambientes e atendimentos, criando uma
+                  experiência cada vez mais positiva dentro da academia.
+                </p>
+                <p className="font-medium">
+                  Continue firme nos seus treinos! Estamos aqui para te apoiar em cada etapa da sua jornada, ajudando
+                  você a alcançar seus objetivos com saúde, motivação e constância.
+                </p>
+                <p className="font-medium">Conte sempre com a nossa equipe!</p>
+                <p className="font-bold text-lg">Juntos somos mais fortes! 💪</p>
+              </div>
             </div>
           )}
         </CardContent>
@@ -144,7 +162,7 @@ export default function SatisfactionSurvey() {
               onClick={() => setSubmitted(false)}
               className="bg-gray-200 text-black hover:bg-gray-300 border-2 border-red-600 rounded-xl font-bold px-8 py-3"
             >
-              Fazer outra pesquisa
+              Voltar ao início
             </Button>
           </CardFooter>
         )}
