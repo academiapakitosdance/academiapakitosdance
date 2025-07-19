@@ -1,5 +1,7 @@
 "use client"
 
+import type React from "react"
+
 import { useState } from "react"
 import Image from "next/image"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
@@ -12,13 +14,50 @@ export default function SatisfactionSurvey() {
   const [rating, setRating] = useState("")
   const [suggestion, setSuggestion] = useState("")
   const [submitted, setSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false) // Novo estado para controlar o envio
 
-  // O Formsubmit.co lida com a submissão diretamente via o atributo 'action' do formulário.
-  // Não precisamos de uma função handleSubmit complexa aqui, apenas para o estado 'submitted'.
-  const handleFormSubmitSuccess = () => {
-    setSubmitted(true)
-    setRating("") // Limpa os campos após a submissão
-    setSuggestion("")
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault() // Impede o comportamento padrão de submissão do formulário (redirecionamento)
+
+    if (!rating) {
+      // Opcional: Adicionar alguma validação visual aqui se a avaliação for obrigatória
+      alert("Por favor, selecione uma avaliação antes de enviar.")
+      return
+    }
+
+    setIsSubmitting(true) // Define o estado de envio para desabilitar o botão
+
+    const formData = new FormData(event.currentTarget)
+    // O Formsubmit.co espera os dados como 'application/x-www-form-urlencoded' ou 'multipart/form-data'
+    // FormData funciona bem para isso.
+
+    try {
+      // ATENÇÃO: Substitua 'seu-email@example.com' pelo seu endereço de e-mail real
+      const response = await fetch("https://formsubmit.co/ajax/academiapakitosdance@gmail.com", {
+        // <-- AQUI VOCÊ COLOCA SEU E-MAIL
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json", // Importante para receber uma resposta JSON e não ser redirecionado
+        },
+      })
+
+      if (response.ok) {
+        // Sucesso no envio
+        setSubmitted(true) // Mostra a mensagem de agradecimento
+        setRating("") // Limpa os campos
+        setSuggestion("")
+      } else {
+        // Lidar com erros de envio
+        alert("Ocorreu um erro ao enviar sua pesquisa. Por favor, tente novamente.")
+        console.error("Erro ao enviar formulário:", response.statusText)
+      }
+    } catch (error) {
+      alert("Ocorreu um erro de rede. Por favor, verifique sua conexão e tente novamente.")
+      console.error("Erro de rede:", error)
+    } finally {
+      setIsSubmitting(false) // Reabilita o botão após o envio (sucesso ou falha)
+    }
   }
 
   return (
@@ -45,27 +84,9 @@ export default function SatisfactionSurvey() {
         </CardHeader>
         <CardContent className="p-6 pt-0">
           {!submitted ? (
-            // ATENÇÃO: Substitua 'seu-email@example.com' pelo seu endereço de e-mail real
-            <form
-              action="https://formsubmit.co/academiapakitosdance@gmail.com" // <-- AQUI VOCÊ COLOCA SEU E-MAIL
-              method="POST"
-              className="space-y-6"
-              onSubmit={(e) => {
-                // Previne o comportamento padrão do formulário para que possamos definir o estado 'submitted'
-                // O Formsubmit.co ainda receberá os dados.
-                e.preventDefault()
-                if (rating) {
-                  // Apenas submete se a avaliação for selecionada
-                  e.currentTarget.submit() // Submete o formulário manualmente
-                  handleFormSubmitSuccess()
-                }
-              }}
-            >
-              <input type="hidden" name="_next" value="?submitted=true" />{" "}
-              {/* Redireciona para a mesma página com um parâmetro */}
-              <input type="hidden" name="_subject" value="Nova Pesquisa de Satisfação - Academia Pakitos Dance" />{" "}
-              {/* Assunto do e-mail */}
-              <input type="hidden" name="_template" value="box" /> {/* Template de e-mail do Formsubmit.co */}
+            // Removemos o atributo 'action' e 'method' do formulário HTML
+            // e os inputs hidden do Formsubmit.co, pois o envio será via JS
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid gap-2">
                 <Label htmlFor="rating" className="text-lg font-medium">
                   Como você avalia o atendimento da academia?
@@ -99,9 +120,9 @@ export default function SatisfactionSurvey() {
               <Button
                 type="submit"
                 className="w-full bg-red-600 text-white hover:bg-red-700 focus:ring-red-600"
-                disabled={!rating} // Desabilita se não houver avaliação
+                disabled={isSubmitting || !rating} // Desabilita durante o envio e se não houver avaliação
               >
-                Enviar
+                {isSubmitting ? "Enviando..." : "Enviar"}
               </Button>
             </form>
           ) : (
