@@ -1,10 +1,21 @@
 "use client"
 
-import type React from "react"
 import { useState } from "react"
 import Image from "next/image"
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle
+} from "@/components/ui/card"
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue
+} from "@/components/ui/select"
 import Textarea from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
@@ -13,73 +24,56 @@ export default function SatisfactionSurvey() {
   const [rating, setRating] = useState("")
   const [suggestion, setSuggestion] = useState("")
   const [submitted, setSubmitted] = useState(false)
-  const [isSubmitting, setIsSubmitting] = useState(false) // Novo estado para controlar o envio
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault() // Impede o comportamento padrão de submissão do formulário (redirecionamento)
+    event.preventDefault()
 
     if (!rating) {
-      // Opcional: Adicionar alguma validação visual aqui se a avaliação for obrigatória
       alert("Por favor, selecione uma avaliação antes de enviar.")
       return
     }
 
-    setIsSubmitting(true) // Define o estado de envio para desabilitar o botão
+    setIsSubmitting(true)
 
     const formData = new FormData(event.currentTarget)
-    // O Formsubmit.co espera os dados como 'application/x-www-form-urlencoded' ou 'multipart/form-data'
-    // FormData funciona bem para isso.
 
     try {
-      // ATENÇÃO: Substitua 'seu-email@example.com' pelo seu endereço de e-mail real
       const response = await fetch("https://formsubmit.co/ajax/academiapakitosdance@gmail.com", {
-        // <-- AQUI VOCÊ COLOCA SEU E-MAIL
         method: "POST",
         body: formData,
         headers: {
-          Accept: "application/json", // Importante para receber uma resposta JSON e não ser redirecionado
+          Accept: "application/json",
         },
       })
 
       if (response.ok) {
-        // Sucesso no envio
-        setSubmitted(true) // Mostra a mensagem de agradecimento
-        setRating("") // Limpa os campos
+        setSubmitted(true)
+        setRating("")
         setSuggestion("")
       } else {
-        // Lidar com erros de envio
-        alert("Ocorreu um erro ao enviar sua pesquisa. Por favor, tente novamente.")
-        console.error("Erro ao enviar formulário:", response.statusText)
+        alert("Erro ao enviar sua pesquisa. Tente novamente.")
       }
     } catch (error) {
-      alert("Ocorreu um erro de rede. Por favor, verifique sua conexão e tente novamente.")
-      console.error("Erro de rede:", error)
+      alert("Erro de rede. Verifique sua conexão.")
     } finally {
-      setIsSubmitting(false) // Reabilita o botão após o envio (sucesso ou falha)
+      setIsSubmitting(false)
     }
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center p-4 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-black to-red-700">
+    <main className="min-h-screen flex items-center justify-center p-4 bg-black">
       <Card className="w-full max-w-md rounded-xl border-transparent bg-white text-black shadow-2xl">
-        {" "}
-        {/* <-- ALTERADO AQUI: borda transparente no Card */}
         <CardHeader className="flex flex-col items-center space-y-4 p-6">
-          <div className="w-full max-w-[400px] h-[200px] relative">
-     import Image from "next/image";
-
-<Image
-  src="/logo/pakitos-dance-logo.png"
-  alt="Pakitos Dance"
-  width={64}
-  height={64}
-  className="rounded-lg"
-/>
-
-
+          <div className="w-16 h-16 relative">
+            <Image
+              src="/logo/pakitos-dance-logo.png"
+              alt="Pakitos Dance"
+              fill
+              className="rounded-md object-contain"
+            />
           </div>
-          <CardTitle className="text-3xl font-bold text-red-600">AVALIE NOSSO SERVIÇO</CardTitle>{" "}
-          {/* <-- MANTIDO AQUI: novo título em maiúsculas */}
+          <CardTitle className="text-3xl font-bold text-red-600">AVALIE NOSSO SERVIÇO</CardTitle>
           <div className="text-center mt-4 max-w-sm">
             <p className="text-gray-700 text-base leading-relaxed">
               Sua opinião é muito importante para nós! Por favor, dedique alguns minutos para responder às perguntas
@@ -123,7 +117,7 @@ export default function SatisfactionSurvey() {
               <Button
                 type="submit"
                 className="w-full bg-red-600 text-white hover:bg-red-700 focus:ring-red-600"
-                disabled={isSubmitting || !rating} // Desabilita durante o envio e se não houver avaliação
+                disabled={isSubmitting || !rating}
               >
                 {isSubmitting ? "Enviando..." : "Enviar"}
               </Button>
@@ -138,7 +132,7 @@ export default function SatisfactionSurvey() {
         {submitted && (
           <CardFooter className="flex justify-center p-6 pt-0">
             <Button
-              onClick={() => setSubmitted(false)} // Apenas reseta o estado 'submitted'
+              onClick={() => setSubmitted(false)}
               className="bg-gray-200 text-black hover:bg-gray-300"
             >
               Fazer outra pesquisa
@@ -146,6 +140,6 @@ export default function SatisfactionSurvey() {
           </CardFooter>
         )}
       </Card>
-    </div>
+    </main>
   )
 }
