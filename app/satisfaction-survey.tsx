@@ -1,8 +1,6 @@
 "use client"
-
-import { useState } from "react"
-
 import type React from "react"
+import { useState } from "react"
 import Image from "next/image"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
@@ -64,8 +62,7 @@ export default function SatisfactionSurvey() {
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center p-4 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-black to-red-700">
-      {/* <-- GRADIENTE AJUSTADO AQUI: de preto para vermelho-700 para mais vivacidade */}
+    <div className="flex min-h-screen items-center justify-center p-4 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-black to-red-900">
       <Card className="w-full max-w-md rounded-xl border-2 border-red-600 bg-white text-black shadow-2xl">
         <CardHeader className="flex flex-col items-center space-y-4 p-6">
           <div className="w-full max-w-[400px] h-[200px] relative">
