@@ -8,6 +8,15 @@ const nextConfig = {
   basePath: "/academiapakitosdance", // Exemplo: se o seu repo for 'academiapakitosdance'
   assetPrefix: "/academiapakitosdance/", // Garante que os assets (imagens, JS, CSS) sejam carregados corretamente
 
+  // Verifique o passo 2 acima e ajuste conforme necessário.
+  // Se o seu site estiver no domínio raiz (ex: username.github.io), remova as linhas abaixo:
+  // basePath: "/academiapakitosdance",
+  // assetPrefix: "/academiapakitosdance/",
+
+  // Se o nome do seu repositório for diferente, atualize:
+  // basePath: "/SEU-NOME-DO-REPOSITORIO",
+  // assetPrefix: "/SEU-NOME-DO-REPOSITORIO/",
+
   // As configurações abaixo são recomendadas para exportação estática com Next.js 13+
   // e para ignorar erros de build que podem ocorrer em ambientes de CI/CD
   eslint: {
