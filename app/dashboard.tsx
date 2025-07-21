@@ -6,6 +6,7 @@ import { CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import { AlertTriangle } from "lucide-react"
 
 interface DashboardProps {
   onBack: () => void
@@ -22,6 +23,14 @@ export default function Dashboard({ onBack }: DashboardProps) {
     { option: "Ótimo, excelente trabalho", votes: 10, color: "bg-blue-500" },
     { option: "Bom, mas daria para melhorar", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
+  ]
+
+  // Sugestões recebidas (você pode atualizar manualmente aqui)
+  const suggestions = [
+    "Disponibilização de mais alteres e mais algumas máquinas",
+    "Pra mim está tudo ótimo. os professores são notas mil.",
+    "Mais máquinas e um espaço mais grande com solo emborrachado para fazer levantamento terra e outros.",
+    "Máquinas novas.",
   ]
 
   const totalVotes = surveyData.reduce((sum, item) => sum + item.votes, 0)
@@ -81,6 +90,18 @@ export default function Dashboard({ onBack }: DashboardProps) {
   return (
     <CardContent className="p-8">
       <div className="space-y-6">
+        {/* Aviso sobre atualização dos dados */}
+        <div className="bg-yellow-50 border-2 border-yellow-400 rounded-xl p-4 flex items-start space-x-3">
+          <AlertTriangle className="text-yellow-600 mt-0.5 flex-shrink-0" size={20} />
+          <div>
+            <h4 className="font-bold text-yellow-800 text-sm">AVISO IMPORTANTE</h4>
+            <p className="text-yellow-700 text-sm mt-1">
+              Os resultados apresentados não são atualizados em tempo real. As informações são processadas
+              periodicamente e podem levar algum tempo para refletir as respostas mais recentes.
+            </p>
+          </div>
+        </div>
+
         <div className="text-center">
           <h3 className="text-2xl font-bold text-red-600 mb-2">Resultados da Enquete</h3>
           <p className="text-gray-600 font-medium">Como você avalia o atendimento da academia?</p>
@@ -118,6 +139,27 @@ export default function Dashboard({ onBack }: DashboardProps) {
             <p className="text-lg font-bold text-gray-800">VOTOS TOTAIS</p>
             <p className="text-3xl font-bold text-red-600">{totalVotes}</p>
           </div>
+        </div>
+
+        {/* Seção de Sugestões */}
+        <div className="bg-blue-50 rounded-xl p-4 border-2 border-blue-400">
+          <h4 className="text-lg font-bold text-blue-800 mb-4 text-center">SUGESTÕES RECEBIDAS</h4>
+          <div className="space-y-3 max-h-60 overflow-y-auto">
+            {suggestions.length > 0 ? (
+              suggestions.map((suggestion, index) => (
+                <div key={index} className="bg-white rounded-lg p-3 border border-blue-200 shadow-sm">
+                  <p className="text-gray-700 text-sm leading-relaxed">"{suggestion}"</p>
+                </div>
+              ))
+            ) : (
+              <p className="text-blue-600 text-center italic">Nenhuma sugestão recebida ainda.</p>
+            )}
+          </div>
+          {suggestions.length > 0 && (
+            <div className="mt-3 text-center">
+              <p className="text-blue-600 text-sm font-medium">Total de sugestões: {suggestions.length}</p>
+            </div>
+          )}
         </div>
 
         <Button
