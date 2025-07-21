@@ -19,9 +19,9 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Dados da enquete (você pode atualizar manualmente aqui)
   const surveyData = [
-    { option: "Excelente, até indicaria para uma pessoa", votes: 15, color: "bg-green-500" },
+    { option: "Excelente, até indicaria para uma pessoa", votes: 17, color: "bg-green-500" },
     { option: "Ótimo, excelente trabalho", votes: 10, color: "bg-blue-500" },
-    { option: "Bom, mas daria para melhorar", votes: 0, color: "bg-yellow-500" },
+    { option: "Bom, mas daria para melhorar", votes: 6, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
   ]
 
