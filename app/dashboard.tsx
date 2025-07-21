@@ -19,8 +19,8 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Dados da enquete (você pode atualizar manualmente aqui)
   const surveyData = [
-    { option: "Excelente, até indicaria para uma pessoa", votes: 34, color: "bg-green-500" },
-    { option: "Ótimo, excelente trabalho", votes: 16, color: "bg-blue-500" },
+    { option: "Excelente, até indicaria para uma pessoa", votes: 39, color: "bg-green-500" },
+    { option: "Ótimo, excelente trabalho", votes: 22, color: "bg-blue-500" },
     { option: "Bom, mas daria para melhorar", votes: 10, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
   ]
@@ -63,7 +63,14 @@ export default function Dashboard({ onBack }: DashboardProps) {
     "alisson, que tal uma estante maior para os itens, tem alguns horários que fica impossível guardar as coisas, tem que deixar no chão a maioria das vezes",
     "Tudo ok",
     "ocorreu uma situação, ao pedir ajuda pra um dos instrutores da manhã, ele debochou e saiu rindo, negando ajuda pedida.",
-
+    "Ventilador mais para cima na área das esteiras.",
+    "A academia em si é excelente — em termos de estrutura, é a melhor de Doutor Camargo. Todas as máquinas são de ótima qualidade, realmente as melhores entre as três academias da cidade (já treinei em todas). Agora, em relação aos treinadores, é preciso uma cobrança maior. Alguns simplesmente parecem estátuas: ficam parados, olhando pro nada, sem dar atenção pra ninguém. Falta iniciativa, presença e vontade de realmente ajudar quem está treinando. E o pior, alguns parecem focar mais em ajudar as mulheres, deixando outros alunos de lado. Por outro lado, há profissionais que fazem valer a experiência, como o Matheus Leite — de longe um dos seus melhores funcionários. Sempre prestativo, atencioso e comprometido com os alunos. Merece reconhecimento. É claro que ainda há pontos a melhorar, como em qualquer lugar, mas você está de parabéns, Alisson, pela academia que montou!",
+    "Venda de suplementos",
+    "excelente academia, professores capacitadados atendimento personalizados sugestão de um futuro proximo alterar a iluminação do ambiente proporcionando uma iluminação mais tranquila investindo em luzes amarelas que tras uma acomodação ao ambiente, investir em panos e alcool para higienização dos aparelhos. Do mais excelente academia assinado gustavo",
+    "Alguns instrutores andam falando mal dos próprios alunos…  A academia é show de bola, alisson é merecedor demais, mas isso me anda me chateando, parecem que eles querem ajudar quem ja sabe treinar, sempre vejo eles ajudando alguns que sabem treinar, e nós que nao sabemos saimos no prejuizo…",
+    "acabar com o estacionamento de patinete na porta",
+    "comprar a data ao lado kkkkkk",
+    "Almenta o lugar onde guarda os celulares",
   ]
   
 
