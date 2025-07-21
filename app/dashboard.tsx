@@ -19,9 +19,9 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Dados da enquete (você pode atualizar manualmente aqui)
   const surveyData = [
-    { option: "Excelente, até indicaria para uma pessoa", votes: 17, color: "bg-green-500" },
-    { option: "Ótimo, excelente trabalho", votes: 10, color: "bg-blue-500" },
-    { option: "Bom, mas daria para melhorar", votes: 6, color: "bg-yellow-500" },
+    { option: "Excelente, até indicaria para uma pessoa", votes: 24, color: "bg-green-500" },
+    { option: "Ótimo, excelente trabalho", votes: 13, color: "bg-blue-500" },
+    { option: "Bom, mas daria para melhorar", votes: 7, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
   ]
 
@@ -47,7 +47,14 @@ export default function Dashboard({ onBack }: DashboardProps) {
     "Melhorar a ventilação da academia, muito quente",
     "Uma bicicleta nova, mais uma ajudaria a conter o pessoal fazendo cardio",
     "Gosto muito da academia, mas os instrutores as vezes deixam a desejar, pois as vezes nao ajudam, ficam em grupinho conversando, faltando com profissionalismo",
+    "Os meninos mais conversam do que trabalham, na ausência do Alisson, em grande parte do tempo estão sempre juntos negligenciando os alunos que posteriormente podem precisar de atenção.",
+    "Algumas ideias de maquinas: Trocar o Sumo pelo Belt Squat.Remada High Row e Low Row.Uma rosca scott seria interessante.Uma nova bicicleta, com um banco mais confortável.Mais barras ou alguns pesos montados, mais algumas cordas",
+    "Melhorar a ventilação da academia e colocar mais leds",
+    "quando o alisson esta esta certo 👍🏻",
+    "boa qualidade",
+    "mexer na pintura e teocar os pisos quebrados",
   ]
+  
 
   const totalVotes = surveyData.reduce((sum, item) => sum + item.votes, 0)
 
