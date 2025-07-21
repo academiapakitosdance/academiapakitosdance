@@ -51,8 +51,14 @@ export default function SatisfactionSurvey() {
     }
   }
 
+  const handleViewResults = () => {
+    // Aqui você pode redirecionar para onde ficam os resultados da enquete
+    // Por exemplo, uma página do Google Forms, planilha pública, ou dashboard
+    window.open("https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewanalytics", "_blank")
+  }
+
   return (
-    <div className="flex min-h-screen items-center justify-center p-4 bg-black">
+    <div className="flex min-h-screen flex-col items-center justify-center p-4 bg-black">
       <Card className="w-full max-w-md rounded-2xl border-2 border-red-600 bg-white text-black shadow-2xl shadow-red-600/20">
         <CardHeader className="flex flex-col items-center space-y-6 p-8">
           <div className="inline-block rounded-xl border-3 border-red-600 shadow-lg shadow-red-600/30 overflow-hidden">
@@ -125,13 +131,23 @@ export default function SatisfactionSurvey() {
                 />
               </div>
 
-              <Button
-                type="submit"
-                className="w-full bg-red-600 text-white hover:bg-red-700 focus:ring-red-600 h-12 rounded-xl font-bold text-lg transition-all duration-200 shadow-lg hover:shadow-xl"
-                disabled={isSubmitting || !rating}
-              >
-                {isSubmitting ? "Enviando..." : "Enviar Avaliação"}
-              </Button>
+              <div className="space-y-4">
+                <Button
+                  type="submit"
+                  className="w-full bg-red-600 text-white hover:bg-red-700 focus:ring-red-600 h-12 rounded-xl font-bold text-lg transition-all duration-200 shadow-lg hover:shadow-xl"
+                  disabled={isSubmitting || !rating}
+                >
+                  {isSubmitting ? "Enviando..." : "Enviar Avaliação"}
+                </Button>
+
+                <Button
+                  type="button"
+                  onClick={handleViewResults}
+                  className="w-full bg-gray-100 text-gray-700 hover:bg-gray-200 border-2 border-red-600 h-12 rounded-xl font-bold text-lg transition-all duration-200"
+                >
+                  Acompanhar Enquete
+                </Button>
+              </div>
             </form>
           ) : (
             <div className="text-center space-y-6">
@@ -167,6 +183,13 @@ export default function SatisfactionSurvey() {
           </CardFooter>
         )}
       </Card>
+
+      {/* Footer com créditos do desenvolvedor */}
+      <div className="mt-6 text-center">
+        <p className="text-gray-400 text-xs">
+          Desenvolvido por <span className="text-gray-300 font-medium">Rafael Nunes Gasperini</span>
+        </p>
+      </div>
     </div>
   )
 }
