@@ -31,6 +31,22 @@ export default function Dashboard({ onBack }: DashboardProps) {
     "Pra mim está tudo ótimo. os professores são notas mil.",
     "Mais máquinas e um espaço mais grande com solo emborrachado para fazer levantamento terra e outros.",
     "Máquinas novas.",
+    "Mr Olympia na academia, com o prêmio drogas anabolizantes, agradeço desde já!",
+    "Se possível o aumento do álcool 70",
+    "Distribuir dose de whey",
+    "Mais halteres, mais barras de ferro, mais cordas e mais anilhas.",
+    "Trazer uma polia grande.",
+    "Comprar barras montadas",
+    "Talvez dividir os instrutores por “regiões” da academia. Muitas vezes quando Alisson não está eles ficam conversando entre si e não atendem de forma ampla todo espaço, fazendo com que muitas pessoas tenham que ir atrás deles, muitos adolescentes sentem vergonha e isso acaba dificultando o treino.",
+    "Tudo perfeito.",
+    "Acho uma ótima academia, bem completa, ótimo atendimento, e de ótimo valor",
+    "tirar o buzetti",
+    "Contratar o Matheus Gali",
+    "Contratar o matheus galli",
+    "Contratar o Matheus Galli",
+    "Melhorar a ventilação da academia, muito quente",
+    "Uma bicicleta nova, mais uma ajudaria a conter o pessoal fazendo cardio",
+    "Gosto muito da academia, mas os instrutores as vezes deixam a desejar, pois as vezes nao ajudam, ficam em grupinho conversando, faltando com profissionalismo",
   ]
 
   const totalVotes = surveyData.reduce((sum, item) => sum + item.votes, 0)
