@@ -7,12 +7,14 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import Textarea from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
+import Dashboard from "./dashboard"
 
 export default function SatisfactionSurvey() {
   const [rating, setRating] = useState("")
   const [suggestion, setSuggestion] = useState("")
   const [submitted, setSubmitted] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [showDashboard, setShowDashboard] = useState(false)
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
@@ -52,9 +54,12 @@ export default function SatisfactionSurvey() {
   }
 
   const handleViewResults = () => {
-    // Aqui você pode redirecionar para onde ficam os resultados da enquete
-    // Por exemplo, uma página do Google Forms, planilha pública, ou dashboard
-    window.open("https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewanalytics", "_blank")
+    setShowDashboard(true)
+  }
+
+  const handleBackToSurvey = () => {
+    setShowDashboard(false)
+    setSubmitted(false)
   }
 
   return (
@@ -72,7 +77,7 @@ export default function SatisfactionSurvey() {
             />
           </div>
 
-          {!submitted && (
+          {!submitted && !showDashboard && (
             <>
               <CardTitle className="text-3xl font-bold text-red-600 tracking-tight">AVALIE NOSSO SERVIÇO</CardTitle>
               <div className="text-center mt-4 max-w-sm">
@@ -86,93 +91,97 @@ export default function SatisfactionSurvey() {
           )}
         </CardHeader>
 
-        <CardContent className="p-8 pt-0">
-          {!submitted ? (
-            <form onSubmit={handleSubmit} className="space-y-8">
-              <div className="grid gap-3">
-                <Label htmlFor="rating" className="text-lg font-semibold text-gray-800">
-                  Como você avalia o atendimento da academia?
-                </Label>
-                <Select value={rating} onValueChange={setRating} name="rating">
-                  <SelectTrigger
-                    id="rating"
-                    className="border-2 border-red-600 focus:border-red-700 focus:ring-red-600 rounded-xl h-12 font-medium"
+        {showDashboard ? (
+          <Dashboard onBack={handleBackToSurvey} />
+        ) : (
+          <CardContent className="p-8 pt-0">
+            {!submitted ? (
+              <form onSubmit={handleSubmit} className="space-y-8">
+                <div className="grid gap-3">
+                  <Label htmlFor="rating" className="text-lg font-semibold text-gray-800">
+                    Como você avalia o atendimento da academia?
+                  </Label>
+                  <Select value={rating} onValueChange={setRating} name="rating">
+                    <SelectTrigger
+                      id="rating"
+                      className="border-2 border-red-600 focus:border-red-700 focus:ring-red-600 rounded-xl h-12 font-medium"
+                    >
+                      <SelectValue placeholder="Selecione sua avaliação" />
+                    </SelectTrigger>
+                    <SelectContent className="border-2 border-red-600 rounded-xl">
+                      <SelectItem value="excelente-indicaria" className="font-medium">
+                        Excelente, até indicaria para uma pessoa.
+                      </SelectItem>
+                      <SelectItem value="otimo-trabalho" className="font-medium">
+                        Ótimo, excelente trabalho.
+                      </SelectItem>
+                      <SelectItem value="bom-melhorar" className="font-medium">
+                        Bom, mas daria para melhorar.
+                      </SelectItem>
+                      <SelectItem value="ruim-precisa-melhora" className="font-medium">
+                        Ruim, precisa de melhora.
+                      </SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+
+                <div className="grid gap-3">
+                  <Label htmlFor="suggestion" className="text-lg font-semibold text-gray-800">
+                    Deixe sua sugestão para melhorar nossa academia:
+                  </Label>
+                  <Textarea
+                    id="suggestion"
+                    placeholder="Sua sugestão aqui..."
+                    value={suggestion}
+                    onChange={(e) => setSuggestion(e.target.value)}
+                    className="min-h-[120px] border-2 border-red-600 focus:border-red-700 focus:ring-red-600 rounded-xl font-medium resize-none"
+                    name="suggestion"
+                  />
+                </div>
+
+                <div className="space-y-4">
+                  <Button
+                    type="submit"
+                    className="w-full bg-red-600 text-white hover:bg-red-700 focus:ring-red-600 h-12 rounded-xl font-bold text-lg transition-all duration-200 shadow-lg hover:shadow-xl"
+                    disabled={isSubmitting || !rating}
                   >
-                    <SelectValue placeholder="Selecione sua avaliação" />
-                  </SelectTrigger>
-                  <SelectContent className="border-2 border-red-600 rounded-xl">
-                    <SelectItem value="excelente-indicaria" className="font-medium">
-                      Excelente, até indicaria para uma pessoa.
-                    </SelectItem>
-                    <SelectItem value="otimo-trabalho" className="font-medium">
-                      Ótimo, excelente trabalho.
-                    </SelectItem>
-                    <SelectItem value="bom-melhorar" className="font-medium">
-                      Bom, mas daria para melhorar.
-                    </SelectItem>
-                    <SelectItem value="ruim-precisa-melhora" className="font-medium">
-                      Ruim, precisa de melhora.
-                    </SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
+                    {isSubmitting ? "Enviando..." : "Enviar Avaliação"}
+                  </Button>
 
-              <div className="grid gap-3">
-                <Label htmlFor="suggestion" className="text-lg font-semibold text-gray-800">
-                  Deixe sua sugestão para melhorar nossa academia:
-                </Label>
-                <Textarea
-                  id="suggestion"
-                  placeholder="Sua sugestão aqui..."
-                  value={suggestion}
-                  onChange={(e) => setSuggestion(e.target.value)}
-                  className="min-h-[120px] border-2 border-red-600 focus:border-red-700 focus:ring-red-600 rounded-xl font-medium resize-none"
-                  name="suggestion"
-                />
+                  <Button
+                    type="button"
+                    onClick={handleViewResults}
+                    className="w-full bg-gray-100 text-gray-700 hover:bg-gray-200 border-2 border-red-600 h-12 rounded-xl font-bold text-lg transition-all duration-200"
+                  >
+                    Acompanhar Enquete
+                  </Button>
+                </div>
+              </form>
+            ) : (
+              <div className="text-center space-y-6">
+                <h3 className="text-3xl font-bold text-red-600 mb-6">Obrigado por sua colaboração!</h3>
+                <div className="space-y-4 text-gray-800 leading-relaxed">
+                  <p className="font-medium">
+                    Sua opinião é essencial para que possamos evoluir e oferecer sempre o melhor para você.
+                  </p>
+                  <p className="font-medium">
+                    Agradecemos por dedicar um momento do seu dia para responder à nossa pesquisa de satisfação. É
+                    através do seu feedback que conseguimos melhorar nossos serviços, ambientes e atendimentos, criando
+                    uma experiência cada vez mais positiva dentro da academia.
+                  </p>
+                  <p className="font-medium">
+                    Continue firme nos seus treinos! Estamos aqui para te apoiar em cada etapa da sua jornada, ajudando
+                    você a alcançar seus objetivos com saúde, motivação e constância.
+                  </p>
+                  <p className="font-medium">Conte sempre com a nossa equipe!</p>
+                  <p className="font-bold text-lg">Juntos somos mais fortes! 💪</p>
+                </div>
               </div>
+            )}
+          </CardContent>
+        )}
 
-              <div className="space-y-4">
-                <Button
-                  type="submit"
-                  className="w-full bg-red-600 text-white hover:bg-red-700 focus:ring-red-600 h-12 rounded-xl font-bold text-lg transition-all duration-200 shadow-lg hover:shadow-xl"
-                  disabled={isSubmitting || !rating}
-                >
-                  {isSubmitting ? "Enviando..." : "Enviar Avaliação"}
-                </Button>
-
-                <Button
-                  type="button"
-                  onClick={handleViewResults}
-                  className="w-full bg-gray-100 text-gray-700 hover:bg-gray-200 border-2 border-red-600 h-12 rounded-xl font-bold text-lg transition-all duration-200"
-                >
-                  Acompanhar Enquete
-                </Button>
-              </div>
-            </form>
-          ) : (
-            <div className="text-center space-y-6">
-              <h3 className="text-3xl font-bold text-red-600 mb-6">Obrigado por sua colaboração!</h3>
-              <div className="space-y-4 text-gray-800 leading-relaxed">
-                <p className="font-medium">
-                  Sua opinião é essencial para que possamos evoluir e oferecer sempre o melhor para você.
-                </p>
-                <p className="font-medium">
-                  Agradecemos por dedicar um momento do seu dia para responder à nossa pesquisa de satisfação. É através
-                  do seu feedback que conseguimos melhorar nossos serviços, ambientes e atendimentos, criando uma
-                  experiência cada vez mais positiva dentro da academia.
-                </p>
-                <p className="font-medium">
-                  Continue firme nos seus treinos! Estamos aqui para te apoiar em cada etapa da sua jornada, ajudando
-                  você a alcançar seus objetivos com saúde, motivação e constância.
-                </p>
-                <p className="font-medium">Conte sempre com a nossa equipe!</p>
-                <p className="font-bold text-lg">Juntos somos mais fortes! 💪</p>
-              </div>
-            </div>
-          )}
-        </CardContent>
-
-        {submitted && (
+        {submitted && !showDashboard && (
           <CardFooter className="flex justify-center p-8 pt-0">
             <Button
               onClick={() => setSubmitted(false)}
