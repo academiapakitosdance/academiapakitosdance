@@ -19,9 +19,9 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Dados da enquete (você pode atualizar manualmente aqui)
   const surveyData = [
-    { option: "Excelente, até indicaria para uma pessoa", votes: 24, color: "bg-green-500" },
-    { option: "Ótimo, excelente trabalho", votes: 13, color: "bg-blue-500" },
-    { option: "Bom, mas daria para melhorar", votes: 7, color: "bg-yellow-500" },
+    { option: "Excelente, até indicaria para uma pessoa", votes: 34, color: "bg-green-500" },
+    { option: "Ótimo, excelente trabalho", votes: 16, color: "bg-blue-500" },
+    { option: "Bom, mas daria para melhorar", votes: 10, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
   ]
 
@@ -53,6 +53,17 @@ export default function Dashboard({ onBack }: DashboardProps) {
     "quando o alisson esta esta certo 👍🏻",
     "boa qualidade",
     "mexer na pintura e teocar os pisos quebrados",
+    "Tudo ótimo continue assim ☺️",
+    "disponibilizar mais alteres mais maquinas que nos ajudem",
+    "O atendimento do Alisson é ótimo, já de alguns outros personal deixa um pouco a desejar.",
+    "Melhor academia para treina em Camargo",
+    "Um suporte a mais para anilhas, acho que la no fundo ficaria legal, para organizar melhor, e um suporte para colocar as barras e triângulos do puxador, as vezes ficam no chão e ir pegar elas pode atrapalhar o pessoal fazendo exercício.",
+    "Pedir para o leite parar de gemer kkkkkkkkkkkkkk",
+    "acho que deviam ter orientações pra que não gritassem/gemessem na academia, se torna constrangedor pra quem está por perto",
+    "alisson, que tal uma estante maior para os itens, tem alguns horários que fica impossível guardar as coisas, tem que deixar no chão a maioria das vezes",
+    "Tudo ok",
+    "ocorreu uma situação, ao pedir ajuda pra um dos instrutores da manhã, ele debochou e saiu rindo, negando ajuda pedida.",
+
   ]
   
 
