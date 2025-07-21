@@ -20,7 +20,7 @@ export default function Dashboard({ onBack }: DashboardProps) {
   // Dados da enquete (você pode atualizar manualmente aqui)
   const surveyData = [
     { option: "Excelente, até indicaria para uma pessoa", votes: 39, color: "bg-green-500" },
-    { option: "Ótimo, excelente trabalho", votes: 22, color: "bg-blue-500" },
+    { option: "Ótimo, excelente trabalho", votes: 24, color: "bg-blue-500" },
     { option: "Bom, mas daria para melhorar", votes: 10, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
   ]
@@ -71,6 +71,8 @@ export default function Dashboard({ onBack }: DashboardProps) {
     "acabar com o estacionamento de patinete na porta",
     "comprar a data ao lado kkkkkk",
     "Almenta o lugar onde guarda os celulares",
+    "Suplemento grátis para todos que treinam em sua academia",
+    "Trembolona, Para os alunos",
   ]
   
 
