@@ -19,7 +19,7 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Dados da enquete (você pode atualizar manualmente aqui)
   const surveyData = [
-    { option: "Excelente, até indicaria para uma pessoa", votes: 40, color: "bg-green-500" },
+    { option: "Excelente, até indicaria para uma pessoa", votes: 41, color: "bg-green-500" },
     { option: "Ótimo, excelente trabalho", votes: 25, color: "bg-blue-500" },
     { option: "Bom, mas daria para melhorar", votes: 10, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
@@ -75,6 +75,7 @@ export default function Dashboard({ onBack }: DashboardProps) {
     "Trembolona, Para os alunos",
     "Está tudo perfeito",
     "Acho massa o funcional femenino, seria interessante que tivesse no masculino, e fosse avisado os dias que fosse ter.Mas do mais a academia è top",
+    "Chest Press declinado seria massa",
   ]
   
 
