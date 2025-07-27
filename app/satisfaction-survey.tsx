@@ -14,13 +14,14 @@ export default function SatisfactionSurvey() {
   const [currentScreen, setCurrentScreen] = useState<"welcome" | "survey" | "submitted" | "dashboard">("welcome")
   const [serviceRating, setServiceRating] = useState("")
   const [infrastructureRating, setInfrastructureRating] = useState("")
+  const [hygieneRating, setHygieneRating] = useState("")
   const [suggestion, setSuggestion] = useState("")
   const [isSubmitting, setIsSubmitting] = useState(false)
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
 
-    if (!serviceRating || !infrastructureRating) {
+    if (!serviceRating || !infrastructureRating || !hygieneRating) {
       alert("Por favor, responda todas as perguntas obrigatórias antes de enviar.")
       return
     }
@@ -42,6 +43,7 @@ export default function SatisfactionSurvey() {
         setCurrentScreen("submitted")
         setServiceRating("")
         setInfrastructureRating("")
+        setHygieneRating("")
         setSuggestion("")
       } else {
         alert("Ocorreu um erro ao enviar sua pesquisa. Por favor, tente novamente.")
@@ -64,12 +66,12 @@ export default function SatisfactionSurvey() {
       <div className="space-y-6">
         <div className="text-center space-y-4">
           <h3 className="text-2xl font-bold text-red-600">Como Funciona Nossa Pesquisa</h3>
-          <div className="bg-blue-50 rounded-xl p-6 border-2 border-blue-200 space-y-4">
+          <div className="bg-gray-50 rounded-xl p-6 border-2 border-red-600 space-y-4">
             <div className="flex items-start space-x-3">
-              <Shield className="text-blue-600 mt-1 flex-shrink-0" size={20} />
+              <Shield className="text-red-600 mt-1 flex-shrink-0" size={20} />
               <div className="text-left">
-                <h4 className="font-bold text-blue-800 text-sm">TOTAL ANONIMATO</h4>
-                <p className="text-blue-700 text-sm mt-1">
+                <h4 className="font-bold text-red-600 text-sm">TOTAL ANONIMATO</h4>
+                <p className="text-gray-700 text-sm mt-1">
                   Sua participação é completamente anônima. Não coletamos nenhum dado pessoal, IP ou informação que
                   possa identificá-lo.
                 </p>
@@ -77,21 +79,23 @@ export default function SatisfactionSurvey() {
             </div>
 
             <div className="flex items-start space-x-3">
-              <Users className="text-green-600 mt-1 flex-shrink-0" size={20} />
+              <Users className="text-red-600 mt-1 flex-shrink-0" size={20} />
               <div className="text-left">
-                <h4 className="font-bold text-green-800 text-sm">AVALIAÇÕES DISPONÍVEIS</h4>
-                <p className="text-green-700 text-sm mt-1">
-                  Você poderá avaliar dois aspectos: <strong>Atendimento</strong> (qualidade do serviço prestado) e{" "}
-                  <strong>Infraestrutura</strong> (equipamentos, limpeza, organização). Temos também o campo de <strong>Sugestões</strong>, um campo opcional, mas que gostariamos de saber sua opnião.
+                <h4 className="font-bold text-red-600 text-sm">AVALIAÇÕES DISPONÍVEIS</h4>
+                <p className="text-gray-700 text-sm mt-1">
+                  Você poderá avaliar três aspectos: <strong>Atendimento</strong> (qualidade do serviço prestado),{" "}
+                  <strong>Infraestrutura</strong> (equipamentos, organização) e <strong>Higiene</strong> (limpeza e
+                  cuidados). Temos também o campo de <strong>Sugestões</strong>, um campo opcional, mas que gostaríamos
+                  de saber sua opinião.
                 </p>
               </div>
             </div>
 
             <div className="flex items-start space-x-3">
-              <Eye className="text-purple-600 mt-1 flex-shrink-0" size={20} />
+              <Eye className="text-red-600 mt-1 flex-shrink-0" size={20} />
               <div className="text-left">
-                <h4 className="font-bold text-purple-800 text-sm">ACESSO ÀS SUGESTÕES</h4>
-                <p className="text-purple-700 text-sm mt-1">
+                <h4 className="font-bold text-red-600 text-sm">ACESSO ÀS SUGESTÕES</h4>
+                <p className="text-gray-700 text-sm mt-1">
                   Apenas o desenvolvedor do sistema e o Alison têm acesso às sugestões enviadas. Todas as informações
                   são tratadas com total confidencialidade.
                 </p>
@@ -99,10 +103,10 @@ export default function SatisfactionSurvey() {
             </div>
 
             <div className="flex items-start space-x-3">
-              <Building2 className="text-orange-600 mt-1 flex-shrink-0" size={20} />
+              <Building2 className="text-red-600 mt-1 flex-shrink-0" size={20} />
               <div className="text-left">
-                <h4 className="font-bold text-orange-800 text-sm">OBJETIVO</h4>
-                <p className="text-orange-700 text-sm mt-1">
+                <h4 className="font-bold text-red-600 text-sm">OBJETIVO</h4>
+                <p className="text-gray-700 text-sm mt-1">
                   Seu feedback nos ajuda a melhorar continuamente nossos serviços e instalações para oferecer a melhor
                   experiência possível.
                 </p>
@@ -166,7 +170,7 @@ export default function SatisfactionSurvey() {
             Como você avalia a infraestrutura da nossa academia? *
           </Label>
           <p className="text-sm text-gray-600 -mt-2">
-            (Considere itens como organização, limpeza, equipamentos, salas e ambiente em geral.)
+            (Considere itens como organização, equipamentos, salas e ambiente em geral.)
           </p>
           <Select value={infrastructureRating} onValueChange={setInfrastructureRating} name="infrastructureRating">
             <SelectTrigger
@@ -193,6 +197,34 @@ export default function SatisfactionSurvey() {
         </div>
 
         <div className="grid gap-3">
+          <Label htmlFor="hygieneRating" className="text-lg font-semibold text-gray-800">
+            Como você avalia a limpeza e higiene da nossa academia? *
+          </Label>
+          <Select value={hygieneRating} onValueChange={setHygieneRating} name="hygieneRating">
+            <SelectTrigger
+              id="hygieneRating"
+              className="border-2 border-red-600 focus:border-red-700 focus:ring-red-600 rounded-xl h-12 font-medium"
+            >
+              <SelectValue placeholder="Selecione sua avaliação" />
+            </SelectTrigger>
+            <SelectContent className="border-2 border-red-600 rounded-xl">
+              <SelectItem value="sempre-muito-limpa" className="font-medium">
+                Sempre muito limpa, sem nada a reclamar!
+              </SelectItem>
+              <SelectItem value="limpeza-boa-melhorar" className="font-medium">
+                Limpeza boa, mas dá pra melhorar em alguns pontos.
+              </SelectItem>
+              <SelectItem value="as-vezes-deixa-desejar" className="font-medium">
+                Às vezes deixa a desejar, precisa mais atenção.
+              </SelectItem>
+              <SelectItem value="falta-cuidado-problema" className="font-medium">
+                Falta cuidado, limpeza é um problema sério aqui.
+              </SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
+
+        <div className="grid gap-3">
           <Label htmlFor="suggestion" className="text-lg font-semibold text-gray-800">
             Deixe sua sugestão para melhorar nossa academia:
           </Label>
@@ -210,7 +242,7 @@ export default function SatisfactionSurvey() {
           <Button
             type="submit"
             className="w-full bg-red-600 text-white hover:bg-red-700 focus:ring-red-600 h-12 rounded-xl font-bold text-lg transition-all duration-200 shadow-lg hover:shadow-xl"
-            disabled={isSubmitting || !serviceRating || !infrastructureRating}
+            disabled={isSubmitting || !serviceRating || !infrastructureRating || !hygieneRating}
           >
             {isSubmitting ? "Enviando..." : "Enviar Avaliação"}
           </Button>
