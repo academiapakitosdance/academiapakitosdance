@@ -7,7 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import Textarea from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
-import { Shield, Users, Building2, Eye } from "lucide-react"
+import { Shield, Users, Building2, Eye, Instagram, MessageCircle } from "lucide-react"
 import Dashboard from "./dashboard"
 
 export default function SatisfactionSurvey() {
@@ -338,11 +338,44 @@ export default function SatisfactionSurvey() {
         )}
       </Card>
 
-      {/* Footer com créditos do desenvolvedor */}
-      <div className="mt-6 text-center">
-        <p className="text-gray-400 text-xs">
-          Desenvolvido por <span className="text-gray-300 font-medium">Rafael Nunes Gasperini</span>
-        </p>
+      {/* Footer com copyright e contatos */}
+      <div className="mt-6 text-center space-y-3">
+        {/* Copyright */}
+        <div>
+          <p className="text-gray-400 text-xs">
+            Copyright © 2025 - <span className="text-gray-300 font-medium">Rafael Nunes Gasperini</span>
+          </p>
+        </div>
+
+        {/* Contatos do Alison */}
+        <div className="bg-gray-800 rounded-lg px-4 py-3 space-y-2">
+          <div className="flex items-center justify-center space-x-4">
+            {/* Instagram */}
+            <a
+              href="https://www.instagram.com/alisonpakito"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-2 text-gray-300 hover:text-pink-400 transition-colors duration-200"
+            >
+              <Instagram size={16} />
+              <span className="text-xs font-medium">@alisonpakito</span>
+            </a>
+
+            {/* WhatsApp */}
+            <a
+              href="https://wa.me/5544988114055"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-2 text-gray-300 hover:text-green-400 transition-colors duration-200"
+            >
+              <MessageCircle size={16} />
+              <span className="text-xs font-medium">WhatsApp Alison</span>
+            </a>
+          </div>
+          <div className="text-center">
+            <p className="text-gray-400 text-xs">+55 44 98811-4055</p>
+          </div>
+        </div>
       </div>
     </div>
   )
