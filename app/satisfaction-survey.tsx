@@ -372,9 +372,6 @@ export default function SatisfactionSurvey() {
               <span className="text-xs font-medium">WhatsApp Alison</span>
             </a>
           </div>
-          <div className="text-center">
-            <p className="text-gray-400 text-xs">+55 44 98811-4055</p>
-          </div>
         </div>
       </div>
     </div>
