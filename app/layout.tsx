@@ -9,14 +9,26 @@ const inter = Inter({
 })
 
 export const metadata = {
-  title: "Pesquisa de Satisfação Academia Pakitos Dance",
-  description: "Sua opinião é muito importante para nós! Ajude-nos a melhorar a Academia Pakitos Dance.",
+  title: "Academia Pakitos Dance - Pesquisa de Satisfação",
+  description:
+    "Sua opinião é muito importante para nós! Ajude-nos a melhorar a Academia Pakitos Dance com sua avaliação.",
   generator: "v0.dev",
+  icons: {
+    icon: "/logo/pakitos-dance-logo.png",
+    shortcut: "/logo/pakitos-dance-logo.png",
+    apple: "/logo/pakitos-dance-logo.png",
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-BR">
+      <head>
+        <link rel="icon" href="/logo/pakitos-dance-logo.png" type="image/png" />
+        <link rel="shortcut icon" href="/logo/pakitos-dance-logo.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/logo/pakitos-dance-logo.png" />
+        <meta name="theme-color" content="#dc2626" />
+      </head>
       <body className={inter.variable}>{children}</body>
     </html>
   )
