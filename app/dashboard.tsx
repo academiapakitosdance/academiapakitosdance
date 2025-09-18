@@ -43,27 +43,27 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Sugestões recebidas (você pode atualizar manualmente aqui)
   const suggestions = [
-"banheiro das mulheres por algum motivo fica com cheiro desagradável as vezes, só de ficar próximo da pra sentir um odor forte."
-"Seria ótimo outro suporte para os acessórios da polia! oque tem está sobrecarregado e desorganizado, dificultando o acesso aos equipamentos que estão atrás."
-"poderia pedir gentilmente para que os alunos tenham mais noção e não deixem seus objetos pessoais na academia integralmente, isso atrapalha em horários de pico pois mesmo aumentando a estante continuam poucos espaços vazios."
-"Espaço mais amplo!"
-"Procurar ajustar os treinos de acordo com as necessidades do aluno."
-"Os aulão de dança poderia ser em um local com mais infraestrutura, com ventiladores e água. E quem sabe futuramente ter estrutura pr aula de spinnig, as aulas já são boas, acho que com essa novidade seria um atrativo a mais e a academia tem potencial pra isso."
-"Sugestão: manter sempre os aparelhos limpos e sem poeira, e aumentar o espaço do bebedouro ou trocar de lugar."
-"Está tudo ótimo."
-"A academia é ótima os professores são atenciosos e os dono nem se fale sempre preocupado sempre perguntando se está tudo bem se precisa de alguma coisa tudo perfeito"
-"Td ótimo"
-"pensar em um espaço para alongamentos, mobilidade e abdominal dentro da academia"
-"Acho que precisa aumentar a academia, como você é nota 1000 tem os 500 alunos não está cabendo. No mais está tudo ótimo. Bjusss"
-"Precisa de mais cochonete mais grosso tem uns bons mais são poucos se tiver mais agradeço"
-"Tudo certo!"
-"Está ótima"
-"Por enquanto não tenho o que opinar em melhoria. Está excelente o atendimento e os professores."
-"A sugestão é continuem com o ótimo trabalho,estão no caminho certo"
-"Almofada nova própria para elevação pélvica"
-"Nao tenho nenhuma reclamação Atendimento maravilhoso Sempre atencioso"
-"Já é ótimo"
-"Pra mim ter o ambiente sempre arejado pois tenho muita falta de ar"
+"banheiro das mulheres por algum motivo fica com cheiro desagradável as vezes, só de ficar próximo da pra sentir um odor forte.",
+"Seria ótimo outro suporte para os acessórios da polia! oque tem está sobrecarregado e desorganizado, dificultando o acesso aos equipamentos que estão atrás.",
+"poderia pedir gentilmente para que os alunos tenham mais noção e não deixem seus objetos pessoais na academia integralmente, isso atrapalha em horários de pico pois mesmo aumentando a estante continuam poucos espaços vazios.",
+"Espaço mais amplo!",
+"Procurar ajustar os treinos de acordo com as necessidades do aluno.",
+"Os aulão de dança poderia ser em um local com mais infraestrutura, com ventiladores e água. E quem sabe futuramente ter estrutura pr aula de spinnig, as aulas já são boas, acho que com essa novidade seria um atrativo a mais e a academia tem potencial pra isso.",
+"Sugestão: manter sempre os aparelhos limpos e sem poeira, e aumentar o espaço do bebedouro ou trocar de lugar.",
+"Está tudo ótimo.",
+"A academia é ótima os professores são atenciosos e os dono nem se fale sempre preocupado sempre perguntando se está tudo bem se precisa de alguma coisa tudo perfeito",
+"Td ótimo",
+"pensar em um espaço para alongamentos, mobilidade e abdominal dentro da academia",
+"Acho que precisa aumentar a academia, como você é nota 1000 tem os 500 alunos não está cabendo. No mais está tudo ótimo. Bjusss",
+"Precisa de mais cochonete mais grosso tem uns bons mais são poucos se tiver mais agradeço",
+"Tudo certo!",
+"Está ótima",
+"Por enquanto não tenho o que opinar em melhoria. Está excelente o atendimento e os professores.",
+"A sugestão é continuem com o ótimo trabalho,estão no caminho certo",
+"Almofada nova própria para elevação pélvica",
+"Nao tenho nenhuma reclamação Atendimento maravilhoso Sempre atencioso",
+"Já é ótimo",
+"Pra mim ter o ambiente sempre arejado pois tenho muita falta de ar",
   ]
 
   const totalServiceVotes = serviceData.reduce((sum, item) => sum + item.votes, 0)
