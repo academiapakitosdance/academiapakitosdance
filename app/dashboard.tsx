@@ -84,8 +84,7 @@ export default function Dashboard({ onBack }: DashboardProps) {
 "Maravilhosa",
 "Melhorar a disposição das bicicletas ergométrica ficam muito perto",
 "Academia é maravilhosa tudo é perfeito, aqueles matérias de boxe poderia ser usados mais, talvez agente aprender uma ou outra coisinha sobre acho interessante, mais a academia e a melhor de todas amo 💕",
-"Atendimento excepcional 
-"Ajuda Atenção Proatividade  Limpeza  Tudo muito bom, não tenho do que reclamar.",
+"Atendimento excepcional Ajuda Atenção Proatividade  Limpeza  Tudo muito bom, não tenho do que reclamar.",
 "Café ☕ seria ótimo",
   ]
 
