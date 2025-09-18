@@ -71,7 +71,7 @@ export default function Dashboard({ onBack }: DashboardProps) {
 "câmeras na frente da academia e na parte que ficam os pertences, traria mais segurança aos alunos",
 "Está ótimo",
 "poderia ter mais aparelhos de aeróbicos, como elíptico.",
-"Poderia ter mais colchonetes daqueles mais grossos , pq os fininhos são desconfortáveis. E uma garrafa de café principalmente de manhã kkkkkkkkkkkk (brincadeira )"
+"Poderia ter mais colchonetes daqueles mais grossos , pq os fininhos são desconfortáveis. E uma garrafa de café principalmente de manhã kkkkkkkkkkkk (brincadeira )",
 "coloque um simulador de escada pra fazer cardio",
 "a limpeza em geral é boa, só acho que deveria melhorar em questão dos emborrachados do chão, acumula bastante poeira lá..",
 "Pra mim  está tudo perfeito ☺️",
