@@ -19,31 +19,51 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Dados da enquete de ATENDIMENTO (você pode atualizar manualmente aqui)
   const serviceData = [
-    { option: "Excelente, até indicaria para uma pessoa", votes: 0, color: "bg-green-500" },
-    { option: "Ótimo, excelente trabalho", votes: 0, color: "bg-blue-500" },
+    { option: "Excelente, até indicaria para uma pessoa", votes: 21, color: "bg-green-500" },
+    { option: "Ótimo, excelente trabalho", votes: 19, color: "bg-blue-500" },
     { option: "Bom, mas daria para melhorar", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
   ]
 
   // Dados da enquete de INFRAESTRUTURA (você pode atualizar manualmente aqui)
   const infrastructureData = [
-    { option: "Muito bonita, não precisa mudar nada!", votes: 0, color: "bg-green-500" },
-    { option: "Boa, mas poderia ter alguns ajustes", votes: 0, color: "bg-blue-500" },
+    { option: "Muito bonita, não precisa mudar nada!", votes: 22, color: "bg-green-500" },
+    { option: "Boa, mas poderia ter alguns ajustes", votes: 18, color: "bg-blue-500" },
     { option: "Regular, precisa de melhorias em alguns pontos", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de uma reforma urgente", votes: 0, color: "bg-red-500" },
   ]
 
   // Dados da enquete de HIGIENE (você pode atualizar manualmente aqui)
   const hygieneData = [
-    { option: "Sempre muito limpa, sem nada a reclamar!", votes: 0, color: "bg-green-500" },
-    { option: "Limpeza boa, mas dá pra melhorar em alguns pontos", votes: 0, color: "bg-blue-500" },
+    { option: "Sempre muito limpa, sem nada a reclamar!", votes: 33, color: "bg-green-500" },
+    { option: "Limpeza boa, mas dá pra melhorar em alguns pontos", votes: 7, color: "bg-blue-500" },
     { option: "Às vezes deixa a desejar, precisa mais atenção", votes: 0, color: "bg-yellow-500" },
     { option: "Falta cuidado, limpeza é um problema sério aqui", votes: 0, color: "bg-red-500" },
   ]
 
   // Sugestões recebidas (você pode atualizar manualmente aqui)
   const suggestions = [
-    
+"banheiro das mulheres por algum motivo fica com cheiro desagradável as vezes, só de ficar próximo da pra sentir um odor forte."
+"Seria ótimo outro suporte para os acessórios da polia! oque tem está sobrecarregado e desorganizado, dificultando o acesso aos equipamentos que estão atrás."
+"poderia pedir gentilmente para que os alunos tenham mais noção e não deixem seus objetos pessoais na academia integralmente, isso atrapalha em horários de pico pois mesmo aumentando a estante continuam poucos espaços vazios."
+"Espaço mais amplo!"
+"Procurar ajustar os treinos de acordo com as necessidades do aluno."
+"Os aulão de dança poderia ser em um local com mais infraestrutura, com ventiladores e água. E quem sabe futuramente ter estrutura pr aula de spinnig, as aulas já são boas, acho que com essa novidade seria um atrativo a mais e a academia tem potencial pra isso."
+"Sugestão: manter sempre os aparelhos limpos e sem poeira, e aumentar o espaço do bebedouro ou trocar de lugar."
+"Está tudo ótimo."
+"A academia é ótima os professores são atenciosos e os dono nem se fale sempre preocupado sempre perguntando se está tudo bem se precisa de alguma coisa tudo perfeito"
+"Td ótimo"
+"pensar em um espaço para alongamentos, mobilidade e abdominal dentro da academia"
+"Acho que precisa aumentar a academia, como você é nota 1000 tem os 500 alunos não está cabendo. No mais está tudo ótimo. Bjusss"
+"Precisa de mais cochonete mais grosso tem uns bons mais são poucos se tiver mais agradeço"
+"Tudo certo!"
+"Está ótima"
+"Por enquanto não tenho o que opinar em melhoria. Está excelente o atendimento e os professores."
+"A sugestão é continuem com o ótimo trabalho,estão no caminho certo"
+"Almofada nova própria para elevação pélvica"
+"Nao tenho nenhuma reclamação Atendimento maravilhoso Sempre atencioso"
+"Já é ótimo"
+"Pra mim ter o ambiente sempre arejado pois tenho muita falta de ar"
   ]
 
   const totalServiceVotes = serviceData.reduce((sum, item) => sum + item.votes, 0)
