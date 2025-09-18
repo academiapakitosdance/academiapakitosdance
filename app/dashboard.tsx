@@ -19,7 +19,7 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Dados da enquete de ATENDIMENTO (você pode atualizar manualmente aqui)
   const serviceData = [
-    { option: "Excelente, até indicaria para uma pessoa", votes: 25, color: "bg-green-500" },
+    { option: "Excelente, até indicaria para uma pessoa", votes: 26, color: "bg-green-500" },
     { option: "Ótimo, excelente trabalho", votes: 24, color: "bg-blue-500" },
     { option: "Bom, mas daria para melhorar", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
@@ -27,7 +27,7 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Dados da enquete de INFRAESTRUTURA (você pode atualizar manualmente aqui)
   const infrastructureData = [
-    { option: "Muito bonita, não precisa mudar nada!", votes: 26, color: "bg-green-500" },
+    { option: "Muito bonita, não precisa mudar nada!", votes: 27, color: "bg-green-500" },
     { option: "Boa, mas poderia ter alguns ajustes", votes: 21, color: "bg-blue-500" },
     { option: "Regular, precisa de melhorias em alguns pontos", votes: 2, color: "bg-yellow-500" },
     { option: "Ruim, precisa de uma reforma urgente", votes: 0, color: "bg-red-500" },
@@ -35,7 +35,7 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Dados da enquete de HIGIENE (você pode atualizar manualmente aqui)
   const hygieneData = [
-    { option: "Sempre muito limpa, sem nada a reclamar!", votes: 41, color: "bg-green-500" },
+    { option: "Sempre muito limpa, sem nada a reclamar!", votes: 42, color: "bg-green-500" },
     { option: "Limpeza boa, mas dá pra melhorar em alguns pontos", votes: 8, color: "bg-blue-500" },
     { option: "Às vezes deixa a desejar, precisa mais atenção", votes: 0, color: "bg-yellow-500" },
     { option: "Falta cuidado, limpeza é um problema sério aqui", votes: 0, color: "bg-red-500" },
@@ -69,6 +69,7 @@ export default function Dashboard({ onBack }: DashboardProps) {
 "alguns detalhes como o relógio no fundo da academia que está desregulado e o dispenser de copos descartáveis que frequentemente trava e não sai nada",
 "halter de 7 e 9kgs pra completar!",
 "câmeras na frente da academia e na parte que ficam os pertences, traria mais segurança aos alunos",
+"Está ótimo",
   ]
 
   const totalServiceVotes = serviceData.reduce((sum, item) => sum + item.votes, 0)
