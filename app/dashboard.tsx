@@ -20,14 +20,14 @@ export default function Dashboard({ onBack }: DashboardProps) {
   // Dados da enquete de ATENDIMENTO (você pode atualizar manualmente aqui)
   const serviceData = [
     { option: "Excelente, até indicaria para uma pessoa", votes: 42, color: "bg-green-500" },
-    { option: "Ótimo, excelente trabalho", votes: 37, color: "bg-blue-500" },
+    { option: "Ótimo, excelente trabalho", votes: 38, color: "bg-blue-500" },
     { option: "Bom, mas daria para melhorar", votes: 1, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
   ]
 
   // Dados da enquete de INFRAESTRUTURA (você pode atualizar manualmente aqui)
   const infrastructureData = [
-    { option: "Muito bonita, não precisa mudar nada!", votes: 44, color: "bg-green-500" },
+    { option: "Muito bonita, não precisa mudar nada!", votes: 45, color: "bg-green-500" },
     { option: "Boa, mas poderia ter alguns ajustes", votes: 35, color: "bg-blue-500" },
     { option: "Regular, precisa de melhorias em alguns pontos", votes: 1, color: "bg-yellow-500" },
     { option: "Ruim, precisa de uma reforma urgente", votes: 0, color: "bg-red-500" },
@@ -35,7 +35,7 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Dados da enquete de HIGIENE (você pode atualizar manualmente aqui)
   const hygieneData = [
-    { option: "Sempre muito limpa, sem nada a reclamar!", votes: 59, color: "bg-green-500" },
+    { option: "Sempre muito limpa, sem nada a reclamar!", votes: 61, color: "bg-green-500" },
     { option: "Limpeza boa, mas dá pra melhorar em alguns pontos", votes: 20, color: "bg-blue-500" },
     { option: "Às vezes deixa a desejar, precisa mais atenção", votes: 0, color: "bg-yellow-500" },
     { option: "Falta cuidado, limpeza é um problema sério aqui", votes: 0, color: "bg-red-500" },
@@ -84,6 +84,9 @@ export default function Dashboard({ onBack }: DashboardProps) {
 "Maravilhosa",
 "Melhorar a disposição das bicicletas ergométrica ficam muito perto",
 "Academia é maravilhosa tudo é perfeito, aqueles matérias de boxe poderia ser usados mais, talvez agente aprender uma ou outra coisinha sobre acho interessante, mais a academia e a melhor de todas amo 💕",
+"Atendimento excepcional 
+"Ajuda Atenção Proatividade  Limpeza  Tudo muito bom, não tenho do que reclamar.",
+"Café ☕ seria ótimo",
   ]
 
   const totalServiceVotes = serviceData.reduce((sum, item) => sum + item.votes, 0)
