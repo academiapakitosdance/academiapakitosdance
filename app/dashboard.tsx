@@ -19,7 +19,7 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Dados da enquete de ATENDIMENTO (você pode atualizar manualmente aqui)
   const serviceData = [
-    { option: "Excelente, até indicaria para uma pessoa", votes: 60, color: "bg-green-500" },
+    { option: "Excelente, até indicaria para uma pessoa", votes: 61, color: "bg-green-500" },
     { option: "Ótimo, excelente trabalho", votes: 52, color: "bg-blue-500" },
     { option: "Bom, mas daria para melhorar", votes: 3, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
@@ -27,7 +27,7 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Dados da enquete de INFRAESTRUTURA (você pode atualizar manualmente aqui)
   const infrastructureData = [
-    { option: "Muito bonita, não precisa mudar nada!", votes: 64, color: "bg-green-500" },
+    { option: "Muito bonita, não precisa mudar nada!", votes: 65, color: "bg-green-500" },
     { option: "Boa, mas poderia ter alguns ajustes", votes: 49, color: "bg-blue-500" },
     { option: "Regular, precisa de melhorias em alguns pontos", votes: 2, color: "bg-yellow-500" },
     { option: "Ruim, precisa de uma reforma urgente", votes: 0, color: "bg-red-500" },
@@ -35,7 +35,7 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Dados da enquete de HIGIENE (você pode atualizar manualmente aqui)
   const hygieneData = [
-    { option: "Sempre muito limpa, sem nada a reclamar!", votes: 85, color: "bg-green-500" },
+    { option: "Sempre muito limpa, sem nada a reclamar!", votes: 86, color: "bg-green-500" },
     { option: "Limpeza boa, mas dá pra melhorar em alguns pontos", votes: 27, color: "bg-blue-500" },
     { option: "Às vezes deixa a desejar, precisa mais atenção", votes: 3, color: "bg-yellow-500" },
     { option: "Falta cuidado, limpeza é um problema sério aqui", votes: 0, color: "bg-red-500" },
@@ -104,6 +104,7 @@ export default function Dashboard({ onBack }: DashboardProps) {
 "A academia eh boa.... acredito que a melhor da cidade. E pela qualidade do atendimento e da estrutura tende a crescer, sugiro algo aquático pois muitos precisam de exercícios sem impacto. E também as aulas extras não conseguem alcançar a todos pelo espaço e horários sugiro repensar isso!",
 "Tudo bom",
 "Vc arrasa proff,  parabens pela dedicação sempre com todos que passa pela academia, muito sucesso sempre a você 🥰🙏🏻👏🏻🚀",
+"Simulador de escada poderia ter, Mais estão de parabéns",
   ]
 
   const totalServiceVotes = serviceData.reduce((sum, item) => sum + item.votes, 0)
