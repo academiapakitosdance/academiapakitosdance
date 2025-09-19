@@ -19,7 +19,7 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Dados da enquete de ATENDIMENTO (você pode atualizar manualmente aqui)
   const serviceData = [
-    { option: "Excelente, até indicaria para uma pessoa", votes: 62, color: "bg-green-500" },
+    { option: "Excelente, até indicaria para uma pessoa", votes: 66, color: "bg-green-500" },
     { option: "Ótimo, excelente trabalho", votes: 54, color: "bg-blue-500" },
     { option: "Bom, mas daria para melhorar", votes: 3, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
