@@ -105,7 +105,7 @@ export default function Dashboard({ onBack }: DashboardProps) {
 "Tudo bom",
 "Vc arrasa proff,  parabens pela dedicação sempre com todos que passa pela academia, muito sucesso sempre a você 🥰🙏🏻👏🏻🚀",
 "Simulador de escada poderia ter, Mais estão de parabéns",
-"Eu sugiro virar as cadeiras adutora e abdutora para a parede ou em um espaço ali não tão"frequentado". Pelo fato dessas duas cadeiras ficarem de frente para o espelho e para as pessoas que passam na frente, no meu ponto de vista, principalmente maioria das mulheres se sentem desconfortável.",
+"Eu sugiro virar as cadeiras adutora e abdutora para a parede ou em um espaço ali não tão 'frequentado'. Pelo fato dessas duas cadeiras ficarem de frente para o espelho e para as pessoas que passam na frente, no meu ponto de vista, principalmente maioria das mulheres se sentem desconfortável.",
   ]
 
   const totalServiceVotes = serviceData.reduce((sum, item) => sum + item.votes, 0)
