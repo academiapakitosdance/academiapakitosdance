@@ -19,25 +19,25 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Dados da enquete de ATENDIMENTO (você pode atualizar manualmente aqui)
   const serviceData = [
-    { option: "Excelente, até indicaria para uma pessoa", votes: 6, color: "bg-green-500" },
-    { option: "Ótimo, excelente trabalho", votes: 3, color: "bg-blue-500" },
-    { option: "Bom, mas daria para melhorar", votes: 0, color: "bg-yellow-500" },
+    { option: "Excelente, até indicaria para uma pessoa", votes: 7, color: "bg-green-500" },
+    { option: "Ótimo, excelente trabalho", votes: 6, color: "bg-blue-500" },
+    { option: "Bom, mas daria para melhorar", votes: 1, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
   ]
 
   // Dados da enquete de INFRAESTRUTURA (você pode atualizar manualmente aqui)
   const infrastructureData = [
-    { option: "Muito bonita, não precisa mudar nada!", votes: 6, color: "bg-green-500" },
-    { option: "Boa, mas poderia ter alguns ajustes", votes: 3, color: "bg-blue-500" },
+    { option: "Muito bonita, não precisa mudar nada!", votes: 9, color: "bg-green-500" },
+    { option: "Boa, mas poderia ter alguns ajustes", votes: 5, color: "bg-blue-500" },
     { option: "Regular, precisa de melhorias em alguns pontos", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de uma reforma urgente", votes: 0, color: "bg-red-500" },
   ]
 
   // Dados da enquete de HIGIENE (você pode atualizar manualmente aqui)
   const hygieneData = [
-    { option: "Sempre muito limpa, sem nada a reclamar!", votes: 9, color: "bg-green-500" },
+    { option: "Sempre muito limpa, sem nada a reclamar!", votes: 13, color: "bg-green-500" },
     { option: "Limpeza boa, mas dá pra melhorar em alguns pontos", votes: 0, color: "bg-blue-500" },
-    { option: "Às vezes deixa a desejar, precisa mais atenção", votes: 0, color: "bg-yellow-500" },
+    { option: "Às vezes deixa a desejar, precisa mais atenção", votes: 1, color: "bg-yellow-500" },
     { option: "Falta cuidado, limpeza é um problema sério aqui", votes: 0, color: "bg-red-500" },
   ]
 
@@ -47,6 +47,11 @@ export default function Dashboard({ onBack }: DashboardProps) {
 "Espaço mais amplo, mais ventilação, mas e um lugar muito bom para treinos, irei indicar aos amigos",
 "Mais equipamentos para panturrilha",
 "Pra está tudo perfeitos",
+"O espaço é curto, e eu sei disso, mas caso algum dia você queira comprar uma outra maquina, independente de qual for, aqui vai algumas sugestões:
+"Remada High-row, Leg Press 180, Panturrila em pé, Supino sentado(aquele anilhado, que é pequeno, acredito q seria diferente este) e vejo bastante mulher pedindo máquinas de glúteos lkkkkkkkk, mas quero não 😎. Como falei é sugestão, sabendo que o espaço é curto, de resto esta tudo certo, parabéns pelo investimento 👏🏻👏🏻",
+"Talvez mais uma barra e o “V” do puxador, pra deixar como “reserva”, tem um pessoal que leva para as polias e não trazem de volta.",
+"Aumentar a quantidade de locais com pano e álcool gel para melhor higienizar os aparelhos, pois assim a pessoa que for fazer o exercício ela mesmo pode higieniza-lo",
+
   ]
 
   const totalServiceVotes = serviceData.reduce((sum, item) => sum + item.votes, 0)
