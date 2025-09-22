@@ -47,8 +47,7 @@ export default function Dashboard({ onBack }: DashboardProps) {
 "Espaço mais amplo, mais ventilação, mas e um lugar muito bom para treinos, irei indicar aos amigos",
 "Mais equipamentos para panturrilha",
 "Pra está tudo perfeitos",
-"O espaço é curto, e eu sei disso, mas caso algum dia você queira comprar uma outra maquina, independente de qual for, aqui vai algumas sugestões:
-"Remada High-row, Leg Press 180, Panturrila em pé, Supino sentado(aquele anilhado, que é pequeno, acredito q seria diferente este) e vejo bastante mulher pedindo máquinas de glúteos lkkkkkkkk, mas quero não 😎. Como falei é sugestão, sabendo que o espaço é curto, de resto esta tudo certo, parabéns pelo investimento 👏🏻👏🏻",
+"O espaço é curto, e eu sei disso, mas caso algum dia você queira comprar uma outra maquina, independente de qual for, aqui vai algumas sugestões: Remada High-row, Leg Press 180, Panturrila em pé, Supino sentado(aquele anilhado, que é pequeno, acredito q seria diferente este) e vejo bastante mulher pedindo máquinas de glúteos lkkkkkkkk, mas quero não 😎. Como falei é sugestão, sabendo que o espaço é curto, de resto esta tudo certo, parabéns pelo investimento 👏🏻👏🏻",
 "Talvez mais uma barra e o “V” do puxador, pra deixar como “reserva”, tem um pessoal que leva para as polias e não trazem de volta.",
 "Aumentar a quantidade de locais com pano e álcool gel para melhor higienizar os aparelhos, pois assim a pessoa que for fazer o exercício ela mesmo pode higieniza-lo",
 
