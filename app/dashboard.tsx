@@ -50,6 +50,13 @@ export default function Dashboard({ onBack }: DashboardProps) {
 "O espaço é curto, e eu sei disso, mas caso algum dia você queira comprar uma outra maquina, independente de qual for, aqui vai algumas sugestões: Remada High-row, Leg Press 180, Panturrila em pé, Supino sentado(aquele anilhado, que é pequeno, acredito q seria diferente este) e vejo bastante mulher pedindo máquinas de glúteos lkkkkkkkk, mas quero não 😎. Como falei é sugestão, sabendo que o espaço é curto, de resto esta tudo certo, parabéns pelo investimento 👏🏻👏🏻",
 "Talvez mais uma barra e o “V” do puxador, pra deixar como “reserva”, tem um pessoal que leva para as polias e não trazem de volta.",
 "Aumentar a quantidade de locais com pano e álcool gel para melhor higienizar os aparelhos, pois assim a pessoa que for fazer o exercício ela mesmo pode higieniza-lo",
+"Coloquei perfeito em 2 itens… Só coloquei que precisa de ajustes na infraestrutura, tipo os pisos e a própria pintura, fazer alguns novos desenhos, aqueles “cards” na parede, nao em papel, como “cards” e alguns no banheiro também, pedindo pra “acertar a mira” que pelo jeito sempre erram…. talvez trazer as polias mais perto da porta para interromper o estacionamento de patinetes na porta, tirar aquele espaço dali… Ja que tem muitas maquinas, acredito que agora daria pra focar em máquinas pequenas…. Nunca é demais",
+"academia nota 10!!",
+"Só tenho que elogiar!! Continue assim.",
+"Não teria como comprar algo para deixar os patinetes na calçada?? unica coisa que atrapalha pra mim kkkkkk, nota 10 alison",
+"Mais halteres, no sentido de ser 2 de cada….",
+"Aparelho de escada tipo esteira",
+"A academia é impecável... dês dos professores até infraestrutura, porém daria a minha opinião de emborrachar o piso inteiro da academia e investir em mais máquinas de cárdio🤝🤝",
 
   ]
 
