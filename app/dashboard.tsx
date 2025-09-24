@@ -19,7 +19,7 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Dados da enquete de ATENDIMENTO (você pode atualizar manualmente aqui)
   const serviceData = [
-    { option: "Excelente, até indicaria para uma pessoa", votes: 14, color: "bg-green-500" },
+    { option: "Excelente, até indicaria para uma pessoa", votes: 20, color: "bg-green-500" },
     { option: "Ótimo, excelente trabalho", votes: 12, color: "bg-blue-500" },
     { option: "Bom, mas daria para melhorar", votes: 1, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
@@ -27,7 +27,7 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Dados da enquete de INFRAESTRUTURA (você pode atualizar manualmente aqui)
   const infrastructureData = [
-    { option: "Muito bonita, não precisa mudar nada!", votes: 16, color: "bg-green-500" },
+    { option: "Muito bonita, não precisa mudar nada!", votes: 22, color: "bg-green-500" },
     { option: "Boa, mas poderia ter alguns ajustes", votes: 11, color: "bg-blue-500" },
     { option: "Regular, precisa de melhorias em alguns pontos", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de uma reforma urgente", votes: 0, color: "bg-red-500" },
@@ -35,7 +35,7 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Dados da enquete de HIGIENE (você pode atualizar manualmente aqui)
   const hygieneData = [
-    { option: "Sempre muito limpa, sem nada a reclamar!", votes: 20, color: "bg-green-500" },
+    { option: "Sempre muito limpa, sem nada a reclamar!", votes: 26, color: "bg-green-500" },
     { option: "Limpeza boa, mas dá pra melhorar em alguns pontos", votes: 5, color: "bg-blue-500" },
     { option: "Às vezes deixa a desejar, precisa mais atenção", votes: 2, color: "bg-yellow-500" },
     { option: "Falta cuidado, limpeza é um problema sério aqui", votes: 0, color: "bg-red-500" },
@@ -58,8 +58,10 @@ export default function Dashboard({ onBack }: DashboardProps) {
 "Aparelho de escada tipo esteira",
 "A academia é impecável... dês dos professores até infraestrutura, porém daria a minha opinião de emborrachar o piso inteiro da academia e investir em mais máquinas de cárdio🤝🤝",
 "Seria interessante que tivesse mobilidade e hit para os homens também",
-
-
+"Alisson pagar o lanche do buzeti e do catabriga.",
+"Whey, creatina, Bomba... Tudo de graça",
+"2 halteres de cada, tem dia que fica dificil um de cada somente",
+"Mais um suporte de anilhas na parte de tras da academia, e talvez algumas barras montadas",
   ]
 
   const totalServiceVotes = serviceData.reduce((sum, item) => sum + item.votes, 0)
