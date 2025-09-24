@@ -20,7 +20,7 @@ export default function Dashboard({ onBack }: DashboardProps) {
   // Dados da enquete de ATENDIMENTO (você pode atualizar manualmente aqui)
   const serviceData = [
     { option: "Excelente, até indicaria para uma pessoa", votes: 23, color: "bg-green-500" },
-    { option: "Ótimo, excelente trabalho", votes: 14, color: "bg-blue-500" },
+    { option: "Ótimo, excelente trabalho", votes: 15, color: "bg-blue-500" },
     { option: "Bom, mas daria para melhorar", votes: 1, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
   ]
@@ -28,7 +28,7 @@ export default function Dashboard({ onBack }: DashboardProps) {
   // Dados da enquete de INFRAESTRUTURA (você pode atualizar manualmente aqui)
   const infrastructureData = [
     { option: "Muito bonita, não precisa mudar nada!", votes: 26, color: "bg-green-500" },
-    { option: "Boa, mas poderia ter alguns ajustes", votes: 12, color: "bg-blue-500" },
+    { option: "Boa, mas poderia ter alguns ajustes", votes: 13, color: "bg-blue-500" },
     { option: "Regular, precisa de melhorias em alguns pontos", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de uma reforma urgente", votes: 0, color: "bg-red-500" },
   ]
@@ -36,7 +36,7 @@ export default function Dashboard({ onBack }: DashboardProps) {
   // Dados da enquete de HIGIENE (você pode atualizar manualmente aqui)
   const hygieneData = [
     { option: "Sempre muito limpa, sem nada a reclamar!", votes: 31, color: "bg-green-500" },
-    { option: "Limpeza boa, mas dá pra melhorar em alguns pontos", votes: 5, color: "bg-blue-500" },
+    { option: "Limpeza boa, mas dá pra melhorar em alguns pontos", votes: 6, color: "bg-blue-500" },
     { option: "Às vezes deixa a desejar, precisa mais atenção", votes: 2, color: "bg-yellow-500" },
     { option: "Falta cuidado, limpeza é um problema sério aqui", votes: 0, color: "bg-red-500" },
   ]
