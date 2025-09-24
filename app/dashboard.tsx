@@ -20,14 +20,14 @@ export default function Dashboard({ onBack }: DashboardProps) {
   // Dados da enquete de ATENDIMENTO (você pode atualizar manualmente aqui)
   const serviceData = [
     { option: "Excelente, até indicaria para uma pessoa", votes: 21, color: "bg-green-500" },
-    { option: "Ótimo, excelente trabalho", votes: 12, color: "bg-blue-500" },
+    { option: "Ótimo, excelente trabalho", votes: 13, color: "bg-blue-500" },
     { option: "Bom, mas daria para melhorar", votes: 1, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
   ]
 
   // Dados da enquete de INFRAESTRUTURA (você pode atualizar manualmente aqui)
   const infrastructureData = [
-    { option: "Muito bonita, não precisa mudar nada!", votes: 23, color: "bg-green-500" },
+    { option: "Muito bonita, não precisa mudar nada!", votes: 24, color: "bg-green-500" },
     { option: "Boa, mas poderia ter alguns ajustes", votes: 11, color: "bg-blue-500" },
     { option: "Regular, precisa de melhorias em alguns pontos", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de uma reforma urgente", votes: 0, color: "bg-red-500" },
@@ -35,7 +35,7 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Dados da enquete de HIGIENE (você pode atualizar manualmente aqui)
   const hygieneData = [
-    { option: "Sempre muito limpa, sem nada a reclamar!", votes: 27, color: "bg-green-500" },
+    { option: "Sempre muito limpa, sem nada a reclamar!", votes: 28, color: "bg-green-500" },
     { option: "Limpeza boa, mas dá pra melhorar em alguns pontos", votes: 5, color: "bg-blue-500" },
     { option: "Às vezes deixa a desejar, precisa mais atenção", votes: 2, color: "bg-yellow-500" },
     { option: "Falta cuidado, limpeza é um problema sério aqui", votes: 0, color: "bg-red-500" },
@@ -63,6 +63,7 @@ export default function Dashboard({ onBack }: DashboardProps) {
 "2 halteres de cada, tem dia que fica dificil um de cada somente",
 "Mais um suporte de anilhas na parte de tras da academia, e talvez algumas barras montadas",
 "Difícil achar algo para melhorar, visto que é muito boa em todos os aspectos. E muito bom saber que o Alison se preocupa em sempre pesquisada satisfação dos alunos. Estou muito satisfeito. Parabéns.",
+"Uma máquina de abdominal vai agregar ainda mais",
 
 ]
 
