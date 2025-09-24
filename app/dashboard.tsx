@@ -64,6 +64,7 @@ export default function Dashboard({ onBack }: DashboardProps) {
 "Mais um suporte de anilhas na parte de tras da academia, e talvez algumas barras montadas",
 "Difícil achar algo para melhorar, visto que é muito boa em todos os aspectos. E muito bom saber que o Alison se preocupa em sempre pesquisada satisfação dos alunos. Estou muito satisfeito. Parabéns.",
 "Uma máquina de abdominal vai agregar ainda mais",
+"Dose de Testozinha basica, so pra repor.",
 
 ]
 
