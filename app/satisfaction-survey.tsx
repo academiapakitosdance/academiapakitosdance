@@ -7,7 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import Textarea from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
-import { Shield, Users, Building2, Eye, Instagram, MessageCircle } from "lucide-react"
+import { Shield, Users, Building2, Eye, Instagram, Calculator } from "lucide-react"
 import Dashboard from "./dashboard"
 
 export default function SatisfactionSurvey() {
@@ -258,7 +258,7 @@ export default function SatisfactionSurvey() {
         <CardHeader className="flex flex-col items-center space-y-6 p-8">
           <div className="inline-block rounded-xl border-3 border-red-600 shadow-lg shadow-red-600/30 overflow-hidden">
             <img
-              src="/images/files-blob-academiapakitosdance-main-public-logo-pakitos-dance-logo.png"
+              src="/logo/pakitos-dance-logo.png"
               alt="Academia Pakitos Dance Logo"
               className="block max-w-[280px] h-auto"
               onError={(e) => {
@@ -316,29 +316,29 @@ export default function SatisfactionSurvey() {
           </p>
         </div>
 
-        {/* Contatos do Alison */}
+        {/* Links */}
         <div className="bg-gray-800 rounded-lg px-4 py-3 space-y-2">
           <div className="flex items-center justify-center space-x-4">
-            {/* Instagram */}
+            {/* Instagram Academia */}
             <a
-              href="https://www.instagram.com/alisonpakito"
+              href="https://www.instagram.com/academiapakitosdance/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-2 text-gray-300 hover:text-pink-400 transition-colors duration-200"
             >
               <Instagram size={16} />
-              <span className="text-xs font-medium">@alisonpakito</span>
+              <span className="text-xs font-medium">Academia Pakitos Dance</span>
             </a>
 
-            {/* WhatsApp */}
+            {/* Calculadora */}
             <a
-              href="https://wa.me/5544988114055"
+              href="https://apppakitosdance.github.io/pakitos-dance/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnR2erp95R6XDxAOhKKwl8mt22-UfB5dY4L9_IUp3BXVVZ37sg5br8dEA1pxs_aem_nlxw1kEYQkKOrOKrkYkBWA"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center space-x-2 text-gray-300 hover:text-green-400 transition-colors duration-200"
+              className="flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors duration-200"
             >
-              <MessageCircle size={16} />
-              <span className="text-xs font-medium">WhatsApp Alison</span>
+              <Calculator size={16} />
+              <span className="text-xs font-medium">Calculadora Pakitos Dance</span>
             </a>
           </div>
         </div>
