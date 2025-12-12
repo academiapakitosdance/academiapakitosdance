@@ -258,12 +258,9 @@ export default function SatisfactionSurvey() {
         <CardHeader className="flex flex-col items-center space-y-6 p-8">
           <div className="inline-block rounded-xl border-3 border-red-600 shadow-lg shadow-red-600/30 overflow-hidden">
             <img
-              src="/logo/pakitos-dance-logo.png"
+              src="/academia-pakitos-dance-logo-red-and-black.jpg"
               alt="Academia Pakitos Dance Logo"
               className="block max-w-[280px] h-auto"
-              onError={(e) => {
-                console.error("Erro ao carregar imagem:", e)
-              }}
             />
           </div>
 
