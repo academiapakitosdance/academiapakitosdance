@@ -256,11 +256,11 @@ export default function SatisfactionSurvey() {
     <div className="flex min-h-screen flex-col items-center justify-center p-4 bg-black">
       <Card className="w-full max-w-md rounded-2xl border-2 border-red-600 bg-white text-black shadow-2xl shadow-red-600/20">
         <CardHeader className="flex flex-col items-center space-y-6 p-8">
-          <div className="inline-block rounded-xl border-3 border-red-600 shadow-lg shadow-red-600/30 overflow-hidden">
+          <div className="inline-block rounded-xl border-3 border-red-600 shadow-lg shadow-red-600/30 overflow-hidden bg-white">
             <img
-              src="/academia-pakitos-dance-logo-red-and-black.jpg"
+              src="/images/files-blob-academiapakitosdance-main-public-logo-pakitos-dance-logo.png"
               alt="Academia Pakitos Dance Logo"
-              className="block max-w-[280px] h-auto"
+              className="block w-[280px] h-[120px] object-contain p-4"
             />
           </div>
 
