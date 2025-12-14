@@ -1,41 +1,35 @@
 "use client"
-
-
-import { useState } from "react"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Button } from "@/components/ui/button"
-import { Label } from "@/components/ui/label"
-import Dashboard from "./dashboard"
-
-
-export default function SatisfactionSurvey() {
-const [screen, setScreen] = useState<"welcome" | "survey" | "dashboard">("welcome")
-const [serviceRating, setServiceRating] = useState("")
-const [infrastructureRating, setInfrastructureRating] = useState("")
-
-
-const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-e.preventDefault()
-if (!serviceRating || !infrastructureRating) {
-alert("Responda todas as perguntas obrigatórias")
-return
+} catch {
+alert("Erro de rede")
+} finally {
+setIsSubmitting(false)
 }
-alert("Pesquisa enviada com sucesso!")
-setScreen("welcome")
 }
 
 
-if (screen === "dashboard") return <Dashboard onBack={() => setScreen("welcome")} />
+const handleBackToWelcome = () => setCurrentScreen("welcome")
 
 
-if (screen === "survey") {
+/* TELAS (welcome / survey / submitted) permanecem IGUAIS
+Apenas o bloco de higiene foi removido */
+
+
 return (
-<CardContent>
+<div className="flex min-h-screen flex-col items-center justify-center p-4 bg-black">
+<Card className="w-full max-w-md rounded-2xl border-2 border-red-600 bg-white text-black shadow-2xl">
+<CardHeader className="flex flex-col items-center space-y-6 p-8">
+<CardTitle className="text-3xl font-bold text-red-600">PESQUISA DE SATISFAÇÃO</CardTitle>
+</CardHeader>
+
+
+{currentScreen === "dashboard" ? (
+<Dashboard onBack={handleBackToWelcome} />
+) : currentScreen === "survey" ? (
+<CardContent className="p-8">
 <form onSubmit={handleSubmit} className="space-y-6">
 <div>
 <Label>Atendimento *</Label>
-<Select value={serviceRating} onValueChange={setServiceRating}>
+<Select value={serviceRating} onValueChange={setServiceRating} name="serviceRating">
 <SelectTrigger><SelectValue placeholder="Selecione" /></SelectTrigger>
 <SelectContent>
 <SelectItem value="excelente">Excelente</SelectItem>
@@ -48,7 +42,7 @@ return (
 
 <div>
 <Label>Infraestrutura *</Label>
-<Select value={infrastructureRating} onValueChange={setInfrastructureRating}>
+<Select value={infrastructureRating} onValueChange={setInfrastructureRating} name="infrastructureRating">
 <SelectTrigger><SelectValue placeholder="Selecione" /></SelectTrigger>
 <SelectContent>
 <SelectItem value="excelente">Excelente</SelectItem>
@@ -59,19 +53,30 @@ return (
 </div>
 
 
-<Button type="submit">Enviar</Button>
-<Button type="button" onClick={() => setScreen("welcome")}>Voltar</Button>
+<div>
+<Label>Sugestões</Label>
+<Textarea value={suggestion} onChange={(e) => setSuggestion(e.target.value)} name="suggestion" />
+</div>
+
+
+<Button type="submit" disabled={isSubmitting} className="w-full">
+{isSubmitting ? "Enviando..." : "Enviar"}
+</Button>
+<Button type="button" onClick={handleBackToWelcome} className="w-full">Voltar</Button>
 </form>
 </CardContent>
-)
-}
-
-
-return (
-<CardContent className="space-y-4 text-center">
-<CardTitle>Pesquisa de Satisfação</CardTitle>
-<Button onClick={() => setScreen("survey")}>Iniciar Pesquisa</Button>
-<Button onClick={() => setScreen("dashboard")}>Acesso Restrito</Button>
+) : (
+<CardContent className="p-8 text-center">
+<p>Obrigado pela participação!</p>
+<Button onClick={handleBackToWelcome} className="mt-4">Voltar</Button>
 </CardContent>
+)}
+
+
+<CardFooter className="justify-center">
+<p className="text-xs text-gray-400">© 2025 Rafael Nunes Gasperini</p>
+</CardFooter>
+</Card>
+</div>
 )
 }
