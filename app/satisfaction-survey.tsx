@@ -82,9 +82,8 @@ export default function SatisfactionSurvey() {
                 <h4 className="font-bold text-red-600 text-sm">AVALIAÇÕES DISPONÍVEIS</h4>
                 <p className="text-gray-700 text-sm mt-1">
                   Você poderá avaliar três aspectos: <strong>Atendimento</strong> (qualidade do serviço prestado),{" "}
-                  <strong>Infraestrutura</strong> (equipamentos, organização) e <strong>Higiene</strong> (limpeza e
-                  cuidados). Temos também o campo de <strong>Sugestões</strong>, um campo opcional, mas que gostaríamos
-                  de saber sua opinião.
+                  <strong>Infraestrutura</strong> (equipamentos, organização). Temos também o campo de <strong>Sugestões</strong>, 
+                  um campo opcional, mas que gostaríamos de saber sua opinião.
                 </p>
               </div>
             </div>
