@@ -316,29 +316,30 @@ export default function SatisfactionSurvey() {
           </p>
         </div>
 
-        {/* Contatos do Alison */}
-        <div className="bg-gray-800 rounded-lg px-4 py-3 space-y-2">
-          <div className="flex items-center justify-center space-x-4">
-            {/* Instagram */}
-            <a
-              href="https://www.instagram.com/alisonpakito"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center space-x-2 text-gray-300 hover:text-pink-400 transition-colors duration-200"
-            >
-              <Instagram size={16} />
-              <span className="text-xs font-medium">@alisonpakito</span>
-            </a>
+{/* Links */}
+<div className="bg-gray-800 rounded-lg px-4 py-3 space-y-3">
+  <div className="flex flex-col items-center justify-center gap-3">
 
-            {/* WhatsApp */}
-            <a
-              href="https://wa.me/5544988114055"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center space-x-2 text-gray-300 hover:text-green-400 transition-colors duration-200"
-            >
-              <MessageCircle size={16} />
-              <span className="text-xs font-medium">WhatsApp Alison</span>
+    {/* Instagram */}
+    <a
+      href="https://www.instagram.com/academiapakitosdance/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center space-x-2 text-gray-300 hover:text-pink-400 transition-colors duration-200"
+    >
+      <Instagram size={16} />
+      <span className="text-xs font-medium">Academia Pakitos Dance</span>
+    </a>
+
+    {/* Calculadora */}
+    <a
+      href="https://apppakitosdance.github.io/pakitos-dance/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnR2erp95R6XDxAOhKKwl8mt22-UfB5dY4L9_IUp3BXVVZ37sg5br8dEA1pxs_aem_nlxw1kEYQkKOrOKrkYkBWA"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center space-x-2 text-gray-300 hover:text-yellow-400 transition-colors duration-200"
+    >
+      <span className="text-sm">🧮</span>
+      <span className="text-xs font-medium">Calculadora Pakitos Dance</span>
             </a>
           </div>
         </div>
