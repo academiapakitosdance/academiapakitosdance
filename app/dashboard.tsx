@@ -6,7 +6,7 @@ import { CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { AlertTriangle, Users, Building2 } from "lucide-react"
+import { AlertTriangle, Users, Building2, Sparkles } from "lucide-react"
 
 interface DashboardProps {
   onBack: () => void
@@ -31,6 +31,14 @@ export default function Dashboard({ onBack }: DashboardProps) {
     { option: "Boa, mas poderia ter alguns ajustes", votes: 0, color: "bg-blue-500" },
     { option: "Regular, precisa de melhorias em alguns pontos", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de uma reforma urgente", votes: 0, color: "bg-red-500" },
+  ]
+
+  // Dados da enquete de HIGIENE (você pode atualizar manualmente aqui)
+  const hygieneData = [
+    { option: "Sempre muito limpa, sem nada a reclamar!", votes: 0, color: "bg-green-500" },
+    { option: "Limpeza boa, mas dá pra melhorar em alguns pontos", votes: 0, color: "bg-blue-500" },
+    { option: "Às vezes deixa a desejar, precisa mais atenção", votes: 0, color: "bg-yellow-500" },
+    { option: "Falta cuidado, limpeza é um problema sério aqui", votes: 0, color: "bg-red-500" },
   ]
 
   // Sugestões recebidas (você pode atualizar manualmente aqui)
@@ -88,6 +96,7 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   const totalServiceVotes = serviceData.reduce((sum, item) => sum + item.votes, 0)
   const totalInfrastructureVotes = infrastructureData.reduce((sum, item) => sum + item.votes, 0)
+  const totalHygieneVotes = hygieneData.reduce((sum, item) => sum + item.votes, 0)
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault()
@@ -221,10 +230,21 @@ export default function Dashboard({ onBack }: DashboardProps) {
           )}
         </div>
 
+        {/* Gráfico de Higiene */}
+        <div className="bg-cyan-50 rounded-xl p-4 border-2 border-cyan-400">
+          {renderChart(
+            hygieneData,
+            totalHygieneVotes,
+            "AVALIAÇÃO DA LIMPEZA E HIGIENE",
+            <Sparkles className="text-cyan-600" size={20} />,
+          )}
+        </div>
+
+        {/* Resumo Geral */}
         <div className="bg-red-50 rounded-xl p-4 border-2 border-red-400">
           <div className="text-center">
             <h4 className="text-lg font-bold text-red-800 mb-3">📈 RESUMO GERAL</h4>
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-3 gap-3">
               <div className="bg-white rounded-lg p-3 border border-red-200">
                 <p className="text-xs font-medium text-gray-600">Atendimento</p>
                 <p className="text-xl font-bold text-red-600">{totalServiceVotes}</p>
@@ -235,10 +255,17 @@ export default function Dashboard({ onBack }: DashboardProps) {
                 <p className="text-xl font-bold text-red-600">{totalInfrastructureVotes}</p>
                 <p className="text-xs text-gray-500">votos</p>
               </div>
+              <div className="bg-white rounded-lg p-3 border border-red-200">
+                <p className="text-xs font-medium text-gray-600">Higiene</p>
+                <p className="text-xl font-bold text-red-600">{totalHygieneVotes}</p>
+                <p className="text-xs text-gray-500">votos</p>
+              </div>
             </div>
             <div className="mt-3 bg-white rounded-lg p-3 border border-red-200">
               <p className="text-sm font-medium text-gray-600">Total Geral</p>
-              <p className="text-3xl font-bold text-red-600">{totalServiceVotes + totalInfrastructureVotes}</p>
+              <p className="text-3xl font-bold text-red-600">
+                {totalServiceVotes + totalInfrastructureVotes + totalHygieneVotes}
+              </p>
               <p className="text-xs text-gray-500">participações</p>
             </div>
           </div>
