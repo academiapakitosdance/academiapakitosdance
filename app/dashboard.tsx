@@ -221,7 +221,6 @@ export default function Dashboard({ onBack }: DashboardProps) {
           )}
         </div>
 
-        {/* Resumo Geral */}
         <div className="bg-red-50 rounded-xl p-4 border-2 border-red-400">
           <div className="text-center">
             <h4 className="text-lg font-bold text-red-800 mb-3">📈 RESUMO GERAL</h4>
