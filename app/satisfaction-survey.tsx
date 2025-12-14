@@ -14,14 +14,13 @@ export default function SatisfactionSurvey() {
   const [currentScreen, setCurrentScreen] = useState<"welcome" | "survey" | "submitted" | "dashboard">("welcome")
   const [serviceRating, setServiceRating] = useState("")
   const [infrastructureRating, setInfrastructureRating] = useState("")
-  const [hygieneRating, setHygieneRating] = useState("")
   const [suggestion, setSuggestion] = useState("")
   const [isSubmitting, setIsSubmitting] = useState(false)
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
 
-    if (!serviceRating || !infrastructureRating || !hygieneRating) {
+  if (!serviceRating || !infrastructureRating) {
       alert("Por favor, responda todas as perguntas obrigatórias antes de enviar.")
       return
     }
@@ -43,7 +42,6 @@ export default function SatisfactionSurvey() {
         setCurrentScreen("submitted")
         setServiceRating("")
         setInfrastructureRating("")
-        setHygieneRating("")
         setSuggestion("")
       } else {
         alert("Ocorreu um erro ao enviar sua pesquisa. Por favor, tente novamente.")
@@ -197,34 +195,6 @@ export default function SatisfactionSurvey() {
         </div>
 
         <div className="grid gap-3">
-          <Label htmlFor="hygieneRating" className="text-lg font-semibold text-gray-800">
-            Como você avalia a limpeza e higiene da nossa academia? *
-          </Label>
-          <Select value={hygieneRating} onValueChange={setHygieneRating} name="hygieneRating">
-            <SelectTrigger
-              id="hygieneRating"
-              className="border-2 border-red-600 focus:border-red-700 focus:ring-red-600 rounded-xl h-12 font-medium"
-            >
-              <SelectValue placeholder="Selecione sua avaliação" />
-            </SelectTrigger>
-            <SelectContent className="border-2 border-red-600 rounded-xl">
-              <SelectItem value="sempre-muito-limpa" className="font-medium">
-                Sempre muito limpa, sem nada a reclamar!
-              </SelectItem>
-              <SelectItem value="limpeza-boa-melhorar" className="font-medium">
-                Limpeza boa, mas dá pra melhorar em alguns pontos.
-              </SelectItem>
-              <SelectItem value="as-vezes-deixa-desejar" className="font-medium">
-                Às vezes deixa a desejar, precisa mais atenção.
-              </SelectItem>
-              <SelectItem value="falta-cuidado-problema" className="font-medium">
-                Falta cuidado, limpeza é um problema sério aqui.
-              </SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
-
-        <div className="grid gap-3">
           <Label htmlFor="suggestion" className="text-lg font-semibold text-gray-800">
             Deixe sua sugestão para melhorar nossa academia:
           </Label>
@@ -242,7 +212,7 @@ export default function SatisfactionSurvey() {
           <Button
             type="submit"
             className="w-full bg-red-600 text-white hover:bg-red-700 focus:ring-red-600 h-12 rounded-xl font-bold text-lg transition-all duration-200 shadow-lg hover:shadow-xl"
-            disabled={isSubmitting || !serviceRating || !infrastructureRating || !hygieneRating}
+            disabled={isSubmitting || !serviceRating || !infrastructureRating}
           >
             {isSubmitting ? "Enviando..." : "Enviar Avaliação"}
           </Button>
