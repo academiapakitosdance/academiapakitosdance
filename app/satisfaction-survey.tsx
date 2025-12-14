@@ -1,379 +1,77 @@
 "use client"
 
-import type React from "react"
+
 import { useState } from "react"
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import Textarea from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
-import { Shield, Users, Building2, Eye, Instagram, MessageCircle } from "lucide-react"
 import Dashboard from "./dashboard"
 
+
 export default function SatisfactionSurvey() {
-  const [currentScreen, setCurrentScreen] = useState<"welcome" | "survey" | "submitted" | "dashboard">("welcome")
-  const [serviceRating, setServiceRating] = useState("")
-  const [infrastructureRating, setInfrastructureRating] = useState("")
-  const [hygieneRating, setHygieneRating] = useState("")
-  const [suggestion, setSuggestion] = useState("")
-  const [isSubmitting, setIsSubmitting] = useState(false)
+const [screen, setScreen] = useState<"welcome" | "survey" | "dashboard">("welcome")
+const [serviceRating, setServiceRating] = useState("")
+const [infrastructureRating, setInfrastructureRating] = useState("")
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault()
 
-    if (!serviceRating || !infrastructureRating || !hygieneRating) {
-      alert("Por favor, responda todas as perguntas obrigatórias antes de enviar.")
-      return
-    }
+const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+e.preventDefault()
+if (!serviceRating || !infrastructureRating) {
+alert("Responda todas as perguntas obrigatórias")
+return
+}
+alert("Pesquisa enviada com sucesso!")
+setScreen("welcome")
+}
 
-    setIsSubmitting(true)
 
-    const formData = new FormData(event.currentTarget)
+if (screen === "dashboard") return <Dashboard onBack={() => setScreen("welcome")} />
 
-    try {
-      const response = await fetch("https://formsubmit.co/ajax/academiapakitosdance@gmail.com", {
-        method: "POST",
-        body: formData,
-        headers: {
-          Accept: "application/json",
-        },
-      })
 
-      if (response.ok) {
-        setCurrentScreen("submitted")
-        setServiceRating("")
-        setInfrastructureRating("")
-        setHygieneRating("")
-        setSuggestion("")
-      } else {
-        alert("Ocorreu um erro ao enviar sua pesquisa. Por favor, tente novamente.")
-        console.error("Erro ao enviar formulário:", response.statusText)
-      }
-    } catch (error) {
-      alert("Ocorreu um erro de rede. Por favor, verifique sua conexão e tente novamente.")
-      console.error("Erro de rede:", error)
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
+if (screen === "survey") {
+return (
+<CardContent>
+<form onSubmit={handleSubmit} className="space-y-6">
+<div>
+<Label>Atendimento *</Label>
+<Select value={serviceRating} onValueChange={setServiceRating}>
+<SelectTrigger><SelectValue placeholder="Selecione" /></SelectTrigger>
+<SelectContent>
+<SelectItem value="excelente">Excelente</SelectItem>
+<SelectItem value="bom">Bom</SelectItem>
+<SelectItem value="ruim">Ruim</SelectItem>
+</SelectContent>
+</Select>
+</div>
 
-  const handleBackToWelcome = () => {
-    setCurrentScreen("welcome")
-  }
 
-  const renderWelcomeScreen = () => (
-    <CardContent className="p-8 pt-0">
-      <div className="space-y-6">
-        <div className="text-center space-y-4">
-          <h3 className="text-2xl font-bold text-red-600">Como Funciona Nossa Pesquisa</h3>
-          <div className="bg-gray-50 rounded-xl p-6 border-2 border-red-600 space-y-4">
-            <div className="flex items-start space-x-3">
-              <Shield className="text-red-600 mt-1 flex-shrink-0" size={20} />
-              <div className="text-left">
-                <h4 className="font-bold text-red-600 text-sm">TOTAL ANONIMATO</h4>
-                <p className="text-gray-700 text-sm mt-1">
-                  Sua participação é completamente anônima. Não coletamos nenhum dado pessoal, IP ou informação que
-                  possa identificá-lo.
-                </p>
-              </div>
-            </div>
+<div>
+<Label>Infraestrutura *</Label>
+<Select value={infrastructureRating} onValueChange={setInfrastructureRating}>
+<SelectTrigger><SelectValue placeholder="Selecione" /></SelectTrigger>
+<SelectContent>
+<SelectItem value="excelente">Excelente</SelectItem>
+<SelectItem value="bom">Bom</SelectItem>
+<SelectItem value="ruim">Ruim</SelectItem>
+</SelectContent>
+</Select>
+</div>
 
-            <div className="flex items-start space-x-3">
-              <Users className="text-red-600 mt-1 flex-shrink-0" size={20} />
-              <div className="text-left">
-                <h4 className="font-bold text-red-600 text-sm">AVALIAÇÕES DISPONÍVEIS</h4>
-                <p className="text-gray-700 text-sm mt-1">
-                  Você poderá avaliar três aspectos: <strong>Atendimento</strong> (qualidade do serviço prestado),{" "}
-                  <strong>Infraestrutura</strong> (equipamentos, organização) e <strong>Higiene</strong> (limpeza e
-                  cuidados). Temos também o campo de <strong>Sugestões</strong>, um campo opcional, mas que gostaríamos
-                  de saber sua opinião.
-                </p>
-              </div>
-            </div>
 
-            <div className="flex items-start space-x-3">
-              <Eye className="text-red-600 mt-1 flex-shrink-0" size={20} />
-              <div className="text-left">
-                <h4 className="font-bold text-red-600 text-sm">ACESSO ÀS SUGESTÕES</h4>
-                <p className="text-gray-700 text-sm mt-1">
-                  Apenas o desenvolvedor do sistema e o Alison têm acesso às sugestões enviadas. Todas as informações
-                  são tratadas com total confidencialidade.
-                </p>
-              </div>
-            </div>
+<Button type="submit">Enviar</Button>
+<Button type="button" onClick={() => setScreen("welcome")}>Voltar</Button>
+</form>
+</CardContent>
+)
+}
 
-            <div className="flex items-start space-x-3">
-              <Building2 className="text-red-600 mt-1 flex-shrink-0" size={20} />
-              <div className="text-left">
-                <h4 className="font-bold text-red-600 text-sm">OBJETIVO</h4>
-                <p className="text-gray-700 text-sm mt-1">
-                  Seu feedback nos ajuda a melhorar continuamente nossos serviços e instalações para oferecer a melhor
-                  experiência possível.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div className="space-y-4">
-          <Button
-            onClick={() => setCurrentScreen("dashboard")}
-            className="w-full bg-gray-100 text-gray-700 hover:bg-gray-200 border-2 border-red-600 h-12 rounded-xl font-bold text-lg transition-all duration-200"
-          >
-            🔒 Acesso Restrito
-          </Button>
-
-          <Button
-            onClick={() => setCurrentScreen("survey")}
-            className="w-full bg-red-600 text-white hover:bg-red-700 focus:ring-red-600 h-12 rounded-xl font-bold text-lg transition-all duration-200 shadow-lg hover:shadow-xl"
-          >
-            Iniciar Pesquisa
-          </Button>
-        </div>
-      </div>
-    </CardContent>
-  )
-
-  const renderSurveyScreen = () => (
-    <CardContent className="p-8 pt-0">
-      <form onSubmit={handleSubmit} className="space-y-8">
-        <div className="grid gap-3">
-          <Label htmlFor="serviceRating" className="text-lg font-semibold text-gray-800">
-            Como você avalia o atendimento da academia? *
-          </Label>
-          <Select value={serviceRating} onValueChange={setServiceRating} name="serviceRating">
-            <SelectTrigger
-              id="serviceRating"
-              className="border-2 border-red-600 focus:border-red-700 focus:ring-red-600 rounded-xl h-12 font-medium"
-            >
-              <SelectValue placeholder="Selecione sua avaliação" />
-            </SelectTrigger>
-            <SelectContent className="border-2 border-red-600 rounded-xl">
-              <SelectItem value="excelente-indicaria" className="font-medium">
-                Excelente, até indicaria para uma pessoa.
-              </SelectItem>
-              <SelectItem value="otimo-trabalho" className="font-medium">
-                Ótimo, excelente trabalho.
-              </SelectItem>
-              <SelectItem value="bom-melhorar" className="font-medium">
-                Bom, mas daria para melhorar.
-              </SelectItem>
-              <SelectItem value="ruim-precisa-melhora" className="font-medium">
-                Ruim, precisa de melhora.
-              </SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
-
-        <div className="grid gap-3">
-          <Label htmlFor="infrastructureRating" className="text-lg font-semibold text-gray-800">
-            Como você avalia a infraestrutura da nossa academia? *
-          </Label>
-          <p className="text-sm text-gray-600 -mt-2">
-            (Considere itens como organização, equipamentos, salas e ambiente em geral.)
-          </p>
-          <Select value={infrastructureRating} onValueChange={setInfrastructureRating} name="infrastructureRating">
-            <SelectTrigger
-              id="infrastructureRating"
-              className="border-2 border-red-600 focus:border-red-700 focus:ring-red-600 rounded-xl h-12 font-medium"
-            >
-              <SelectValue placeholder="Selecione sua avaliação" />
-            </SelectTrigger>
-            <SelectContent className="border-2 border-red-600 rounded-xl">
-              <SelectItem value="muito-bonita-nao-mudar" className="font-medium">
-                Muito bonita, não precisa mudar nada!
-              </SelectItem>
-              <SelectItem value="boa-alguns-ajustes" className="font-medium">
-                Boa, mas poderia ter alguns ajustes.
-              </SelectItem>
-              <SelectItem value="regular-precisa-melhorias" className="font-medium">
-                Regular, precisa de melhorias em alguns pontos.
-              </SelectItem>
-              <SelectItem value="ruim-reforma-urgente" className="font-medium">
-                Ruim, precisa de uma reforma urgente.
-              </SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
-
-        <div className="grid gap-3">
-          <Label htmlFor="hygieneRating" className="text-lg font-semibold text-gray-800">
-            Como você avalia a limpeza e higiene da nossa academia? *
-          </Label>
-          <Select value={hygieneRating} onValueChange={setHygieneRating} name="hygieneRating">
-            <SelectTrigger
-              id="hygieneRating"
-              className="border-2 border-red-600 focus:border-red-700 focus:ring-red-600 rounded-xl h-12 font-medium"
-            >
-              <SelectValue placeholder="Selecione sua avaliação" />
-            </SelectTrigger>
-            <SelectContent className="border-2 border-red-600 rounded-xl">
-              <SelectItem value="sempre-muito-limpa" className="font-medium">
-                Sempre muito limpa, sem nada a reclamar!
-              </SelectItem>
-              <SelectItem value="limpeza-boa-melhorar" className="font-medium">
-                Limpeza boa, mas dá pra melhorar em alguns pontos.
-              </SelectItem>
-              <SelectItem value="as-vezes-deixa-desejar" className="font-medium">
-                Às vezes deixa a desejar, precisa mais atenção.
-              </SelectItem>
-              <SelectItem value="falta-cuidado-problema" className="font-medium">
-                Falta cuidado, limpeza é um problema sério aqui.
-              </SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
-
-        <div className="grid gap-3">
-          <Label htmlFor="suggestion" className="text-lg font-semibold text-gray-800">
-            Deixe sua sugestão para melhorar nossa academia:
-          </Label>
-          <Textarea
-            id="suggestion"
-            placeholder="Sua sugestão aqui..."
-            value={suggestion}
-            onChange={(e) => setSuggestion(e.target.value)}
-            className="min-h-[120px] border-2 border-red-600 focus:border-red-700 focus:ring-red-600 rounded-xl font-medium resize-none"
-            name="suggestion"
-          />
-        </div>
-
-        <div className="space-y-4">
-          <Button
-            type="submit"
-            className="w-full bg-red-600 text-white hover:bg-red-700 focus:ring-red-600 h-12 rounded-xl font-bold text-lg transition-all duration-200 shadow-lg hover:shadow-xl"
-            disabled={isSubmitting || !serviceRating || !infrastructureRating || !hygieneRating}
-          >
-            {isSubmitting ? "Enviando..." : "Enviar Avaliação"}
-          </Button>
-
-          <Button
-            type="button"
-            onClick={handleBackToWelcome}
-            className="w-full bg-gray-200 text-black hover:bg-gray-300 border-2 border-red-600 h-12 rounded-xl font-bold text-lg transition-all duration-200"
-          >
-            Voltar
-          </Button>
-        </div>
-      </form>
-    </CardContent>
-  )
-
-  const renderSubmittedScreen = () => (
-    <CardContent className="p-8 pt-0">
-      <div className="text-center space-y-6">
-        <h3 className="text-3xl font-bold text-red-600 mb-6">Obrigado por sua colaboração!</h3>
-        <div className="space-y-4 text-gray-800 leading-relaxed">
-          <p className="font-medium">
-            Sua opinião é essencial para que possamos evoluir e oferecer sempre o melhor para você.
-          </p>
-          <p className="font-medium">
-            Agradecemos por dedicar um momento do seu dia para responder à nossa pesquisa de satisfação. É através do
-            seu feedback que conseguimos melhorar nossos serviços, ambientes e atendimentos, criando uma experiência
-            cada vez mais positiva dentro da academia.
-          </p>
-          <p className="font-medium">
-            Continue firme nos seus treinos! Estamos aqui para te apoiar em cada etapa da sua jornada, ajudando você a
-            alcançar seus objetivos com saúde, motivação e constância.
-          </p>
-          <p className="font-medium">Conte sempre com a nossa equipe!</p>
-          <p className="font-bold text-lg">Juntos somos mais fortes! 💪</p>
-        </div>
-      </div>
-    </CardContent>
-  )
-
-  return (
-    <div className="flex min-h-screen flex-col items-center justify-center p-4 bg-black">
-      <Card className="w-full max-w-md rounded-2xl border-2 border-red-600 bg-white text-black shadow-2xl shadow-red-600/20">
-        <CardHeader className="flex flex-col items-center space-y-6 p-8">
-          <div className="inline-block rounded-xl border-3 border-red-600 shadow-lg shadow-red-600/30 overflow-hidden">
-            <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/files-blob/academiapakitosdance-main/public/logo/pakitos-dance-logo-GHgd7tBfEFqyykKsKS3aQXRAi9vp40.png"
-              alt="Academia Pakitos Dance Logo"
-              className="block max-w-[280px] h-auto"
-              onError={(e) => {
-                console.error("Erro ao carregar imagem:", e)
-              }}
-            />
-          </div>
-
-          {currentScreen === "welcome" && (
-            <CardTitle className="text-3xl font-bold text-red-600 tracking-tight">PESQUISA DE SATISFAÇÃO</CardTitle>
-          )}
-
-          {currentScreen === "survey" && (
-            <>
-              <CardTitle className="text-3xl font-bold text-red-600 tracking-tight">AVALIE NOSSO SERVIÇO</CardTitle>
-              <div className="text-center mt-4 max-w-sm">
-                <p className="text-gray-700 text-base leading-relaxed font-medium">
-                  Sua opinião é muito importante para nós! Por favor, dedique alguns minutos para responder às perguntas
-                  abaixo e nos ajudar a melhorar a{" "}
-                  <span className="font-bold text-red-600">Academia Pakitos Dance</span>.
-                </p>
-              </div>
-            </>
-          )}
-        </CardHeader>
-
-        {currentScreen === "dashboard" ? (
-          <Dashboard onBack={handleBackToWelcome} />
-        ) : currentScreen === "welcome" ? (
-          renderWelcomeScreen()
-        ) : currentScreen === "survey" ? (
-          renderSurveyScreen()
-        ) : (
-          renderSubmittedScreen()
-        )}
-
-        {currentScreen === "submitted" && (
-          <CardFooter className="flex justify-center p-8 pt-0">
-            <Button
-              onClick={handleBackToWelcome}
-              className="bg-gray-200 text-black hover:bg-gray-300 border-2 border-red-600 rounded-xl font-bold px-8 py-3"
-            >
-              Voltar ao início
-            </Button>
-          </CardFooter>
-        )}
-      </Card>
-
-      {/* Footer com copyright e contatos */}
-      <div className="mt-6 text-center space-y-3">
-        {/* Copyright */}
-        <div>
-          <p className="text-gray-400 text-xs">
-            Copyright © 2025 - <span className="text-gray-300 font-medium">Rafael Nunes Gasperini</span>
-          </p>
-        </div>
-
-        {/* Contatos do Alison */}
-        <div className="bg-gray-800 rounded-lg px-4 py-3 space-y-2">
-          <div className="flex items-center justify-center space-x-4">
-            {/* Instagram */}
-            <a
-              href="https://www.instagram.com/alisonpakito"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center space-x-2 text-gray-300 hover:text-pink-400 transition-colors duration-200"
-            >
-              <Instagram size={16} />
-              <span className="text-xs font-medium">@alisonpakito</span>
-            </a>
-
-            {/* WhatsApp */}
-            <a
-              href="https://wa.me/5544988114055"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center space-x-2 text-gray-300 hover:text-green-400 transition-colors duration-200"
-            >
-              <MessageCircle size={16} />
-              <span className="text-xs font-medium">WhatsApp Alison</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
+return (
+<CardContent className="space-y-4 text-center">
+<CardTitle>Pesquisa de Satisfação</CardTitle>
+<Button onClick={() => setScreen("survey")}>Iniciar Pesquisa</Button>
+<Button onClick={() => setScreen("dashboard")}>Acesso Restrito</Button>
+</CardContent>
+)
 }

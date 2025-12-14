@@ -255,16 +255,12 @@ export default function Dashboard({ onBack }: DashboardProps) {
                 <p className="text-xl font-bold text-red-600">{totalInfrastructureVotes}</p>
                 <p className="text-xs text-gray-500">votos</p>
               </div>
-              <div className="bg-white rounded-lg p-3 border border-red-200">
-                <p className="text-xs font-medium text-gray-600">Higiene</p>
-                <p className="text-xl font-bold text-red-600">{totalHygieneVotes}</p>
-                <p className="text-xs text-gray-500">votos</p>
-              </div>
+
             </div>
             <div className="mt-3 bg-white rounded-lg p-3 border border-red-200">
               <p className="text-sm font-medium text-gray-600">Total Geral</p>
               <p className="text-3xl font-bold text-red-600">
-                {totalServiceVotes + totalInfrastructureVotes + totalHygieneVotes}
+                {totalServiceVotes + totalInfrastructureVotes}
               </p>
               <p className="text-xs text-gray-500">participações</p>
             </div>
