@@ -373,7 +373,7 @@ export default function SatisfactionSurvey() {
               className="flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors duration-200"
             >
               <Calculator size={16} />
-              <span className="text-xs font-medium">Calculadora pakitos dance</span>
+              <span className="text-xs font-medium">Calculadora Pakitos Dance</span>
             </a>
           </div>
         </div>
