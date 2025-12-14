@@ -83,7 +83,7 @@ export default function SatisfactionSurvey() {
                 <p className="text-gray-700 text-sm mt-1">
                   Você poderá avaliar dois aspectos: <strong>Atendimento</strong> (qualidade do serviço prestado) e{" "}
                   <strong>Infraestrutura</strong> (equipamentos, organização). Temos também o campo de{" "}
-                  <strong>Sugestões para 2026</strong>, um campo opcional, mas que gostaríamos de saber sua opinião.
+                  <strong>Sugestões</strong>, um campo opcional, mas que gostaríamos de saber sua opinião.
                 </p>
               </div>
             </div>
@@ -256,13 +256,16 @@ export default function SatisfactionSurvey() {
     <div className="flex min-h-screen flex-col items-center justify-center p-4 bg-black">
       <Card className="w-full max-w-md rounded-2xl border-2 border-red-600 bg-white text-black shadow-2xl shadow-red-600/20">
         <CardHeader className="flex flex-col items-center space-y-6 p-8">
-         <div className="inline-block rounded-xl border-3 border-red-600 shadow-lg shadow-red-600/30 overflow-hidden bg-white">
+          <div className="inline-block rounded-xl border-3 border-red-600 shadow-lg shadow-red-600/30 overflow-hidden">
             <img
-    src="/logo/pakitos-logo.png"
-    alt="Academia Pakitos Dance Logo"
-    className="block w-[280px] h-[120px] object-contain p-4"
-  />
-</div>
+              src="/images/files-blob-academiapakitosdance-main-public-logo-pakitos-dance-logo.png"
+              alt="Academia Pakitos Dance Logo"
+              className="block max-w-[280px] h-auto"
+              onError={(e) => {
+                console.error("Erro ao carregar imagem:", e)
+              }}
+            />
+          </div>
 
           {currentScreen === "welcome" && (
             <CardTitle className="text-3xl font-bold text-red-600 tracking-tight">PESQUISA DE SATISFAÇÃO</CardTitle>
@@ -313,10 +316,10 @@ export default function SatisfactionSurvey() {
           </p>
         </div>
 
-        {/* Links */}
-        <div className="bg-gray-800 rounded-lg px-4 py-3 space-y-2">
-          <div className="flex items-center justify-center space-x-4">
-            {/* Instagram Academia */}
+        {/* Contatos do Alison */}
+        <div className="bg-gray-800 rounded-lg px-4 py-3">
+          <div className="flex items-center justify-center">
+            {/* Instagram */}
             <a
               href="https://www.instagram.com/academiapakitosdance/"
               target="_blank"
@@ -326,8 +329,12 @@ export default function SatisfactionSurvey() {
               <Instagram size={16} />
               <span className="text-xs font-medium">Academia Pakitos Dance</span>
             </a>
+          </div>
+        </div>
 
-            {/* Calculadora */}
+        {/* Calculadora link */}
+        <div className="bg-gray-800 rounded-lg px-4 py-3">
+          <div className="flex items-center justify-center">
             <a
               href="https://apppakitosdance.github.io/pakitos-dance/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnR2erp95R6XDxAOhKKwl8mt22-UfB5dY4L9_IUp3BXVVZ37sg5br8dEA1pxs_aem_nlxw1kEYQkKOrOKrkYkBWA"
               target="_blank"
@@ -335,7 +342,7 @@ export default function SatisfactionSurvey() {
               className="flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors duration-200"
             >
               <Calculator size={16} />
-              <span className="text-xs font-medium">Calculadora Pakitos Dance</span>
+              <span className="text-xs font-medium">Calculadora pakitos dance</span>
             </a>
           </div>
         </div>
