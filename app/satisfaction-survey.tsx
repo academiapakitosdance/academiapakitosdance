@@ -4,7 +4,7 @@ import type React from "react"
 import { useState } from "react"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import Textarea from "@/components/ui/textarea"
+import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
 import { Shield, Users, Building2, Eye, Instagram, MessageCircle } from "lucide-react"
@@ -14,14 +14,13 @@ export default function SatisfactionSurvey() {
   const [currentScreen, setCurrentScreen] = useState<"welcome" | "survey" | "submitted" | "dashboard">("welcome")
   const [serviceRating, setServiceRating] = useState("")
   const [infrastructureRating, setInfrastructureRating] = useState("")
-  const [hygieneRating, setHygieneRating] = useState("")
   const [suggestion, setSuggestion] = useState("")
   const [isSubmitting, setIsSubmitting] = useState(false)
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
 
-    if (!serviceRating || !infrastructureRating || !hygieneRating) {
+    if (!serviceRating || !infrastructureRating) {
       alert("Por favor, responda todas as perguntas obrigatórias antes de enviar.")
       return
     }
@@ -43,7 +42,6 @@ export default function SatisfactionSurvey() {
         setCurrentScreen("submitted")
         setServiceRating("")
         setInfrastructureRating("")
-        setHygieneRating("")
         setSuggestion("")
       } else {
         alert("Ocorreu um erro ao enviar sua pesquisa. Por favor, tente novamente.")
@@ -83,10 +81,9 @@ export default function SatisfactionSurvey() {
               <div className="text-left">
                 <h4 className="font-bold text-red-600 text-sm">AVALIAÇÕES DISPONÍVEIS</h4>
                 <p className="text-gray-700 text-sm mt-1">
-                  Você poderá avaliar três aspectos: <strong>Atendimento</strong> (qualidade do serviço prestado),{" "}
-                  <strong>Infraestrutura</strong> (equipamentos, organização) e <strong>Higiene</strong> (limpeza e
-                  cuidados). Temos também o campo de <strong>Sugestões</strong>, um campo opcional, mas que gostaríamos
-                  de saber sua opinião.
+                  Você poderá avaliar dois aspectos: <strong>Atendimento</strong> (qualidade do serviço prestado) e{" "}
+                  <strong>Infraestrutura</strong> (equipamentos, organização). Temos também o campo de{" "}
+                  <strong>Sugestões</strong>, um campo opcional, mas que gostaríamos de saber sua opinião.
                 </p>
               </div>
             </div>
@@ -197,34 +194,6 @@ export default function SatisfactionSurvey() {
         </div>
 
         <div className="grid gap-3">
-          <Label htmlFor="hygieneRating" className="text-lg font-semibold text-gray-800">
-            Como você avalia a limpeza e higiene da nossa academia? *
-          </Label>
-          <Select value={hygieneRating} onValueChange={setHygieneRating} name="hygieneRating">
-            <SelectTrigger
-              id="hygieneRating"
-              className="border-2 border-red-600 focus:border-red-700 focus:ring-red-600 rounded-xl h-12 font-medium"
-            >
-              <SelectValue placeholder="Selecione sua avaliação" />
-            </SelectTrigger>
-            <SelectContent className="border-2 border-red-600 rounded-xl">
-              <SelectItem value="sempre-muito-limpa" className="font-medium">
-                Sempre muito limpa, sem nada a reclamar!
-              </SelectItem>
-              <SelectItem value="limpeza-boa-melhorar" className="font-medium">
-                Limpeza boa, mas dá pra melhorar em alguns pontos.
-              </SelectItem>
-              <SelectItem value="as-vezes-deixa-desejar" className="font-medium">
-                Às vezes deixa a desejar, precisa mais atenção.
-              </SelectItem>
-              <SelectItem value="falta-cuidado-problema" className="font-medium">
-                Falta cuidado, limpeza é um problema sério aqui.
-              </SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
-
-        <div className="grid gap-3">
           <Label htmlFor="suggestion" className="text-lg font-semibold text-gray-800">
             Deixe sua sugestão para melhorar nossa academia:
           </Label>
@@ -242,7 +211,7 @@ export default function SatisfactionSurvey() {
           <Button
             type="submit"
             className="w-full bg-red-600 text-white hover:bg-red-700 focus:ring-red-600 h-12 rounded-xl font-bold text-lg transition-all duration-200 shadow-lg hover:shadow-xl"
-            disabled={isSubmitting || !serviceRating || !infrastructureRating || !hygieneRating}
+            disabled={isSubmitting || !serviceRating || !infrastructureRating}
           >
             {isSubmitting ? "Enviando..." : "Enviar Avaliação"}
           </Button>
@@ -289,7 +258,7 @@ export default function SatisfactionSurvey() {
         <CardHeader className="flex flex-col items-center space-y-6 p-8">
           <div className="inline-block rounded-xl border-3 border-red-600 shadow-lg shadow-red-600/30 overflow-hidden">
             <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/files-blob/academiapakitosdance-main/public/logo/pakitos-dance-logo-GHgd7tBfEFqyykKsKS3aQXRAi9vp40.png"
+              src="/images/files-blob-academiapakitosdance-main-public-logo-pakitos-dance-logo.png"
               alt="Academia Pakitos Dance Logo"
               className="block max-w-[280px] h-auto"
               onError={(e) => {
@@ -338,7 +307,7 @@ export default function SatisfactionSurvey() {
         )}
       </Card>
 
- {/* Footer com copyright e contatos */}
+      {/* Footer com copyright e contatos */}
       <div className="mt-6 text-center space-y-3">
         {/* Copyright */}
         <div>
@@ -348,32 +317,28 @@ export default function SatisfactionSurvey() {
         </div>
 
         {/* Contatos do Alison */}
-        <div className="bg-gray-800 rounded-lg px-4 py-3">
-          <div className="flex items-center justify-center">
+        <div className="bg-gray-800 rounded-lg px-4 py-3 space-y-2">
+          <div className="flex items-center justify-center space-x-4">
             {/* Instagram */}
             <a
-              href="https://www.instagram.com/academiapakitosdance/"
+              href="https://www.instagram.com/alisonpakito"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-2 text-gray-300 hover:text-pink-400 transition-colors duration-200"
             >
               <Instagram size={16} />
-              <span className="text-xs font-medium">Academia Pakitos Dance</span>
+              <span className="text-xs font-medium">@alisonpakito</span>
             </a>
-          </div>
-        </div>
 
-        {/* Calculadora link */}
-        <div className="bg-gray-800 rounded-lg px-4 py-3">
-          <div className="flex items-center justify-center">
+            {/* WhatsApp */}
             <a
-              href="https://apppakitosdance.github.io/pakitos-dance/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnR2erp95R6XDxAOhKKwl8mt22-UfB5dY4L9_IUp3BXVVZ37sg5br8dEA1pxs_aem_nlxw1kEYQkKOrOKrkYkBWA"
+              href="https://wa.me/5544988114055"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors duration-200"
+              className="flex items-center space-x-2 text-gray-300 hover:text-green-400 transition-colors duration-200"
             >
-              <Calculator size={16} />
-              <span className="text-xs font-medium">Calculadora Pakitos Dance</span>
+              <MessageCircle size={16} />
+              <span className="text-xs font-medium">WhatsApp Alison</span>
             </a>
           </div>
         </div>
