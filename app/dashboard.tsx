@@ -33,6 +33,13 @@ export default function Dashboard({ onBack }: DashboardProps) {
     { option: "Ruim, precisa de uma reforma urgente", votes: 0, color: "bg-red-500" },
   ]
 
+  const suggestions = [
+  "Disponibilização de mais alteres e mais algumas máquinas",
+  "Pra mim está tudo ótimo. os professores são nota mil.",
+  "Mais máquinas e um espaço maior com piso emborrachado",
+  "Melhorar a ventilação da academia",
+]
+
   const totalServiceVotes = serviceData.reduce((sum, item) => sum + item.votes, 0)
   const totalInfrastructureVotes = infrastructureData.reduce((sum, item) => sum + item.votes, 0)
 
@@ -132,6 +139,38 @@ export default function Dashboard({ onBack }: DashboardProps) {
           Resultados não são atualizados em tempo real.
         </p>
       </div>
+
+      {/* 💡 SUGESTÕES RECEBIDAS */}
+<div className="bg-purple-50 rounded-xl p-4 border-2 border-purple-400">
+  <h4 className="text-lg font-bold text-purple-800 mb-4 text-center">
+    💡 SUGESTÕES RECEBIDAS
+  </h4>
+
+  <div className="space-y-3 max-h-60 overflow-y-auto">
+    {suggestions.length > 0 ? (
+      suggestions.map((suggestion, index) => (
+        <div
+          key={index}
+          className="bg-white rounded-lg p-3 border border-purple-200 shadow-sm"
+        >
+          <p className="text-gray-700 text-sm leading-relaxed">
+            "{suggestion}"
+          </p>
+        </div>
+      ))
+    ) : (
+      <p className="text-purple-600 text-center italic">
+        Nenhuma sugestão cadastrada.
+      </p>
+    )}
+  </div>
+
+  <div className="mt-3 text-center">
+    <p className="text-purple-600 text-sm font-medium">
+      Total de sugestões: {suggestions.length}
+    </p>
+  </div>
+</div>
 
       <Button onClick={onBack} className="w-full">
         Voltar ao início
