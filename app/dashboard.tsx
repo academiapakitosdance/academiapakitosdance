@@ -19,16 +19,16 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Atendimento
   const serviceData = [
-    { option: "Excelente, até indicaria para uma pessoa", votes: 15, color: "bg-green-500" },
-    { option: "Ótimo, excelente trabalho", votes: 8, color: "bg-blue-500" },
+    { option: "Excelente, até indicaria para uma pessoa", votes: 37, color: "bg-green-500" },
+    { option: "Ótimo, excelente trabalho", votes: 26, color: "bg-blue-500" },
     { option: "Bom, mas daria para melhorar", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
   ]
 
   // Infraestrutura
   const infrastructureData = [
-    { option: "Muito bonita, não precisa mudar nada!", votes: 18, color: "bg-green-500" },
-    { option: "Boa, mas poderia ter alguns ajustes", votes: 5, color: "bg-blue-500" },
+    { option: "Muito bonita, não precisa mudar nada!", votes: 46, color: "bg-green-500" },
+    { option: "Boa, mas poderia ter alguns ajustes", votes: 17, color: "bg-blue-500" },
     { option: "Regular, precisa de melhorias em alguns pontos", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de uma reforma urgente", votes: 0, color: "bg-red-500" },
   ]
@@ -42,6 +42,27 @@ export default function Dashboard({ onBack }: DashboardProps) {
 "Tudo maravilhoso!!! Parabéns 👏👏",
 "Almofadinha própria para elevação pélvica",
 "Só elogios estão de parabéns",
+"Que os professores sejam mais atentos com os alunos",
+"Poderia ter mais iluminação",
+"Ta otimo pra mim",
+"Ventilação, halter de 7kg",
+"A academia é excelente! O ambiente é sempre muito limpo, organizado e agradável. Os profissionais são extremamente atenciosos e sempre dão o máximo de assistência durante os treinos, o que faz toda a diferença. Gosto muito de treinar aqui e me sinto super bem. Como sugestão, talvez futuramente a inclusão de mais uma esteira, sei que é um investimento alto, mas poderia ajudar nos horários mais cheios. No mais, a academia está perfeita. Parabéns pelo trabalho incrível!",
+"Se melhorar estraga tá ótimo estou satisfeita não tenho do que reclamar parabéns prof e para sua equipe são excelentes",
+"Mais bicicletas e alguns aparelhos que tem apenas uma unidade.",
+"mais aulas de step na semana",
+"Para mim está ótimo👏🙏🥰",
+"Profissionais mais que capacitados. Ótima estrutura. A melhor academia da Cidade",
+"Pra mim tudo ótimo, da pra ver o quanto vocês se esforçam com todos da academia, estão de parabéns.",
+"P mim nota 10",
+"Pintura pra dar aquele tchan, poderia ter algo que deixa lugar mais aconchegante.",
+"Pra mim tá ótima não precisa mudar nada ❤️",
+"Melhorar a parte de climatização.",
+"Melhoras na parte ventilação",
+"Ótima",
+"Perfeita inclusive o atendimento",
+"Topp",
+"Eu estou muito satisfeita ,não tenho nada a reclamar professores excelentes nota mil pra vcs parabéns.alison vc é diferenciado não trocaria essa academia por nada vc é um amigo e Proff de um coração enorme você só tem a ganhar com sua simpatia Deus abençoe vc e sua família e todos os Proff 🙏🏻🙏🏻🥰",
+
 ]
 
   const totalServiceVotes = serviceData.reduce((sum, item) => sum + item.votes, 0)
