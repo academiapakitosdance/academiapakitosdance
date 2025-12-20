@@ -19,25 +19,29 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Atendimento
   const serviceData = [
-    { option: "Excelente, até indicaria para uma pessoa", votes: 0, color: "bg-green-500" },
-    { option: "Ótimo, excelente trabalho", votes: 0, color: "bg-blue-500" },
+    { option: "Excelente, até indicaria para uma pessoa", votes: 15, color: "bg-green-500" },
+    { option: "Ótimo, excelente trabalho", votes: 8, color: "bg-blue-500" },
     { option: "Bom, mas daria para melhorar", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
   ]
 
   // Infraestrutura
   const infrastructureData = [
-    { option: "Muito bonita, não precisa mudar nada!", votes: 0, color: "bg-green-500" },
-    { option: "Boa, mas poderia ter alguns ajustes", votes: 0, color: "bg-blue-500" },
+    { option: "Muito bonita, não precisa mudar nada!", votes: 18, color: "bg-green-500" },
+    { option: "Boa, mas poderia ter alguns ajustes", votes: 5, color: "bg-blue-500" },
     { option: "Regular, precisa de melhorias em alguns pontos", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de uma reforma urgente", votes: 0, color: "bg-red-500" },
   ]
 
   const suggestions = [
-  "Disponibilização de mais alteres e mais algumas máquinas",
-  "Pra mim está tudo ótimo. os professores são nota mil.",
-  "Mais máquinas e um espaço maior com piso emborrachado",
-  "Melhorar a ventilação da academia",
+"Se melhorar estraga amo meus professores academia bem arejada ótima",
+"Sobre as pessoas serem mais organizadas em relação ao uso dos aparelhos! E também as vezes fico um pouco desconfortável com alguns aparelhos que quando fazemos os exercícios expõe muito a bunda! Tinha que ser virado pra parede",
+"Para mim tudo ok não tenho reclamações",
+"Está excelente Alisson, vc é inspirador e sua academia está cada vez melhor, com equipamentos novos, de qualidade e com muitos resultado ! Amoo as aulas diversificadas que tem, os treinos que vc monta e a dedicação dos profissionais. Parabéns e sucesso para 2026 🙏🏻✨",
+"Sem opiniões. Só agradecimento. Fevereiro se Deus quiser estou de volt",
+"Tudo maravilhoso!!! Parabéns 👏👏",
+"Almofadinha própria para elevação pélvica",
+"Só elogios estão de parabéns",
 ]
 
   const totalServiceVotes = serviceData.reduce((sum, item) => sum + item.votes, 0)
