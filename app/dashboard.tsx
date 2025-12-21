@@ -19,16 +19,16 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Atendimento
   const serviceData = [
-    { option: "Excelente, até indicaria para uma pessoa", votes: 47, color: "bg-green-500" },
-    { option: "Ótimo, excelente trabalho", votes: 34, color: "bg-blue-500" },
+    { option: "Excelente, até indicaria para uma pessoa", votes: 49, color: "bg-green-500" },
+    { option: "Ótimo, excelente trabalho", votes: 37, color: "bg-blue-500" },
     { option: "Bom, mas daria para melhorar", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
   ]
 
   // Infraestrutura
   const infrastructureData = [
-    { option: "Muito bonita, não precisa mudar nada!", votes: 61, color: "bg-green-500" },
-    { option: "Boa, mas poderia ter alguns ajustes", votes: 20, color: "bg-blue-500" },
+    { option: "Muito bonita, não precisa mudar nada!", votes: 65, color: "bg-green-500" },
+    { option: "Boa, mas poderia ter alguns ajustes", votes: 21, color: "bg-blue-500" },
     { option: "Regular, precisa de melhorias em alguns pontos", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de uma reforma urgente", votes: 0, color: "bg-red-500" },
   ]
@@ -69,6 +69,7 @@ export default function Dashboard({ onBack }: DashboardProps) {
 "Excelente com proficinais maravilhoso só tenho que agradecer o Alisson e muito querido merece tudo de melhor",
 "Amo tudo lá, mas as vezes falta mais vento",
 "Ótimo atendimento! Nada a reclamar apenas parabenizar por serem ótimos profissionais. 👏👏👏👏 a melhor da cidade",
+"Esto amo",
 
 ]
 
