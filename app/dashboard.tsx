@@ -19,62 +19,28 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Atendimento
   const serviceData = [
-    { option: "Excelente, até indicaria para uma pessoa", votes: 51, color: "bg-green-500" },
-    { option: "Ótimo, excelente trabalho", votes: 38, color: "bg-blue-500" },
-    { option: "Bom, mas daria para melhorar", votes: 2, color: "bg-yellow-500" },
+    { option: "Excelente, até indicaria para uma pessoa", votes: 7, color: "bg-green-500" },
+    { option: "Ótimo, excelente trabalho", votes: 5, color: "bg-blue-500" },
+    { option: "Bom, mas daria para melhorar", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
   ]
 
   // Infraestrutura
   const infrastructureData = [
-    { option: "Muito bonita, não precisa mudar nada!", votes: 68, color: "bg-green-500" },
-    { option: "Boa, mas poderia ter alguns ajustes", votes: 23, color: "bg-blue-500" },
+    { option: "Muito bonita, não precisa mudar nada!", votes: 5, color: "bg-green-500" },
+    { option: "Boa, mas poderia ter alguns ajustes", votes: 7, color: "bg-blue-500" },
     { option: "Regular, precisa de melhorias em alguns pontos", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de uma reforma urgente", votes: 0, color: "bg-red-500" },
   ]
 
   const suggestions = [
-"Se melhorar estraga amo meus professores academia bem arejada ótima",
-"Sobre as pessoas serem mais organizadas em relação ao uso dos aparelhos! E também as vezes fico um pouco desconfortável com alguns aparelhos que quando fazemos os exercícios expõe muito a bunda! Tinha que ser virado pra parede",
-"Para mim tudo ok não tenho reclamações",
-"Está excelente Alisson, vc é inspirador e sua academia está cada vez melhor, com equipamentos novos, de qualidade e com muitos resultado ! Amoo as aulas diversificadas que tem, os treinos que vc monta e a dedicação dos profissionais. Parabéns e sucesso para 2026 🙏🏻✨",
-"Sem opiniões. Só agradecimento. Fevereiro se Deus quiser estou de volt",
-"Tudo maravilhoso!!! Parabéns 👏👏",
-"Almofadinha própria para elevação pélvica",
-"Só elogios estão de parabéns",
-"Que os professores sejam mais atentos com os alunos",
-"Poderia ter mais iluminação",
-"Ta otimo pra mim",
-"Ventilação, halter de 7kg",
-"A academia é excelente! O ambiente é sempre muito limpo, organizado e agradável. Os profissionais são extremamente atenciosos e sempre dão o máximo de assistência durante os treinos, o que faz toda a diferença. Gosto muito de treinar aqui e me sinto super bem. Como sugestão, talvez futuramente a inclusão de mais uma esteira, sei que é um investimento alto, mas poderia ajudar nos horários mais cheios. No mais, a academia está perfeita. Parabéns pelo trabalho incrível!",
-"Se melhorar estraga tá ótimo estou satisfeita não tenho do que reclamar parabéns prof e para sua equipe são excelentes",
-"Mais bicicletas e alguns aparelhos que tem apenas uma unidade.",
-"mais aulas de step na semana",
-"Para mim está ótimo👏🙏🥰",
-"Profissionais mais que capacitados. Ótima estrutura. A melhor academia da Cidade",
-"Pra mim tudo ótimo, da pra ver o quanto vocês se esforçam com todos da academia, estão de parabéns.",
-"P mim nota 10",
-"Pintura pra dar aquele tchan, poderia ter algo que deixa lugar mais aconchegante.",
-"Pra mim tá ótima não precisa mudar nada ❤️",
-"Melhorar a parte de climatização.",
-"Melhoras na parte ventilação",
-"Ótima",
-"Perfeita inclusive o atendimento",
-"Topp",
-"Eu estou muito satisfeita ,não tenho nada a reclamar professores excelentes nota mil pra vcs parabéns.alison vc é diferenciado não trocaria essa academia por nada vc é um amigo e Proff de um coração enorme você só tem a ganhar com sua simpatia Deus abençoe vc e sua família e todos os Proff 🙏🏻🙏🏻🥰",
-"O povo para de reclamar de barriga cheia . A academia ta ótima. O valor ótimo. E mesmo assim aparece 1 e outro pra reclama",
-"Só elogio, muito bom, professores super prestativos.",
-"Acredito que esteja adecada",
-"aumentar e colocar aparelhos novos",
-"Excelente com proficinais maravilhoso só tenho que agradecer o Alisson e muito querido merece tudo de melhor",
-"Amo tudo lá, mas as vezes falta mais vento",
-"Ótimo atendimento! Nada a reclamar apenas parabenizar por serem ótimos profissionais. 👏👏👏👏 a melhor da cidade",
-"Esto amo",
-"TD ótimo",
-"Somente parabénizar a todos os professores 👏🏼👏🏼🙏🏼",
-"Dois funcionários treinam no horário dos alunos e batem os pesos recorrentemente. Matheus Leite ainda tira a camisa, essa conduta é anti-profissional e passa uma imagem negativa da academia, além do barulho excessivo. É necessário intervenção e que as regras de conduta sejam igualmente aplicadas aos funcionários, que se fossem alunos, já teriam sido repreendidos.",
-"a climatização inadequada, já que o espaço está muito quente, causando desconforto aos alunos. Alguns funcionários treinam durante o horário de funcionamento da academia, treina sem camisa, fazendo barulho excessivo ao soltar os pesos repetidamente.",
-"Almofadinha para elevação pélvica e halter de 7kgs",
+"Muitas pessoas treinando nos mesmos equipamentos ao mesmo tempo",
+"Colocar mais chão de borracha",
+"🤠🥇🧃",
+"Para mim está tudo ótimo",
+"Sem sugestão",
+"acho q poderia melhorar um pouco mais a ventilação",
+   
 ]
 
   const totalServiceVotes = serviceData.reduce((sum, item) => sum + item.votes, 0)
