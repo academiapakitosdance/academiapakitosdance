@@ -19,7 +19,7 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Atendimento
   const serviceData = [
-    { option: "Excelente, até indicaria para uma pessoa", votes: 50, color: "bg-green-500" },
+    { option: "Excelente, até indicaria para uma pessoa", votes: 51, color: "bg-green-500" },
     { option: "Ótimo, excelente trabalho", votes: 38, color: "bg-blue-500" },
     { option: "Bom, mas daria para melhorar", votes: 2, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
@@ -27,7 +27,7 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Infraestrutura
   const infrastructureData = [
-    { option: "Muito bonita, não precisa mudar nada!", votes: 67, color: "bg-green-500" },
+    { option: "Muito bonita, não precisa mudar nada!", votes: 68, color: "bg-green-500" },
     { option: "Boa, mas poderia ter alguns ajustes", votes: 23, color: "bg-blue-500" },
     { option: "Regular, precisa de melhorias em alguns pontos", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de uma reforma urgente", votes: 0, color: "bg-red-500" },
@@ -74,6 +74,7 @@ export default function Dashboard({ onBack }: DashboardProps) {
 "Somente parabénizar a todos os professores 👏🏼👏🏼🙏🏼",
 "Dois funcionários treinam no horário dos alunos e batem os pesos recorrentemente. Matheus Leite ainda tira a camisa, essa conduta é anti-profissional e passa uma imagem negativa da academia, além do barulho excessivo. É necessário intervenção e que as regras de conduta sejam igualmente aplicadas aos funcionários, que se fossem alunos, já teriam sido repreendidos.",
 "a climatização inadequada, já que o espaço está muito quente, causando desconforto aos alunos. Alguns funcionários treinam durante o horário de funcionamento da academia, treina sem camisa, fazendo barulho excessivo ao soltar os pesos repetidamente.",
+"Almofadinha para elevação pélvica e halter de 7kgs",
 ]
 
   const totalServiceVotes = serviceData.reduce((sum, item) => sum + item.votes, 0)
