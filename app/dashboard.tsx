@@ -19,16 +19,16 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Atendimento
   const serviceData = [
-    { option: "Excelente, até indicaria para uma pessoa", votes: 17, color: "bg-green-500" },
-    { option: "Ótimo, excelente trabalho", votes: 11, color: "bg-blue-500" },
-    { option: "Bom, mas daria para melhorar", votes: 0, color: "bg-yellow-500" },
+    { option: "Excelente, até indicaria para uma pessoa", votes: 25, color: "bg-green-500" },
+    { option: "Ótimo, excelente trabalho", votes: 15, color: "bg-blue-500" },
+    { option: "Bom, mas daria para melhorar", votes: 1, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
   ]
 
   // Infraestrutura
   const infrastructureData = [
-    { option: "Muito bonita, não precisa mudar nada!", votes: 15, color: "bg-green-500" },
-    { option: "Boa, mas poderia ter alguns ajustes", votes: 13, color: "bg-blue-500" },
+    { option: "Muito bonita, não precisa mudar nada!", votes: 20, color: "bg-green-500" },
+    { option: "Boa, mas poderia ter alguns ajustes", votes: 20, color: "bg-blue-500" },
     { option: "Regular, precisa de melhorias em alguns pontos", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de uma reforma urgente", votes: 0, color: "bg-red-500" },
   ]
@@ -52,6 +52,10 @@ export default function Dashboard({ onBack }: DashboardProps) {
 "Danone 💉 e creatina de graça para fiéis",
 "Acho que temos que fazer mais coisas diferentes em datas especiais, vejo as outras academias se movimentando com o publico em geral, não só com homem ou mulher",
 "Melhora o brinde pq o das outras foram melhor, vou mudar pra la pegar brinde e volto 😝💪🏻",
+"Vender suplementos,eu acredito que aumentaria ainda mais,a credibilidade da academia.",
+"Climatização do local",
+"Somente o calor que e demais, (e uma coisa que não temos MT oq fzr) mas fora isso não tenho nada a reclamar",
+"Investimento no futuro em pintura e iluminação",
 ]
 
   const totalServiceVotes = serviceData.reduce((sum, item) => sum + item.votes, 0)
