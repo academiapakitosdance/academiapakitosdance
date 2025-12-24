@@ -19,16 +19,16 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Atendimento
   const serviceData = [
-    { option: "Excelente, até indicaria para uma pessoa", votes: 7, color: "bg-green-500" },
-    { option: "Ótimo, excelente trabalho", votes: 5, color: "bg-blue-500" },
+    { option: "Excelente, até indicaria para uma pessoa", votes: 14, color: "bg-green-500" },
+    { option: "Ótimo, excelente trabalho", votes: 8, color: "bg-blue-500" },
     { option: "Bom, mas daria para melhorar", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
   ]
 
   // Infraestrutura
   const infrastructureData = [
-    { option: "Muito bonita, não precisa mudar nada!", votes: 5, color: "bg-green-500" },
-    { option: "Boa, mas poderia ter alguns ajustes", votes: 7, color: "bg-blue-500" },
+    { option: "Muito bonita, não precisa mudar nada!", votes: 11, color: "bg-green-500" },
+    { option: "Boa, mas poderia ter alguns ajustes", votes: 11, color: "bg-blue-500" },
     { option: "Regular, precisa de melhorias em alguns pontos", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de uma reforma urgente", votes: 0, color: "bg-red-500" },
   ]
@@ -40,7 +40,13 @@ export default function Dashboard({ onBack }: DashboardProps) {
 "Para mim está tudo ótimo",
 "Sem sugestão",
 "acho q poderia melhorar um pouco mais a ventilação",
-   
+"Não precisa mudar",
+"Está ótima ☺️",
+"Ventilação precisara ser mudada..ou outros climatizadores...pois estamos em um momento bem crítico de calor daí o treino acaba ficando exaustivo",
+"Cada equipamento poderia ser identificada com nome com uma plaquinha de identificação.",
+"Colchonetes, atualizar play list e melhorar ventilação.",
+"Ar condicionado seria ideial kkk",
+
 ]
 
   const totalServiceVotes = serviceData.reduce((sum, item) => sum + item.votes, 0)
