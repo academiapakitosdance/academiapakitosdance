@@ -19,16 +19,16 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Atendimento
   const serviceData = [
-    { option: "Excelente, até indicaria para uma pessoa", votes: 14, color: "bg-green-500" },
-    { option: "Ótimo, excelente trabalho", votes: 8, color: "bg-blue-500" },
+    { option: "Excelente, até indicaria para uma pessoa", votes: 17, color: "bg-green-500" },
+    { option: "Ótimo, excelente trabalho", votes: 11, color: "bg-blue-500" },
     { option: "Bom, mas daria para melhorar", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
   ]
 
   // Infraestrutura
   const infrastructureData = [
-    { option: "Muito bonita, não precisa mudar nada!", votes: 11, color: "bg-green-500" },
-    { option: "Boa, mas poderia ter alguns ajustes", votes: 11, color: "bg-blue-500" },
+    { option: "Muito bonita, não precisa mudar nada!", votes: 15, color: "bg-green-500" },
+    { option: "Boa, mas poderia ter alguns ajustes", votes: 13, color: "bg-blue-500" },
     { option: "Regular, precisa de melhorias em alguns pontos", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de uma reforma urgente", votes: 0, color: "bg-red-500" },
   ]
@@ -46,7 +46,12 @@ export default function Dashboard({ onBack }: DashboardProps) {
 "Cada equipamento poderia ser identificada com nome com uma plaquinha de identificação.",
 "Colchonetes, atualizar play list e melhorar ventilação.",
 "Ar condicionado seria ideial kkk",
-
+"Ja que sou da academia,pedi para um amigo meu de maringa que veio aqui por esses dias, alguma sugestao, disse que principalmente a ventilação que é precaria, precisa de ajuste urgente! Ele também 2 ideias para costas, porque nao temos um exercicio especifico para lombar, aquele banco que trabalha a lombar, n sei o nome kkkkk, e uma remada em T, disse que isso fecharia mto em questao do que falta, entao essa é minha sugestao",
+"Pedir pro matheus leite gemer menos 🤣🤣🤣🤣🤣",
+"Pede pro matheus gemer só quando agarram ele com força no agachamento",
+"Danone 💉 e creatina de graça para fiéis",
+"Acho que temos que fazer mais coisas diferentes em datas especiais, vejo as outras academias se movimentando com o publico em geral, não só com homem ou mulher",
+"Melhora o brinde pq o das outras foram melhor, vou mudar pra la pegar brinde e volto 😝💪🏻",
 ]
 
   const totalServiceVotes = serviceData.reduce((sum, item) => sum + item.votes, 0)
