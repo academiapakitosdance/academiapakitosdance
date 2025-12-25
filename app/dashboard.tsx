@@ -21,14 +21,14 @@ export default function Dashboard({ onBack }: DashboardProps) {
   const serviceData = [
     { option: "Excelente, até indicaria para uma pessoa", votes: 25, color: "bg-green-500" },
     { option: "Ótimo, excelente trabalho", votes: 15, color: "bg-blue-500" },
-    { option: "Bom, mas daria para melhorar", votes: 1, color: "bg-yellow-500" },
+    { option: "Bom, mas daria para melhorar", votes: 2, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
   ]
 
   // Infraestrutura
   const infrastructureData = [
     { option: "Muito bonita, não precisa mudar nada!", votes: 20, color: "bg-green-500" },
-    { option: "Boa, mas poderia ter alguns ajustes", votes: 20, color: "bg-blue-500" },
+    { option: "Boa, mas poderia ter alguns ajustes", votes: 21, color: "bg-blue-500" },
     { option: "Regular, precisa de melhorias em alguns pontos", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de uma reforma urgente", votes: 0, color: "bg-red-500" },
   ]
