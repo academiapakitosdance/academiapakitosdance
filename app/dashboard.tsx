@@ -20,7 +20,7 @@ export default function Dashboard({ onBack }: DashboardProps) {
   // Atendimento
   const serviceData = [
     { option: "Excelente, até indicaria para uma pessoa", votes: 25, color: "bg-green-500" },
-    { option: "Ótimo, excelente trabalho", votes: 15, color: "bg-blue-500" },
+    { option: "Ótimo, excelente trabalho", votes: 17, color: "bg-blue-500" },
     { option: "Bom, mas daria para melhorar", votes: 2, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
   ]
@@ -29,7 +29,7 @@ export default function Dashboard({ onBack }: DashboardProps) {
   const infrastructureData = [
     { option: "Muito bonita, não precisa mudar nada!", votes: 20, color: "bg-green-500" },
     { option: "Boa, mas poderia ter alguns ajustes", votes: 21, color: "bg-blue-500" },
-    { option: "Regular, precisa de melhorias em alguns pontos", votes: 0, color: "bg-yellow-500" },
+    { option: "Regular, precisa de melhorias em alguns pontos", votes: 2, color: "bg-yellow-500" },
     { option: "Ruim, precisa de uma reforma urgente", votes: 0, color: "bg-red-500" },
   ]
 
@@ -56,6 +56,7 @@ export default function Dashboard({ onBack }: DashboardProps) {
 "Climatização do local",
 "Somente o calor que e demais, (e uma coisa que não temos MT oq fzr) mas fora isso não tenho nada a reclamar",
 "Investimento no futuro em pintura e iluminação",
+"Precisa melhorar urgentemente a climatização, o calor esta extremo, tem varias pessoas passando mal!",
 ]
 
   const totalServiceVotes = serviceData.reduce((sum, item) => sum + item.votes, 0)
