@@ -195,7 +195,7 @@ export default function SatisfactionSurvey() {
 
         <div className="grid gap-3">
           <Label htmlFor="suggestion" className="text-lg font-semibold text-gray-800">
-            Deixe sua sugestão para melhorar nossa academia:
+            Deixe sua sugestão/reclamação/elogios para nossa academia:
           </Label>
           <Textarea
             id="suggestion"
