@@ -46,9 +46,9 @@ export default function Dashboard({ onBack }: DashboardProps) {
 "Sempre dando o melhor  tá d parabéns .",
 "Pra mim tá ficando cada dia melhor Só tenho uma reclamação das pessoas acharem que são donas do aparelho e não quer dividir",
 "A academia está excelente. Os equipamentos são ótimos e bem conservados, e a infraestrutura no geral é muito boa, não tenho do que reclamar. Os professores são atenciosos, sempre prestativos e dão um suporte muito bom durante os treinos. Além disso, a dinâmica das aulas é um diferencial, pois há bastante variedade e isso torna a rotina mais motivadora e agradável. Estou muito satisfeita com a experiência.",
-"Continuar evoluindo,estão de parabéns
-"Está ótima
-"Linda ótimo atendimento
+"Continuar evoluindo,estão de parabéns",
+"Está ótima",
+"Linda ótimo atendimento",
 "Acho que esses suplementos ali na frente ficam muito largados, sem ninguém pra olhar direto. Talvez se ficasse mais no fundo, perto do balcão, era mais seguro. Porque do jeito que tá, em horário cheio, ninguém nem percebe se alguém pega sem pagar.",
 "As veiz a gente quer treinar bem, mas com esse calor fica dificil demais, desanima.",
 "Podia investir mais nisso ai, ar condicionado ou climatizador, pq assim tá complicado.",
