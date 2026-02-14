@@ -19,16 +19,16 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Atendimento
   const serviceData = [
-    { option: "Excelente, até indicaria para uma pessoa", votes: 35, color: "bg-green-500" },
-    { option: "Ótimo, excelente trabalho", votes: 21, color: "bg-blue-500" },
+    { option: "Excelente, até indicaria para uma pessoa", votes: 46, color: "bg-green-500" },
+    { option: "Ótimo, excelente trabalho", votes: 23, color: "bg-blue-500" },
     { option: "Bom, mas daria para melhorar", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
   ]
 
   // Infraestrutura
   const infrastructureData = [
-    { option: "Muito bonita, não precisa mudar nada!", votes: 40, color: "bg-green-500" },
-    { option: "Boa, mas poderia ter alguns ajustes", votes: 16, color: "bg-blue-500" },
+    { option: "Muito bonita, não precisa mudar nada!", votes: 51, color: "bg-green-500" },
+    { option: "Boa, mas poderia ter alguns ajustes", votes: 18, color: "bg-blue-500" },
     { option: "Regular, precisa de melhorias em alguns pontos", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de uma reforma urgente", votes: 0, color: "bg-red-500" },
   ]
@@ -78,7 +78,17 @@ export default function Dashboard({ onBack }: DashboardProps) {
 "Está tudo perfeito, Alison não deixa a desejar no atendimento e nem na evolução do ambiente. Parabéns a todos pelo excelente trabalho!",
 "os ventiladores perto dos legumes 45 deveria ficar em direção pra baixo e rodando, pois são equipamentos que faz a gente sentir mais calor",
 "Só um elogio! Alison, vc e o Matheus Botassini são maravilhosos, atenciosos, educados, prestativos... Continuem assim.",
-]
+"Profissionais mto dedicados",
+"O atendimento é o diferencial de vocês! Parabéns pela dedicação e empenho com a gente!",
+"Só elogios, parabéns professores 👏🏼👏🏼 ",
+"A academia está ótima ,pequenos ajustes pra fazer ,um ou outro ventilador que está parado mas sempre vemos que vc está sempre fazendo os ajustes que precisa,os professores sempre atenciosos e prestativos",
+"Coloca o Pix com Qrcode para pagamento lá onde está ficando os suplementos .",
+"Ampliar horários ao sabados E horario do almoço (Talvez intercalando com os profissionais)",
+"Tudo perfeito... parabéns 👏👏",
+"Perfeito",
+"Top top",
+"Professores top. Sem nada a reclamar",
+  ]
 
   const totalServiceVotes = serviceData.reduce((sum, item) => sum + item.votes, 0)
   const totalInfrastructureVotes = infrastructureData.reduce((sum, item) => sum + item.votes, 0)
