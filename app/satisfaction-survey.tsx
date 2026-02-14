@@ -17,16 +17,15 @@ export default function SatisfactionSurvey() {
   const [suggestion, setSuggestion] = useState("")
   const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault()
-
+const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
   if (!serviceRating || !infrastructureRating) {
-      alert("Por favor, responda todas as perguntas obrigatórias antes de enviar.")
-      return
-    }
+    event.preventDefault()
+    alert("Por favor, responda todas as perguntas obrigatórias antes de enviar.")
+    return
+  }
 
-    setIsSubmitting(true)
-
+  setIsSubmitting(true)
+}
     const formData = new FormData(event.currentTarget)
 
     try {
@@ -133,7 +132,19 @@ export default function SatisfactionSurvey() {
 
   const renderSurveyScreen = () => (
     <CardContent className="p-8 pt-0">
-      <form onSubmit={handleSubmit} className="space-y-8">
+      <form
+  onSubmit={handleSubmit}
+  action="https://formsubmit.co/academiapakitosdance@gmail.com"
+  method="POST"
+  className="space-y-8"
+>
+
+  <input type="hidden" name="_captcha" value="false" />
+  <input type="hidden" name="_template" value="table" />
+  <input type="hidden" name="_subject" value="Nova Pesquisa de Satisfação" />
+
+  <div className="grid gap-3">
+
         <div className="grid gap-3">
           <Label htmlFor="serviceRating" className="text-lg font-semibold text-gray-800">
             Como você avalia o atendimento da academia? *
