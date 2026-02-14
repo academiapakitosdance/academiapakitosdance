@@ -30,7 +30,7 @@ export default function SatisfactionSurvey() {
     const formData = new FormData(event.currentTarget)
 
     try {
-      const response = await fetch("https://formsubmit.co/ajax/academiapakitosdance@gmail.com", {
+      const response = await fetch("https://formsubmit.co/academiapakitosdance@gmail.com", {
         method: "POST",
         body: formData,
         headers: {
