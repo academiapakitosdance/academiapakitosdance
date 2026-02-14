@@ -19,7 +19,7 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Atendimento
   const serviceData = [
-    { option: "Excelente, até indicaria para uma pessoa", votes: 55, color: "bg-green-500" },
+    { option: "Excelente, até indicaria para uma pessoa", votes: 56, color: "bg-green-500" },
     { option: "Ótimo, excelente trabalho", votes: 31, color: "bg-blue-500" },
     { option: "Bom, mas daria para melhorar", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
@@ -28,7 +28,7 @@ export default function Dashboard({ onBack }: DashboardProps) {
   // Infraestrutura
   const infrastructureData = [
     { option: "Muito bonita, não precisa mudar nada!", votes: 59, color: "bg-green-500" },
-    { option: "Boa, mas poderia ter alguns ajustes", votes: 27, color: "bg-blue-500" },
+    { option: "Boa, mas poderia ter alguns ajustes", votes: 28, color: "bg-blue-500" },
     { option: "Regular, precisa de melhorias em alguns pontos", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de uma reforma urgente", votes: 0, color: "bg-red-500" },
   ]
@@ -93,10 +93,13 @@ export default function Dashboard({ onBack }: DashboardProps) {
 "A melhor academia, com os melhores profissionais!!!!!",
  "suporte paras baras pronta",
 "mais halteres, muito dificil na hora do fuzue",
-"A melhor não troco por nada parabéns Proff nota 1000👏🙏🏻"
+"A melhor não troco por nada parabéns Proff nota 1000👏🙏🏻",
 "Sou aluna nova e para mim está perfeito em tudo .Os personal são muito atencioso o professor e excelente só tenho agradecer .",
 "melhorar a climatização e suporte para as barras, q nao fiquem mais jogadas e amontoadas lá",
 "Eu nem em sonho queria fazer academia, mais depois q comecei a ir na Pakitos dance, minha opinião mudou completamente.",
+"A academia atende perfeitamente a necessidade dos frequentadores. Os profissionais são atenciosos (as aulas da professora Josi são excelentes). Uma sugestão é ter mais pontos com frascos de álcool e pano para higienizar os aparelhos.",
+
+
   ]
 
   const totalServiceVotes = serviceData.reduce((sum, item) => sum + item.votes, 0)
