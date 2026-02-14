@@ -10,52 +10,63 @@ import { Label } from "@/components/ui/label"
 import { Shield, Users, Building2, Eye, Instagram, MessageCircle } from "lucide-react"
 import Dashboard from "./dashboard"
 
-export default function SatisfactionSurvey() {
-  const [currentScreen, setCurrentScreen] = useState<"welcome" | "survey" | "submitted" | "dashboard">("welcome")
-  const [serviceRating, setServiceRating] = useState("")
-  const [infrastructureRating, setInfrastructureRating] = useState("")
-  const [suggestion, setSuggestion] = useState("")
-  const [isSubmitting, setIsSubmitting] = useState(false)
+export default function FormularioContato() {
+  return (
+    <div className="max-w-md mx-auto p-6">
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault()
+      <form
+        action="https://formsubmit.co/academiapakitosdance@gmail.com"
+        method="POST"
+        className="space-y-4"
+      >
 
-  if (!serviceRating || !infrastructureRating) {
-      alert("Por favor, responda todas as perguntas obrigatórias antes de enviar.")
-      return
-    }
+        {/* Proteção anti-spam */}
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_template" value="table" />
 
-    setIsSubmitting(true)
+        {/* Redirecionamento após enviar */}
+        <input
+          type="hidden"
+          name="_next"
+          value="https://SEUSITE.github.io/obrigado.html"
+        />
 
-    const formData = new FormData(event.currentTarget)
+        <h2 className="text-xl font-bold">Contato</h2>
 
-    try {
-      const response = await fetch("https://formsubmit.co/academiapakitosdance@gmail.com", {
-        method: "POST",
-        body: formData,
-        })
+        <input
+          type="text"
+          name="nome"
+          placeholder="Seu nome"
+          required
+          className="w-full border p-2"
+        />
 
-      if (response.ok) {
-        setCurrentScreen("submitted")
-        setServiceRating("")
-        setInfrastructureRating("")
-        setSuggestion("")
-      } else {
-        alert("Ocorreu um erro ao enviar sua pesquisa. Por favor, tente novamente.")
-        console.error("Erro ao enviar ulário:", response.statusText)
-      }
-    } catch (error) {
-      alert("Ocorreu um erro de rede. Por favor, verifique sua conexão e tente novamente.")
-      console.error("Erro de rede:", error)
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
+        <input
+          type="email"
+          name="email"
+          placeholder="Seu email"
+          required
+          className="w-full border p-2"
+        />
 
-  const handleBackToWelcome = () => {
-    setCurrentScreen("welcome")
-  }
+        <textarea
+          name="mensagem"
+          placeholder="Sua mensagem"
+          required
+          className="w-full border p-2"
+        />
 
+        <button
+          type="submit"
+          className="w-full bg-blue-600 text-white p-2 rounded"
+        >
+          Enviar
+        </button>
+
+      </form>
+    </div>
+  )
+}
   const renderWelcomeScreen = () => (
     <CardContent className="p-8 pt-0">
       <div className="space-y-6">
