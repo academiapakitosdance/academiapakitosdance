@@ -33,10 +33,7 @@ export default function SatisfactionSurvey() {
       const response = await fetch("https://formsubmit.co/academiapakitosdance@gmail.com", {
         method: "POST",
         body: formData,
-        headers: {
-          Accept: "application/json",
-        },
-      })
+        })
 
       if (response.ok) {
         setCurrentScreen("submitted")
@@ -45,7 +42,7 @@ export default function SatisfactionSurvey() {
         setSuggestion("")
       } else {
         alert("Ocorreu um erro ao enviar sua pesquisa. Por favor, tente novamente.")
-        console.error("Erro ao enviar formulário:", response.statusText)
+        console.error("Erro ao enviar ulário:", response.statusText)
       }
     } catch (error) {
       alert("Ocorreu um erro de rede. Por favor, verifique sua conexão e tente novamente.")
@@ -70,7 +67,7 @@ export default function SatisfactionSurvey() {
               <div className="text-left">
                 <h4 className="font-bold text-red-600 text-sm">TOTAL ANONIMATO</h4>
                 <p className="text-gray-700 text-sm mt-1">
-                  Sua participação é completamente anônima. Não coletamos nenhum dado pessoal, IP ou informação que
+                  Sua participação é completamente anônima. Não coletamos nenhum dado pessoal, IP ou inação que
                   possa identificá-lo.
                 </p>
               </div>
@@ -93,7 +90,7 @@ export default function SatisfactionSurvey() {
               <div className="text-left">
                 <h4 className="font-bold text-red-600 text-sm">ACESSO ÀS SUGESTÕES</h4>
                 <p className="text-gray-700 text-sm mt-1">
-                  Apenas o desenvolvedor do sistema e o Alison têm acesso às sugestões enviadas. Todas as informações
+                  Apenas o desenvolvedor do sistema e o Alison têm acesso às sugestões enviadas. Todas as inações
                   são tratadas com total confidencialidade.
                 </p>
               </div>
@@ -131,102 +128,112 @@ export default function SatisfactionSurvey() {
     </CardContent>
   )
 
-  const renderSurveyScreen = () => (
-    <CardContent className="p-8 pt-0">
-      <form onSubmit={handleSubmit} className="space-y-8">
-        <div className="grid gap-3">
-          <Label htmlFor="serviceRating" className="text-lg font-semibold text-gray-800">
-            Como você avalia o atendimento da academia? *
-          </Label>
-          <Select value={serviceRating} onValueChange={setServiceRating} name="serviceRating">
-            <SelectTrigger
-              id="serviceRating"
-              className="border-2 border-red-600 focus:border-red-700 focus:ring-red-600 rounded-xl h-12 font-medium"
-            >
-              <SelectValue placeholder="Selecione sua avaliação" />
-            </SelectTrigger>
-            <SelectContent className="border-2 border-red-600 rounded-xl">
-              <SelectItem value="excelente-indicaria" className="font-medium">
-                Excelente, até indicaria para uma pessoa.
-              </SelectItem>
-              <SelectItem value="otimo-trabalho" className="font-medium">
-                Ótimo, excelente trabalho.
-              </SelectItem>
-              <SelectItem value="bom-melhorar" className="font-medium">
-                Bom, mas daria para melhorar.
-              </SelectItem>
-              <SelectItem value="ruim-precisa-melhora" className="font-medium">
-                Ruim, precisa de melhora.
-              </SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
+const renderSurveyScreen = () => (
+  <CardContent className="p-8 pt-0">
 
-        <div className="grid gap-3">
-          <Label htmlFor="infrastructureRating" className="text-lg font-semibold text-gray-800">
-            Como você avalia a infraestrutura da nossa academia? *
-          </Label>
-          <p className="text-sm text-gray-600 -mt-2">
-            (Considere itens como organização, equipamentos, salas e ambiente em geral.)
-          </p>
-          <Select value={infrastructureRating} onValueChange={setInfrastructureRating} name="infrastructureRating">
-            <SelectTrigger
-              id="infrastructureRating"
-              className="border-2 border-red-600 focus:border-red-700 focus:ring-red-600 rounded-xl h-12 font-medium"
-            >
-              <SelectValue placeholder="Selecione sua avaliação" />
-            </SelectTrigger>
-            <SelectContent className="border-2 border-red-600 rounded-xl">
-              <SelectItem value="muito-bonita-nao-mudar" className="font-medium">
-                Muito bonita, não precisa mudar nada!
-              </SelectItem>
-              <SelectItem value="boa-alguns-ajustes" className="font-medium">
-                Boa, mas poderia ter alguns ajustes.
-              </SelectItem>
-              <SelectItem value="regular-precisa-melhorias" className="font-medium">
-                Regular, precisa de melhorias em alguns pontos.
-              </SelectItem>
-              <SelectItem value="ruim-reforma-urgente" className="font-medium">
-                Ruim, precisa de uma reforma urgente.
-              </SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
+    <form
+      onSubmit={handleSubmit}
+      className="space-y-8"
+    >
 
-        <div className="grid gap-3">
-          <Label htmlFor="suggestion" className="text-lg font-semibold text-gray-800">
-            Deixe sua sugestão/reclamação/elogios para nossa academia:
-          </Label>
-          <Textarea
-            id="suggestion"
-            placeholder="Sua sugestão aqui..."
-            value={suggestion}
-            onChange={(e) => setSuggestion(e.target.value)}
-            className="min-h-[120px] border-2 border-red-600 focus:border-red-700 focus:ring-red-600 rounded-xl font-medium resize-none"
-            name="suggestion"
-          />
-        </div>
+      {/* Campos ocultos (anti-bloqueio FormSubmit) */}
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="hidden" name="_subject" value="Nova Pesquisa - Academia Pakitos Dance" />
 
-        <div className="space-y-4">
-          <Button
-            type="submit"
-            className="w-full bg-red-600 text-white hover:bg-red-700 focus:ring-red-600 h-12 rounded-xl font-bold text-lg transition-all duration-200 shadow-lg hover:shadow-xl"
-            disabled={isSubmitting || !serviceRating || !infrastructureRating}
+      {/* Atendimento */}
+      <div className="grid gap-3">
+        <Label htmlFor="serviceRating" className="text-lg font-semibold text-gray-800">
+          Como você avalia o atendimento da academia? *
+        </Label>
+
+        <Select
+          value={serviceRating}
+          onValueChange={setServiceRating}
+          name="serviceRating"
+        >
+          <SelectTrigger
+            id="serviceRating"
+            className="border-2 border-red-600 rounded-xl h-12 font-medium"
           >
-            {isSubmitting ? "Enviando..." : "Enviar Avaliação"}
-          </Button>
+            <SelectValue placeholder="Selecione sua avaliação" />
+          </SelectTrigger>
 
-          <Button
-            type="button"
-            onClick={handleBackToWelcome}
-            className="w-full bg-gray-200 text-black hover:bg-gray-300 border-2 border-red-600 h-12 rounded-xl font-bold text-lg transition-all duration-200"
+          <SelectContent className="border-2 border-red-600 rounded-xl">
+            <SelectItem value="excelente">Excelente</SelectItem>
+            <SelectItem value="otimo">Ótimo</SelectItem>
+            <SelectItem value="bom">Bom</SelectItem>
+            <SelectItem value="ruim">Ruim</SelectItem>
+          </SelectContent>
+        </Select>
+      </div>
+
+      {/* Infraestrutura */}
+      <div className="grid gap-3">
+        <Label htmlFor="infrastructureRating" className="text-lg font-semibold text-gray-800">
+          Como você avalia a infraestrutura? *
+        </Label>
+
+        <Select
+          value={infrastructureRating}
+          onValueChange={setInfrastructureRating}
+          name="infrastructureRating"
+        >
+          <SelectTrigger
+            id="infrastructureRating"
+            className="border-2 border-red-600 rounded-xl h-12 font-medium"
           >
-            Voltar
-          </Button>
-        </div>
-      </form>
-    </CardContent>
-  )
+            <SelectValue placeholder="Selecione sua avaliação" />
+          </SelectTrigger>
+
+          <SelectContent className="border-2 border-red-600 rounded-xl">
+            <SelectItem value="muito-bom">Muito bom</SelectItem>
+            <SelectItem value="bom">Bom</SelectItem>
+            <SelectItem value="regular">Regular</SelectItem>
+            <SelectItem value="ruim">Ruim</SelectItem>
+          </SelectContent>
+        </Select>
+      </div>
+
+      {/* Sugestão */}
+      <div className="grid gap-3">
+        <Label htmlFor="suggestion" className="text-lg font-semibold text-gray-800">
+          Sugestões / Reclamações / Elogios
+        </Label>
+
+        <Textarea
+          id="suggestion"
+          name="suggestion"
+          placeholder="Escreva aqui..."
+          value={suggestion}
+          onChange={(e) => setSuggestion(e.target.value)}
+          className="min-h-[120px] border-2 border-red-600 rounded-xl resize-none"
+        />
+      </div>
+
+      {/* Botões */}
+      <div className="space-y-4">
+        <Button
+          type="submit"
+          disabled={isSubmitting || !serviceRating || !infrastructureRating}
+          className="w-full bg-red-600 text-white h-12 rounded-xl font-bold"
+        >
+          {isSubmitting ? "Enviando..." : "Enviar Avaliação"}
+        </Button>
+
+        <Button
+          type="button"
+          onClick={handleBackToWelcome}
+          className="w-full bg-gray-200 border-2 border-red-600 h-12 rounded-xl font-bold"
+        >
+          Voltar
+        </Button>
+      </div>
+
+    </form>
+
+  </CardContent>
+)
 
   const renderSubmittedScreen = () => (
     <CardContent className="p-8 pt-0">
