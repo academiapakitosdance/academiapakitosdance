@@ -19,16 +19,16 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Atendimento
   const serviceData = [
-    { option: "Excelente, até indicaria para uma pessoa", votes: 46, color: "bg-green-500" },
-    { option: "Ótimo, excelente trabalho", votes: 23, color: "bg-blue-500" },
+    { option: "Excelente, até indicaria para uma pessoa", votes: 55, color: "bg-green-500" },
+    { option: "Ótimo, excelente trabalho", votes: 31, color: "bg-blue-500" },
     { option: "Bom, mas daria para melhorar", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
   ]
 
   // Infraestrutura
   const infrastructureData = [
-    { option: "Muito bonita, não precisa mudar nada!", votes: 51, color: "bg-green-500" },
-    { option: "Boa, mas poderia ter alguns ajustes", votes: 18, color: "bg-blue-500" },
+    { option: "Muito bonita, não precisa mudar nada!", votes: 59, color: "bg-green-500" },
+    { option: "Boa, mas poderia ter alguns ajustes", votes: 27, color: "bg-blue-500" },
     { option: "Regular, precisa de melhorias em alguns pontos", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de uma reforma urgente", votes: 0, color: "bg-red-500" },
   ]
@@ -88,6 +88,15 @@ export default function Dashboard({ onBack }: DashboardProps) {
 "Perfeito",
 "Top top",
 "Professores top. Sem nada a reclamar",
+"MELHORAR A CLIMATIZAÇÃO TA MUITO RUIM NESSE CALOR",
+"Acho legal colocar suportes nas paredes para aquelas barras, ficam todas amontoadas, nos horarios mais cheio além de muita pessosa fica muito ruim pq tem muita barra",
+"A melhor academia, com os melhores profissionais!!!!!",
+ "suporte paras baras pronta",
+"mais halteres, muito dificil na hora do fuzue",
+"A melhor não troco por nada parabéns Proff nota 1000👏🙏🏻"
+"Sou aluna nova e para mim está perfeito em tudo .Os personal são muito atencioso o professor e excelente só tenho agradecer .",
+"melhorar a climatização e suporte para as barras, q nao fiquem mais jogadas e amontoadas lá",
+"Eu nem em sonho queria fazer academia, mais depois q comecei a ir na Pakitos dance, minha opinião mudou completamente.",
   ]
 
   const totalServiceVotes = serviceData.reduce((sum, item) => sum + item.votes, 0)
