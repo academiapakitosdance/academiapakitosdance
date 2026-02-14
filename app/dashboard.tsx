@@ -19,22 +19,65 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Atendimento
   const serviceData = [
-    { option: "Excelente, até indicaria para uma pessoa", votes: 0, color: "bg-green-500" },
-    { option: "Ótimo, excelente trabalho", votes: 0, color: "bg-blue-500" },
+    { option: "Excelente, até indicaria para uma pessoa", votes: 35, color: "bg-green-500" },
+    { option: "Ótimo, excelente trabalho", votes: 21, color: "bg-blue-500" },
     { option: "Bom, mas daria para melhorar", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
   ]
 
   // Infraestrutura
   const infrastructureData = [
-    { option: "Muito bonita, não precisa mudar nada!", votes: 0, color: "bg-green-500" },
-    { option: "Boa, mas poderia ter alguns ajustes", votes: 0, color: "bg-blue-500" },
+    { option: "Muito bonita, não precisa mudar nada!", votes: 40, color: "bg-green-500" },
+    { option: "Boa, mas poderia ter alguns ajustes", votes: 16, color: "bg-blue-500" },
     { option: "Regular, precisa de melhorias em alguns pontos", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de uma reforma urgente", votes: 0, color: "bg-red-500" },
   ]
 
   const suggestions = [
-
+"Maravilhoso atendimento ótimo. Equipamentos tds bem cuidados, Pra mim esta td ótimo",
+"Podia melhorar essa parte da climatização né… um climatizador ja fazia muita diferença.",
+"Nada a dizer, somente que tudo é maravilhoso",
+"eu gosto muito de treinar aqui, mas esse calor atrapalha demais… se tivesse mais ar condicionado ia melhorar muito.",
+"Perfeitaaa",
+"Tudo excelente!",
+"eu teria colocado o refrigerador lá no fundo, está muito exposto la na frente, nao tem como os meninos ficar cuidando, o pagamento tinha q ser feito na hora e algum funcionario, se em algum dia tiver muito movimento e todos ocupados, alguem pode simplesmente pegar e ir embora",
+"Sinceramente, tem dia que eu penso em ir embora de tão quente que tá, fica abafado demais.",
+"O predio da academia ficou show após a reforma,gostaria de enfatizar sobre o atendimento dos meninos ,super atenciosos,parabéns pela equipe!",
+"Sempre dando o melhor  tá d parabéns .",
+"Pra mim tá ficando cada dia melhor Só tenho uma reclamação das pessoas acharem que são donas do aparelho e não quer dividir",
+"A academia está excelente. Os equipamentos são ótimos e bem conservados, e a infraestrutura no geral é muito boa, não tenho do que reclamar. Os professores são atenciosos, sempre prestativos e dão um suporte muito bom durante os treinos. Além disso, a dinâmica das aulas é um diferencial, pois há bastante variedade e isso torna a rotina mais motivadora e agradável. Estou muito satisfeita com a experiência.",
+"Continuar evoluindo,estão de parabéns",
+"Está ótima",
+"Linda ótimo atendimento",
+"Acho que esses suplementos ali na frente ficam muito largados, sem ninguém pra olhar direto. Talvez se ficasse mais no fundo, perto do balcão, era mais seguro. Porque do jeito que tá, em horário cheio, ninguém nem percebe se alguém pega sem pagar.",
+"As veiz a gente quer treinar bem, mas com esse calor fica dificil demais, desanima.",
+"Podia investir mais nisso ai, ar condicionado ou climatizador, pq assim tá complicado.",
+"Ótima lkkkkkkkkkkkkkkkkkkkk",
+"Ta ficando pequena rsrsrs",
+"BOTASSINI é perfeito D+  S2",
+"Eu gosto daqui, mas essa parte do calor precisa melhorar urgente, não dá pra fingir que tá normal.",
+"Poderia ter Tornozeleiras novas para fazer a extensão na polia 😅, e de sábado o horário da academia poderia ser até umas 12:00",
+"Recomendar as pessoas não deixarem os patinetes no meio da entrada, além de atrapalhar é um perigo derrubar algum e te que pagar",
+"Equipe nota 💯",
+"deixar os suplementos ali na entrada é meio arriscado. Não tem sempre alguém pra cuidar, e com a correria, pode acontecer de sair sem pagar. Se ficasse mais próximo de algum funcionário, ia evitar esse problema.",
+"com menos calor a experiência ia ser bem melhor.",
+"A única coisa que  na minha opinião  sobre o grupo de watts zap , poderia ser só sobre academia ,não ficar colocando propaganda de roupa ou de produtos de limpeza",
+"Ótimos professores",
+"Podiam pensar em colocar mais ventiladores, nem precisa ser nada exagerado, só pra circular melhor o ar.",
+"Todos os personal estão de parabéns principalmente o Alisson muito gentil e dedicado as pessoas.",
+"Nota 1000",
+"acho que essa parte da climatização podia ser melhor cuidada.",
+"Tem dia que o calor tá tão forte que parece que a gente tá numa sauna, ai fica dificil manter o foco.",
+"Poderia ampliar o espaço ou pegar prédio  e fazer em cima e em baixo potencial e professores bem treinados tem.  mais está assim já está ótimo e mudança sempre e bom",
+"Poderia arrumar os ventiladores, atrás das baik , Um cuidado melhor na limpeza do banheiro feminino Da más e um lugar ótimo , onde agente se sente bem , e acolhido,.... Uma experiência, nova q estamos amando",
+"se possível colocar uns ar condicionados que é mais garantido pois o local é muito grande e o climatizador não está dando conta 🫠🙃🫠",
+"Só elogios parabéns",
+"Academia está de parabéns",
+"Amo a academia,mas tem hrs que agente quer usar um aparelho e tem muitas pessoas principalmente as meninas mais jovens que ficam no celular e acabam prejudicando quem realmente foi lá pra fazer seu exercício.",
+"Sugiro que o grupo wats feminino seja somente para recados, avisos, e listas pertinentes a academia, sem propagandas e vendas de outras coisas.",
+"Está tudo perfeito, Alison não deixa a desejar no atendimento e nem na evolução do ambiente. Parabéns a todos pelo excelente trabalho!",
+"os ventiladores perto dos legumes 45 deveria ficar em direção pra baixo e rodando, pois são equipamentos que faz a gente sentir mais calor",
+"Só um elogio! Alison, vc e o Matheus Botassini são maravilhosos, atenciosos, educados, prestativos... Continuem assim.",
 ]
 
   const totalServiceVotes = serviceData.reduce((sum, item) => sum + item.votes, 0)
