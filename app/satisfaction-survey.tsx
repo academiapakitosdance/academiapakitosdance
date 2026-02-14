@@ -9,6 +9,8 @@ import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
 import { Shield, Users, Building2, Eye, Instagram, MessageCircle } from "lucide-react"
 import Dashboard from "./dashboard"
+import emailjs from "@emailjs/browser"
+
 
 export default function SatisfactionSurvey() {
   const [currentScreen, setCurrentScreen] = useState<"welcome" | "survey" | "submitted" | "dashboard">("welcome")
@@ -17,43 +19,40 @@ export default function SatisfactionSurvey() {
   const [suggestion, setSuggestion] = useState("")
   const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault()
+const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+  event.preventDefault()
 
   if (!serviceRating || !infrastructureRating) {
-      alert("Por favor, responda todas as perguntas obrigatórias antes de enviar.")
-      return
-    }
-
-    setIsSubmitting(true)
-
-    const formData = new FormData(event.currentTarget)
-
-    try {
-      const response = await fetch("https://formsubmit.co/academiapakitosdance@gmail.com", {
-        method: "POST",
-        body: formData,
-        headers: {
-          Accept: "application/json",
-        },
-      })
-
-      if (response.ok) {
-        setCurrentScreen("submitted")
-        setServiceRating("")
-        setInfrastructureRating("")
-        setSuggestion("")
-      } else {
-        alert("Ocorreu um erro ao enviar sua pesquisa. Por favor, tente novamente.")
-        console.error("Erro ao enviar formulário:", response.statusText)
-      }
-    } catch (error) {
-      alert("Ocorreu um erro de rede. Por favor, verifique sua conexão e tente novamente.")
-      console.error("Erro de rede:", error)
-    } finally {
-      setIsSubmitting(false)
-    }
+    alert("Por favor, responda todas as perguntas obrigatórias.")
+    return
   }
+
+  setIsSubmitting(true)
+
+  try {
+    await emailjs.send(
+      "service_joih093",
+      "template_9al40xc",
+      {
+        service: serviceRating,
+        infra: infrastructureRating,
+        msg: suggestion,
+      },
+      "RNgGBTcAs7ESerkyv"
+    )
+
+    setCurrentScreen("submitted")
+    setServiceRating("")
+    setInfrastructureRating("")
+    setSuggestion("")
+
+  } catch (error) {
+    console.error(error)
+    alert("Erro ao enviar. Tente novamente.")
+  } finally {
+    setIsSubmitting(false)
+  }
+}
 
   const handleBackToWelcome = () => {
     setCurrentScreen("welcome")
