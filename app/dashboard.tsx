@@ -19,16 +19,16 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Atendimento
   const serviceData = [
-    { option: "Excelente, até indicaria para uma pessoa", votes: 56, color: "bg-green-500" },
-    { option: "Ótimo, excelente trabalho", votes: 33, color: "bg-blue-500" },
+    { option: "Excelente, até indicaria para uma pessoa", votes: 60, color: "bg-green-500" },
+    { option: "Ótimo, excelente trabalho", votes: 40, color: "bg-blue-500" },
     { option: "Bom, mas daria para melhorar", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
   ]
 
   // Infraestrutura
   const infrastructureData = [
-    { option: "Muito bonita, não precisa mudar nada!", votes: 60, color: "bg-green-500" },
-    { option: "Boa, mas poderia ter alguns ajustes", votes: 29, color: "bg-blue-500" },
+    { option: "Muito bonita, não precisa mudar nada!", votes: 63, color: "bg-green-500" },
+    { option: "Boa, mas poderia ter alguns ajustes", votes: 37, color: "bg-blue-500" },
     { option: "Regular, precisa de melhorias em alguns pontos", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de uma reforma urgente", votes: 0, color: "bg-red-500" },
   ]
@@ -99,7 +99,14 @@ export default function Dashboard({ onBack }: DashboardProps) {
 "Eu nem em sonho queria fazer academia, mais depois q comecei a ir na Pakitos dance, minha opinião mudou completamente.",
 "A academia atende perfeitamente a necessidade dos frequentadores. Os profissionais são atenciosos (as aulas da professora Josi são excelentes). Uma sugestão é ter mais pontos com frascos de álcool e pano para higienizar os aparelhos.",
 "Para minha pessoa esta tudo ótimo , muito bom atendimento,são didicados e atenciosos só tenho a elogiar.",
-
+"Mais esteiras",
+"principalmente melhoar a cliamtizasao mto calor",
+"Ótima",
+"mais ahalteres e dar uns jeitos ddaquelas barras que ficam pelo chao todas jogadas",
+"mais segurança com aquele negocio ded suplemnteo, talvez cameras, porque anddaram roubandod coisas dods outros por ai, e não é brincadeira",
+"climatização, halter e mais barras prontas, e talvez um suporte na parede pra elas",
+"Ter mais, opções de halteres e kettlebell para uso em treinos dinâmicos ou para substituir aparelhos quando estiver ocupados",
+"bom",
   ]
 
   const totalServiceVotes = serviceData.reduce((sum, item) => sum + item.votes, 0)
