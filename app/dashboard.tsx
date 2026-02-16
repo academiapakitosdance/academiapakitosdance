@@ -19,16 +19,16 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Atendimento
   const serviceData = [
-    { option: "Excelente, até indicaria para uma pessoa", votes: 60, color: "bg-green-500" },
-    { option: "Ótimo, excelente trabalho", votes: 40, color: "bg-blue-500" },
+    { option: "Excelente, até indicaria para uma pessoa", votes: 75, color: "bg-green-500" },
+    { option: "Ótimo, excelente trabalho", votes: 52, color: "bg-blue-500" },
     { option: "Bom, mas daria para melhorar", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
   ]
 
   // Infraestrutura
   const infrastructureData = [
-    { option: "Muito bonita, não precisa mudar nada!", votes: 63, color: "bg-green-500" },
-    { option: "Boa, mas poderia ter alguns ajustes", votes: 37, color: "bg-blue-500" },
+    { option: "Muito bonita, não precisa mudar nada!", votes: 85, color: "bg-green-500" },
+    { option: "Boa, mas poderia ter alguns ajustes", votes: 42, color: "bg-blue-500" },
     { option: "Regular, precisa de melhorias em alguns pontos", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de uma reforma urgente", votes: 0, color: "bg-red-500" },
   ]
@@ -107,6 +107,26 @@ export default function Dashboard({ onBack }: DashboardProps) {
 "climatização, halter e mais barras prontas, e talvez um suporte na parede pra elas",
 "Ter mais, opções de halteres e kettlebell para uso em treinos dinâmicos ou para substituir aparelhos quando estiver ocupados",
 "bom",
+"Está ótima !",
+"Nota 1000",
+"mais seguranã pq estão roubando pertences, já é a segunda vez q encontro minha bolsa em outro lugar e sempre com uma piranha a menos",
+"climatização, acho q outro local para o frigobar, esta muito exposto ali, qualquer um pode pegar e sair",
+"Vcs são nota 1000 querido",
+"Sei que a culpa não é de vocês, mas poderia dar um toque nas pessoas para passar álcool pós uso dos aparelhos, também deixar organizado. E tem pessoas que não entende que tem que revezar, dito isso não tenho o que reclamar, atendimento excelente e limpo. Obrigada!!",
+"Nada a declarar kkkkk está ótima",
+"Sempre continue assim",
+"Só parabenizar professor e instrutores muitos atenciosos Deus abençoe sempre",
+"intrutores muito bons, acho q deveria ter um suporte para as barras prontas, nem q for na parede, e melhorar a ventilação",
+"Comecei faz pouco tempo,por enquanto não tenho o que reclamar tá exeley",
+"Única coisa, que alguns alunos demora um pouco nos aparelhos, os professores estagiários, só tomar cuidado pois os alunos, as vezes não sabe realizar o movimento do exercício, explica 1 vez e já sai e não vê se o exercício tá certo ou não.",
+"Pra mim está ótima e depois da reforma ficou linda",
+"Ambiente poderia ser um pouco mais claro e iluminado."
+"Nada a reclamar, academia maravilhosa, professores super atenciosos.",
+"ar condicionado",
+"Academia Top. Parabéns,"
+
+
+  
   ]
 
   const totalServiceVotes = serviceData.reduce((sum, item) => sum + item.votes, 0)
