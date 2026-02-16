@@ -120,7 +120,7 @@ export default function Dashboard({ onBack }: DashboardProps) {
 "Comecei faz pouco tempo,por enquanto não tenho o que reclamar tá exeley",
 "Única coisa, que alguns alunos demora um pouco nos aparelhos, os professores estagiários, só tomar cuidado pois os alunos, as vezes não sabe realizar o movimento do exercício, explica 1 vez e já sai e não vê se o exercício tá certo ou não.",
 "Pra mim está ótima e depois da reforma ficou linda",
-"Ambiente poderia ser um pouco mais claro e iluminado."
+"Ambiente poderia ser um pouco mais claro e iluminado.",
 "Nada a reclamar, academia maravilhosa, professores super atenciosos.",
 "ar condicionado",
 "Academia Top. Parabéns,"
