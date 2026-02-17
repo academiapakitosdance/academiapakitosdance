@@ -27,7 +27,7 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Infraestrutura
   const infrastructureData = [
-    { option: "Muito bonita, não precisa mudar nada!", votes: 17", color: "bg-green-500" },
+    { option: "Muito bonita, não precisa mudar nada!", votes: 17, color: "bg-green-500" },
     { option: "Boa, mas poderia ter alguns ajustes", votes: 8, color: "bg-blue-500" },
     { option: "Regular, precisa de melhorias em alguns pontos", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de uma reforma urgente", votes: 0, color: "bg-red-500" },
