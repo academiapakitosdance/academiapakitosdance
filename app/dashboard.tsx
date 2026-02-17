@@ -19,21 +19,31 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Atendimento
   const serviceData = [
-    { option: "Excelente, até indicaria para uma pessoa", votes: 0, color: "bg-green-500" },
-    { option: "Ótimo, excelente trabalho", votes: 0, color: "bg-blue-500" },
+    { option: "Excelente, até indicaria para uma pessoa", votes: 11, color: "bg-green-500" },
+    { option: "Ótimo, excelente trabalho", votes: 7, color: "bg-blue-500" },
     { option: "Bom, mas daria para melhorar", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
   ]
 
   // Infraestrutura
   const infrastructureData = [
-    { option: "Muito bonita, não precisa mudar nada!", votes: 0, color: "bg-green-500" },
-    { option: "Boa, mas poderia ter alguns ajustes", votes: 0, color: "bg-blue-500" },
+    { option: "Muito bonita, não precisa mudar nada!", votes: 12, color: "bg-green-500" },
+    { option: "Boa, mas poderia ter alguns ajustes", votes: 6, color: "bg-blue-500" },
     { option: "Regular, precisa de melhorias em alguns pontos", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de uma reforma urgente", votes: 0, color: "bg-red-500" },
   ]
 
   const suggestions = [
+"Tá tudo certo",
+"Nada a reclamar, somente do calor, mas isso e uma coisa inevitável, tudo ótimo fora isso",
+"climatização a melhorar",
+"Parabéns estrutores muito atenciosos",
+"Uma sugestão colocar a chicletes a venda e comprar o terreno do lado kkk",
+"elogios: alison e sua equipe extremamente atenciosos e prestativos! academia com nítido investimento por parte do alison, dedicação admirável! sugestão: sugiro que por conta dos pesos que caem e o atrito com o chão da academia, um piso vinílico seria uma opção válida! a estética ficaria belíssima, aparência de sempre limpa e sem gastos com manutenções por quebra de azulejos.",
+"Ótimo atendimento",
+"Por mim top, atendimento , explicação, atenção sempre que precisar nota 10 a todos os professores pois não tem acepção de alunos e sim atende todos iguais parabéns continuem assim",
+"Excelentes! Sugiro mudar a playlist das músicas, acaba ficando repetitivo e acredito que isso influencia no nosso ânimo rs... ou faça uma playlist colaborativa.. no mais está ótimo demais",
+"Academia muito completa, não economizam em equipamentos, é a mais completa da cidade. Horário de funcionamento legal, preço acessível e o lugar é bem cuidado.",
 
   ]
 
