@@ -21,14 +21,14 @@ export default function Dashboard({ onBack }: DashboardProps) {
   const serviceData = [
     { option: "Excelente, até indicaria para uma pessoa", votes: 15, color: "bg-green-500" },
     { option: "Ótimo, excelente trabalho", votes: 9, color: "bg-blue-500" },
-    { option: "Bom, mas daria para melhorar", votes: 1, color: "bg-yellow-500" },
+    { option: "Bom, mas daria para melhorar", votes: 3, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
   ]
 
   // Infraestrutura
   const infrastructureData = [
-    { option: "Muito bonita, não precisa mudar nada!", votes: 17, color: "bg-green-500" },
-    { option: "Boa, mas poderia ter alguns ajustes", votes: 8, color: "bg-blue-500" },
+    { option: "Muito bonita, não precisa mudar nada!", votes: 18, color: "bg-green-500" },
+    { option: "Boa, mas poderia ter alguns ajustes", votes: 9, color: "bg-blue-500" },
     { option: "Regular, precisa de melhorias em alguns pontos", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de uma reforma urgente", votes: 0, color: "bg-red-500" },
   ]
@@ -50,6 +50,10 @@ export default function Dashboard({ onBack }: DashboardProps) {
 "Professores super profissionais antciosos nota 1000",
 "A academia está muito bonita, sempre progredindo e servindo bem a todos os matrículados. Mais na minha opinião os pisos seria uma boa serem trocados! Fora isso o lugar n há mais nada pra falar.",
 "Muito bom, equipamentos d última qualidade, ótimo atendimento",
+"Muito boa a academia inteira ótimos aparelhos poderia por umas playlist eletrônica ou da uma diversificada nas músicas do resto estão de parabéns",
+"Uma sugestão seria comprar máquinas diferentes ex: t-bar, banco romano. Entre outros",
+
+
 
 
 
