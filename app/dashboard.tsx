@@ -19,17 +19,17 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Atendimento
   const serviceData = [
-    { option: "Excelente, até indicaria para uma pessoa", votes: 15, color: "bg-green-500" },
-    { option: "Ótimo, excelente trabalho", votes: 9, color: "bg-blue-500" },
-    { option: "Bom, mas daria para melhorar", votes: 3, color: "bg-yellow-500" },
+    { option: "Excelente, até indicaria para uma pessoa", votes: 20, color: "bg-green-500" },
+    { option: "Ótimo, excelente trabalho", votes: 10, color: "bg-blue-500" },
+    { option: "Bom, mas daria para melhorar", votes: 9, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
   ]
 
   // Infraestrutura
   const infrastructureData = [
-    { option: "Muito bonita, não precisa mudar nada!", votes: 18, color: "bg-green-500" },
-    { option: "Boa, mas poderia ter alguns ajustes", votes: 9, color: "bg-blue-500" },
-    { option: "Regular, precisa de melhorias em alguns pontos", votes: 0, color: "bg-yellow-500" },
+    { option: "Muito bonita, não precisa mudar nada!", votes: 25, color: "bg-green-500" },
+    { option: "Boa, mas poderia ter alguns ajustes", votes: 12, color: "bg-blue-500" },
+    { option: "Regular, precisa de melhorias em alguns pontos", votes: 2, color: "bg-yellow-500" },
     { option: "Ruim, precisa de uma reforma urgente", votes: 0, color: "bg-red-500" },
   ]
 
@@ -52,11 +52,14 @@ export default function Dashboard({ onBack }: DashboardProps) {
 "Muito bom, equipamentos d última qualidade, ótimo atendimento",
 "Muito boa a academia inteira ótimos aparelhos poderia por umas playlist eletrônica ou da uma diversificada nas músicas do resto estão de parabéns",
 "Uma sugestão seria comprar máquinas diferentes ex: t-bar, banco romano. Entre outros",
-
-
-
-
-
+"Precisa de equipamentos pequenos eu acho, nao digo por que falta equipamento, isso é uma coisa que esta longe de ser, digo por conta que na hora de pico, esta dificil",
+"Climatizacao, preciso melhorar",
+"aulao dos homens e ventilacao",
+"👍🏻",
+"suporte para barra pronta e camera",
+"clima e equipamentos que nunca e demais",
+"mais halter",
+"melhorar climatizacao",
   ]
 
   const totalServiceVotes = serviceData.reduce((sum, item) => sum + item.votes, 0)
