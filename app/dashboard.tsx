@@ -76,7 +76,7 @@ export default function Dashboard({ onBack }: DashboardProps) {
 "mais elastico",
 "Então de parabéns Alison e equipe sempre trazendo atividades novas",
 "mais maquina pequena para maior variação, e mais pegadores, estão todos rachados",
-"Gostaria que tivesse mais álcool perto dos aparelhos. Tem usuários que deixam tudo melado de suor. Por uma caneta piloto para por o nome no copo para evitar desperdício. Cada um escreve o seu nome e utiliza o mesmo até o final do horário.","
+"Gostaria que tivesse mais álcool perto dos aparelhos. Tem usuários que deixam tudo melado de suor. Por uma caneta piloto para por o nome no copo para evitar desperdício. Cada um escreve o seu nome e utiliza o mesmo até o final do horário.",
 "Sempre muito bem atendida noota 1000",
 "Reforçar sempre para alunos limpar os aparelhos quando suam muito.",
 "Academia top super indico",
