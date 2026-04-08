@@ -19,17 +19,17 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Atendimento
   const serviceData = [
-    { option: "Excelente, até indicaria para uma pessoa", votes: 23, color: "bg-green-500" },
-    { option: "Ótimo, excelente trabalho", votes: 23, color: "bg-blue-500" },
-    { option: "Bom, mas daria para melhorar", votes: 3, color: "bg-yellow-500" },
+    { option: "Excelente, até indicaria para uma pessoa", votes: 28, color: "bg-green-500" },
+    { option: "Ótimo, excelente trabalho", votes: 31, color: "bg-blue-500" },
+    { option: "Bom, mas daria para melhorar", votes: 6, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
   ]
 
   // Infraestrutura
   const infrastructureData = [
-    { option: "Muito bonita, não precisa mudar nada!", votes: 39, color: "bg-green-500" },
-    { option: "Boa, mas poderia ter alguns ajustes", votes: 9, color: "bg-blue-500" },
-    { option: "Regular, precisa de melhorias em alguns pontos", votes: 1, color: "bg-yellow-500" },
+    { option: "Muito bonita, não precisa mudar nada!", votes: 47, color: "bg-green-500" },
+    { option: "Boa, mas poderia ter alguns ajustes", votes: 16, color: "bg-blue-500" },
+    { option: "Regular, precisa de melhorias em alguns pontos", votes: 2, color: "bg-yellow-500" },
     { option: "Ruim, precisa de uma reforma urgente", votes: 0, color: "bg-red-500" },
   ]
 
@@ -65,6 +65,18 @@ export default function Dashboard({ onBack }: DashboardProps) {
 "Amando tudo vc arrasa muitoooo.. gratidão 🙏",
 "Tá nota 1000",
 "aquels elasticos grande que usa em maquina de academia e troca playlist",
+"Está de parabéns",
+"tudo ótimo, após o ar melhorou muito, mas acho q deveria trocar os pegadores, só tem 2 que não estão rachados, ai todos ficam tentando pegar ele e ngm usa o resto",
+"Amo estar lá,além de ser muito bem assistida você Alison e toda sua equipe estão de parabéns.",
+"O que falta mesmo é as pessoas guardarem as Anilhas serem mais organizadas.",
+"Muito boa, continue sempre melhoras e buscando inovar",
+"Os profissionais são de extrema competência, porém quando vamos treinar mais a noite vemos que eles já estão bem cansados e pouco dispostos a ajudar",
+"Academia ótima",
+"Continue fazendo o ótimo trabalho que já fazem",
+"mais elastico",
+"Então de parabéns Alison e equipe sempre trazendo atividades novas",
+"mais maquina pequena para maior variação, e mais pegadores, estão todos rachados",
+"Gostaria que tivesse mais álcool perto dos aparelhos. Tem usuários que deixam tudo melado de suor. Por uma caneta piloto para por o nome no copo para evitar desperdício. Cada um escreve o seu nome e utiliza o mesmo até o final do horário.",   
   ]
 
   const totalServiceVotes = serviceData.reduce((sum, item) => sum + item.votes, 0)
