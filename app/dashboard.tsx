@@ -19,47 +19,22 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Atendimento
   const serviceData = [
-    { option: "Excelente, até indicaria para uma pessoa", votes: 20, color: "bg-green-500" },
-    { option: "Ótimo, excelente trabalho", votes: 10, color: "bg-blue-500" },
-    { option: "Bom, mas daria para melhorar", votes: 9, color: "bg-yellow-500" },
+    { option: "Excelente, até indicaria para uma pessoa", votes: 0, color: "bg-green-500" },
+    { option: "Ótimo, excelente trabalho", votes: 0, color: "bg-blue-500" },
+    { option: "Bom, mas daria para melhorar", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
   ]
 
   // Infraestrutura
   const infrastructureData = [
-    { option: "Muito bonita, não precisa mudar nada!", votes: 25, color: "bg-green-500" },
-    { option: "Boa, mas poderia ter alguns ajustes", votes: 12, color: "bg-blue-500" },
-    { option: "Regular, precisa de melhorias em alguns pontos", votes: 2, color: "bg-yellow-500" },
+    { option: "Muito bonita, não precisa mudar nada!", votes: 0, color: "bg-green-500" },
+    { option: "Boa, mas poderia ter alguns ajustes", votes: 0, color: "bg-blue-500" },
+    { option: "Regular, precisa de melhorias em alguns pontos", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de uma reforma urgente", votes: 0, color: "bg-red-500" },
   ]
 
   const suggestions = [
-"Tá tudo certo",
-"Nada a reclamar, somente do calor, mas isso e uma coisa inevitável, tudo ótimo fora isso",
-"climatização a melhorar",
-"Parabéns estrutores muito atenciosos",
-"Uma sugestão colocar a chicletes a venda e comprar o terreno do lado kkk",
-"elogios: alison e sua equipe extremamente atenciosos e prestativos! academia com nítido investimento por parte do alison, dedicação admirável! sugestão: sugiro que por conta dos pesos que caem e o atrito com o chão da academia, um piso vinílico seria uma opção válida! a estética ficaria belíssima, aparência de sempre limpa e sem gastos com manutenções por quebra de azulejos.",
-"Ótimo atendimento",
-"Por mim top, atendimento , explicação, atenção sempre que precisar nota 10 a todos os professores pois não tem acepção de alunos e sim atende todos iguais parabéns continuem assim",
-"Excelentes! Sugiro mudar a playlist das músicas, acaba ficando repetitivo e acredito que isso influencia no nosso ânimo rs... ou faça uma playlist colaborativa.. no mais está ótimo demais",
-"Academia muito completa, não economizam em equipamentos, é a mais completa da cidade. Horário de funcionamento legal, preço acessível e o lugar é bem cuidado.",
-"Acho que deveria ter catraca ou algum tipo de segurança",
-"Muito boa, profissionais muito qualificados, aparelhos sempre sob observação e equipamentos para vários tipos de idade.",
-"C. Melhorar estraga vcs estão de parabéns",
-"Professores super profissionais antciosos nota 1000",
-"A academia está muito bonita, sempre progredindo e servindo bem a todos os matrículados. Mais na minha opinião os pisos seria uma boa serem trocados! Fora isso o lugar n há mais nada pra falar.",
-"Muito bom, equipamentos d última qualidade, ótimo atendimento",
-"Muito boa a academia inteira ótimos aparelhos poderia por umas playlist eletrônica ou da uma diversificada nas músicas do resto estão de parabéns",
-"Uma sugestão seria comprar máquinas diferentes ex: t-bar, banco romano. Entre outros",
-"Precisa de equipamentos pequenos eu acho, nao digo por que falta equipamento, isso é uma coisa que esta longe de ser, digo por conta que na hora de pico, esta dificil",
-"Climatizacao, preciso melhorar",
-"aulao dos homens e ventilacao",
-"👍🏻",
-"suporte para barra pronta e camera",
-"clima e equipamentos que nunca e demais",
-"mais halter",
-"melhorar climatizacao",
+
   ]
 
   const totalServiceVotes = serviceData.reduce((sum, item) => sum + item.votes, 0)
