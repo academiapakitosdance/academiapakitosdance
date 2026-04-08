@@ -19,22 +19,39 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Atendimento
   const serviceData = [
-    { option: "Excelente, até indicaria para uma pessoa", votes: 0, color: "bg-green-500" },
-    { option: "Ótimo, excelente trabalho", votes: 0, color: "bg-blue-500" },
+    { option: "Excelente, até indicaria para uma pessoa", votes: 17, color: "bg-green-500" },
+    { option: "Ótimo, excelente trabalho", votes: 12, color: "bg-blue-500" },
     { option: "Bom, mas daria para melhorar", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
   ]
 
   // Infraestrutura
   const infrastructureData = [
-    { option: "Muito bonita, não precisa mudar nada!", votes: 0, color: "bg-green-500" },
-    { option: "Boa, mas poderia ter alguns ajustes", votes: 0, color: "bg-blue-500" },
+    { option: "Muito bonita, não precisa mudar nada!", votes: 25, color: "bg-green-500" },
+    { option: "Boa, mas poderia ter alguns ajustes", votes: 4, color: "bg-blue-500" },
     { option: "Regular, precisa de melhorias em alguns pontos", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de uma reforma urgente", votes: 0, color: "bg-red-500" },
   ]
 
   const suggestions = [
-
+"Só elogios",
+"Ótima infraestrutura, ótimos profissionais.",
+"Ótima academia ,ótimos professores estão de parabéns",
+"Nada a reclamar só elogiar mesmo o excelente trabalho de vcs professores e paciência com a gente….",
+"Excelentes profissionais. Muito atenciosos.",
+"Academia muito bem equipada , atendimento maravilhoso, sempre me tiram dúvida e são solícitos, academia espaçosa , aparelhos de qualidade , cada dia melhor",
+"Perfeitaaaa",
+"Todos atendem a gente como eu esperava, Todos se preocupam com nós fznd os exercícios. Muito boa a estrutura principalmente todos os instrutores que estão ali dentro. Nota 10 para academia e principalmente para o Alisson que se preocupa sempre com todos",
+"Ter mais esteiras e bicicletas . Os professores são todos excelentes, Alisson vc é nota 1000.",
+"Só tenho elogios! A academia tem uma estrutura muito boa, mas o grande diferencial é o professor Alison, extremamente atencioso, dedicado e realmente se preocupa com a evolução de cada aluno.",
+"Tudo perfeito!!!",
+"Está ótima",
+"Topp",
+"So tenho elogios, professor nota 10 , os meninos super atenciosos !! Super satisfeita 👏🙌",
+"Super indico academia está uma maravilha bem geladinha",
+"Super indico os profs são bem atenciosos a academia está mais fresca",
+"Não tenho nada a reclamar, inclusive faço propaganda para todos que conheço kkkk Instrutores ótimos e atenciosos, organização ok, só elogios !",
+"Atendimento perfeito, professores atenciosos e prestativos",
   ]
 
   const totalServiceVotes = serviceData.reduce((sum, item) => sum + item.votes, 0)
