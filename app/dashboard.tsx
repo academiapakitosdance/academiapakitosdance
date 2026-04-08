@@ -19,16 +19,16 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Atendimento
   const serviceData = [
-    { option: "Excelente, até indicaria para uma pessoa", votes: 31, color: "bg-green-500" },
-    { option: "Ótimo, excelente trabalho", votes: 41, color: "bg-blue-500" },
-    { option: "Bom, mas daria para melhorar", votes: 6, color: "bg-yellow-500" },
+    { option: "Excelente, até indicaria para uma pessoa", votes: 55, color: "bg-green-500" },
+    { option: "Ótimo, excelente trabalho", votes: 53, color: "bg-blue-500" },
+    { option: "Bom, mas daria para melhorar", votes: 11, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
   ]
 
   // Infraestrutura
   const infrastructureData = [
-    { option: "Muito bonita, não precisa mudar nada!", votes: 51, color: "bg-green-500" },
-    { option: "Boa, mas poderia ter alguns ajustes", votes: 22, color: "bg-blue-500" },
+    { option: "Muito bonita, não precisa mudar nada!", votes: 86, color: "bg-green-500" },
+    { option: "Boa, mas poderia ter alguns ajustes", votes: 31, color: "bg-blue-500" },
     { option: "Regular, precisa de melhorias em alguns pontos", votes: 2, color: "bg-yellow-500" },
     { option: "Ruim, precisa de uma reforma urgente", votes: 0, color: "bg-red-500" },
   ]
@@ -76,7 +76,7 @@ export default function Dashboard({ onBack }: DashboardProps) {
 "mais elastico",
 "Então de parabéns Alison e equipe sempre trazendo atividades novas",
 "mais maquina pequena para maior variação, e mais pegadores, estão todos rachados",
-"Gostaria que tivesse mais álcool perto dos aparelhos. Tem usuários que deixam tudo melado de suor. Por uma caneta piloto para por o nome no copo para evitar desperdício. Cada um escreve o seu nome e utiliza o mesmo até o final do horário.",
+"Gostaria que tivesse mais álcool perto dos aparelhos. Tem usuários que deixam tudo melado de suor. Por uma caneta piloto para por o nome no copo para evitar desperdício. Cada um escreve o seu nome e utiliza o mesmo até o final do horário.","
 "Sempre muito bem atendida noota 1000",
 "Reforçar sempre para alunos limpar os aparelhos quando suam muito.",
 "Academia top super indico",
@@ -84,6 +84,41 @@ export default function Dashboard({ onBack }: DashboardProps) {
 "Academia muito boa e os professores muitos cuidadosos e atenciosos.",
 "Ótima recomendo,,, preço acessível.. Instrutores muito atencioso, Parabéns",
 "Mais Limpeza e organização.",
+"pedir pra aquela lá, que me recuso a citar o nome, parar de usar as coisas para ficar se mostrando nos vídeos dela",
+"Intensificar as orientações junto aos alunos para limpeza dos aparelhos e realocações dos mesmos no devido lugar após o uso.",
+"Ótima academia, me sinto em casa local muito acolhedor",
+"Poderia ter uma cobertura na frente como um toldo",
+"mais halteres e cada vez mais máquinas",
+"A academia funciona muito bem. Os instrutores são profissionais atenciosos e muito bons. Parabéns",
+"Para mim esta ótima",
+"boa a climatização após a nova adquiração",
+"Acho que pelo fato de ser o melhor lugar pra treinar pelo tratamento que temos o espaço poderia ser maior acho que está ficando pequeno para todas as pessoas que frequentam, e também as vezes temos pouco tempo pra treinar e temos que ficar esperando pra usar os aparelhos. Mais sobre o tratamento na academia é excelente.",
+"Sugestão: Trocar a malha das camisetas. São quentes para treinar.",
+"2 coisas, os instrutores estão sendo muito grossos enquanto estão treinando, uma coisa é você avisar calmamente que não está no horário deles, e apontar quem está de plantão, outra coisa é ser grosso e falar que não esta no horario dele e que agr ta ocupado, outra coisa que anda me incomodando, tem uma ai q ta ocupando os acessórios, não sei como dizer, enfim para se gravar, atrapalhando o treino de várias pessoas, sem contar que tem gente que não gosta de aparecer nesse tipo de coisa",
+"ESTA DE PARABÉNS PELO TRABALHO .",
+"Mais colchonetes grossos, e lavar as toalhinhas de álcool semanalmente.",
+"Ta perfeito",
+"Continue como esta!",
+"Está de parabéns",
+"Tá de parabéns 👏",
+"Instrutores na hora que estão treinando , fui tirar uma dúvida me tratou mal me ignorando.",
+"Tudo ótimo, excelente.",
+"Lenços de álcool, descartáveis para higienização dos aparelhos...",
+"Ótimo atendimento.",
+"Em determinados horários fica difícil de fazer cardio pelo fato de todas as esteiras e bicicletas estarem ocupadas.",
+"Indico vocês estão todos de parabéns",
+"pedir pra certas pessoas parar de pegar as caixas e bancos para gravar",
+"Tudo perfeito, desde dos aparelhos, e professores 👏",
+"colocar tempo pra usar os aparelhos os adolescentes estão brincando neles",
+"Devido a tanto tipo de vírus , teria que ter álcool em todos os aparelhos , pois as x pegamos aparelho cheio de suor e fica meio ruim , então cada um usa , sai passa o álcool e deixa sempre limpo pr proximo",
+"Sem reclamações está tudo ótimo como sempre",
+"Sugestão: precisa de um espaço maior já kkk. Elogios: atendimento ótimo, limpeza excelente. Zero defeito",
+"À unica coisa que incomoda, sao os aparelhos sempre com suor quando vamos utilizar, os alunos parecem terem preguiça dê ir até o local dos paninhos com alcool para limpar. À sugestao seria ter mais paninhos próximos dos aparelhos, porque nas esteiras ajudou muito estar pertinho. Mais eu entendo que isso não é culpa da academia e sim às pessoas que utilizam. Usou limpou",
+"O horário de funcionamento aos sábados poderia ser até mais tarde .",
+"charma a atenssao de quem fica passando tempo no aparelho",
+"Lavar as toalhas de passar álcool semanalmente , as vezes elas estão com mal cheiro aí quando vai limpar os aparelhos fica pior 🫣, mais colchonetes daqueles grossos , os finos são desconfortáveis.",
+"olha, minha unica reclamação é uma moça em especifico, que literalmente, está usando os bancos, halteres, maquinas, caixas, steps para se gravar, quando você vai pedir para pegar ainda acha ruim e diz que esta usando, isso é um desaforo",
+"Super top recomendo tão d parabéns",
   ]
 
   const totalServiceVotes = serviceData.reduce((sum, item) => sum + item.votes, 0)
