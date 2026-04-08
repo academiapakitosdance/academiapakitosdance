@@ -19,16 +19,16 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Atendimento
   const serviceData = [
-    { option: "Excelente, até indicaria para uma pessoa", votes: 17, color: "bg-green-500" },
-    { option: "Ótimo, excelente trabalho", votes: 14, color: "bg-blue-500" },
-    { option: "Bom, mas daria para melhorar", votes: 1, color: "bg-yellow-500" },
+    { option: "Excelente, até indicaria para uma pessoa", votes: 23, color: "bg-green-500" },
+    { option: "Ótimo, excelente trabalho", votes: 23, color: "bg-blue-500" },
+    { option: "Bom, mas daria para melhorar", votes: 3, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
   ]
 
   // Infraestrutura
   const infrastructureData = [
-    { option: "Muito bonita, não precisa mudar nada!", votes: 26, color: "bg-green-500" },
-    { option: "Boa, mas poderia ter alguns ajustes", votes: 5, color: "bg-blue-500" },
+    { option: "Muito bonita, não precisa mudar nada!", votes: 39, color: "bg-green-500" },
+    { option: "Boa, mas poderia ter alguns ajustes", votes: 9, color: "bg-blue-500" },
     { option: "Regular, precisa de melhorias em alguns pontos", votes: 1, color: "bg-yellow-500" },
     { option: "Ruim, precisa de uma reforma urgente", votes: 0, color: "bg-red-500" },
   ]
@@ -54,6 +54,17 @@ export default function Dashboard({ onBack }: DashboardProps) {
 "Atendimento perfeito, professores atenciosos e prestativos",
 "Qdo os instrutores treinam poderiam falar menos palavrão",
 "Pra mim muito boa equipe ótima bastante equipamento e um ) professor que além de ser muito profissional tem Humildade❤️",
+"Para mim está maravilhosa e os personal muito atencioso está perfeito só tenho agradecer.",
+"Mudar a playlist,para não ficar enjoativa",
+"acho q devia ter aqueles elasticos maiores, que de pra usar em maquinas, ja que o espaço ja está bem utilizado, visando isso da pra melhorar com bastante variações de exercicios",
+"Precisava de um espaço maior, Mais esta perfeita em tudo, So o espaço que esta ficando pequeno",
+"Eu gosto muito da academia pakito Dance , não troco de academia por q vcs não muito atencioso com agente, recomendo pra qual um",
+"Acho q teria que ter thera band p alongamento",
+"Que os instrutores tem que ajudar mais e não só explicar o exercício e já te deixa sozinha pq as vezes esqueço a forma de como executar o exercício e eles não dão atenção devida as vezes",
+"Nada a falar. Só elogios.",
+"Amando tudo vc arrasa muitoooo.. gratidão 🙏",
+"Tá nota 1000",
+"aquels elasticos grande que usa em maquina de academia e troca playlist",
   ]
 
   const totalServiceVotes = serviceData.reduce((sum, item) => sum + item.votes, 0)
