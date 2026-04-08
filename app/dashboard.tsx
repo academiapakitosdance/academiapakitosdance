@@ -19,16 +19,16 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Atendimento
   const serviceData = [
-    { option: "Excelente, até indicaria para uma pessoa", votes: 28, color: "bg-green-500" },
-    { option: "Ótimo, excelente trabalho", votes: 32, color: "bg-blue-500" },
+    { option: "Excelente, até indicaria para uma pessoa", votes: 31, color: "bg-green-500" },
+    { option: "Ótimo, excelente trabalho", votes: 41, color: "bg-blue-500" },
     { option: "Bom, mas daria para melhorar", votes: 6, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
   ]
 
   // Infraestrutura
   const infrastructureData = [
-    { option: "Muito bonita, não precisa mudar nada!", votes: 47, color: "bg-green-500" },
-    { option: "Boa, mas poderia ter alguns ajustes", votes: 17, color: "bg-blue-500" },
+    { option: "Muito bonita, não precisa mudar nada!", votes: 51, color: "bg-green-500" },
+    { option: "Boa, mas poderia ter alguns ajustes", votes: 22, color: "bg-blue-500" },
     { option: "Regular, precisa de melhorias em alguns pontos", votes: 2, color: "bg-yellow-500" },
     { option: "Ruim, precisa de uma reforma urgente", votes: 0, color: "bg-red-500" },
   ]
@@ -78,6 +78,12 @@ export default function Dashboard({ onBack }: DashboardProps) {
 "mais maquina pequena para maior variação, e mais pegadores, estão todos rachados",
 "Gostaria que tivesse mais álcool perto dos aparelhos. Tem usuários que deixam tudo melado de suor. Por uma caneta piloto para por o nome no copo para evitar desperdício. Cada um escreve o seu nome e utiliza o mesmo até o final do horário.",
 "Sempre muito bem atendida noota 1000",
+"Reforçar sempre para alunos limpar os aparelhos quando suam muito.",
+"Academia top super indico",
+"Acho que teria que aumentar mais pois está entrando muito gente e tendo pouco espaço e aparelhos",
+"Academia muito boa e os professores muitos cuidadosos e atenciosos.",
+"Ótima recomendo,,, preço acessível.. Instrutores muito atencioso, Parabéns",
+"Mais Limpeza e organização.",
   ]
 
   const totalServiceVotes = serviceData.reduce((sum, item) => sum + item.votes, 0)
