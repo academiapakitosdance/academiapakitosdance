@@ -19,16 +19,16 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Atendimento
   const serviceData = [
-    { option: "Excelente, até indicaria para uma pessoa", votes: 55, color: "bg-green-500" },
-    { option: "Ótimo, excelente trabalho", votes: 53, color: "bg-blue-500" },
-    { option: "Bom, mas daria para melhorar", votes: 11, color: "bg-yellow-500" },
+    { option: "Excelente, até indicaria para uma pessoa", votes: 71, color: "bg-green-500" },
+    { option: "Ótimo, excelente trabalho", votes: 66, color: "bg-blue-500" },
+    { option: "Bom, mas daria para melhorar", votes: 14, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
   ]
 
   // Infraestrutura
   const infrastructureData = [
-    { option: "Muito bonita, não precisa mudar nada!", votes: 86, color: "bg-green-500" },
-    { option: "Boa, mas poderia ter alguns ajustes", votes: 31, color: "bg-blue-500" },
+    { option: "Muito bonita, não precisa mudar nada!", votes: 110, color: "bg-green-500" },
+    { option: "Boa, mas poderia ter alguns ajustes", votes: 39, color: "bg-blue-500" },
     { option: "Regular, precisa de melhorias em alguns pontos", votes: 2, color: "bg-yellow-500" },
     { option: "Ruim, precisa de uma reforma urgente", votes: 0, color: "bg-red-500" },
   ]
@@ -119,6 +119,18 @@ export default function Dashboard({ onBack }: DashboardProps) {
 "Lavar as toalhas de passar álcool semanalmente , as vezes elas estão com mal cheiro aí quando vai limpar os aparelhos fica pior 🫣, mais colchonetes daqueles grossos , os finos são desconfortáveis.",
 "olha, minha unica reclamação é uma moça em especifico, que literalmente, está usando os bancos, halteres, maquinas, caixas, steps para se gravar, quando você vai pedir para pegar ainda acha ruim e diz que esta usando, isso é um desaforo",
 "Super top recomendo tão d parabéns",
+"elasticos maiores para ter mais variações de exercicios, e mais pegadores tbm, tem varios quebrados, os vermelhos estão machucando as maos!",
+"Amoooo meus professores academia está maravilhosa não tenho nada pra reclamar",
+"Só poderia mudar a playlist",
+"Maravilhosa 👏🏻",
+"Ótima academia, excelentes profissionais! Parabéns Alison por casa inovação vejo ainda mais muito sucesso pra você",
+"Tô gostando muito de treinar com vcs, vcs são excelentes",
+"Tudo perfeito academia top a melhor ,os Proff são nota 1000",
+"Espaço esta ficando apertado, Ter mais aulão durante a semana 🙂",
+"Pra tá ótimo",
+"somente jogar o pendulo mais para tras, ta apertado passar entre ele e a mesa, principalmente quando estão usando, mas está tudo maravilhoso",
+"Parabéns está excelente 👏🏼",
+"Vocês são demais, uma equipe respeitosa, atenciosa e alegre da até gosto de ir na academia.",
   ]
 
   const totalServiceVotes = serviceData.reduce((sum, item) => sum + item.votes, 0)
