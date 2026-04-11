@@ -19,16 +19,16 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Atendimento
   const serviceData = [
-    { option: "Excelente, até indicaria para uma pessoa", votes: 10, color: "bg-green-500" },
-    { option: "Ótimo, excelente trabalho", votes: 5, color: "bg-blue-500" },
+    { option: "Excelente, até indicaria para uma pessoa", votes: 19, color: "bg-green-500" },
+    { option: "Ótimo, excelente trabalho", votes: 9, color: "bg-blue-500" },
     { option: "Bom, mas daria para melhorar", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
   ]
 
   // Infraestrutura
   const infrastructureData = [
-    { option: "Muito bonita, não precisa mudar nada!", votes: 10, color: "bg-green-500" },
-    { option: "Boa, mas poderia ter alguns ajustes", votes: 5, color: "bg-blue-500" },
+    { option: "Muito bonita, não precisa mudar nada!", votes: 20, color: "bg-green-500" },
+    { option: "Boa, mas poderia ter alguns ajustes", votes: 8, color: "bg-blue-500" },
     { option: "Regular, precisa de melhorias em alguns pontos", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de uma reforma urgente", votes: 0, color: "bg-red-500" },
   ]
@@ -40,7 +40,18 @@ export default function Dashboard({ onBack }: DashboardProps) {
 "Seria interessante que tivesse aeróbico para o masculino, ou mas atividades la no fundo",
 "Nova playlist de músicas",
 "segustao de maquinas: supino reto sentado com pegada neutra e pronada",
-
+"Barrinha energética todo final de treino grátis...",
+"apesar do espaço apertado, precisa de mais máquinas de superiores, para de querer agradar só a mulherada 🤣🤣🤣🤣🤣",
+"Por mim tá top , e não há no que reclamar pois atendimento a atenciosamente com cada aluno tudo da hora",
+"Tá top, não vejo necessidade de mais nada, se por mais aparelho vai ficar intransitável.",
+"T-bar, Supino reto sentado(aquele pequeno), graviton, são maquinas pequenas e boas, acho interessante tentar, nem que for usada, só pra ver se funcionaria legal",
+"tudo top, só trocar o banco scott por outro, nas outras 2 academia ele era melhor, não estou dizendo q é ruim, to dizendo q é legal pegar um melhor, mas ta tudo filé",
+"climatização top agora em, hahhaha",
+"colocar o dalton de modelo",
+"👍👍👍👍👍"
+"comprar daqueles elásticos grande, resistentes, para colocar em máquinas, ter mais variações, seria bem legal, é uma das coisas que faltam na academia, e climatização ficou top d+ com o ar!",
+"pedir pros gente boa para de gemer 🤣🤣🤣, top d+",
+"cade as bombas de graça",
   ]
 
   const totalServiceVotes = serviceData.reduce((sum, item) => sum + item.votes, 0)
