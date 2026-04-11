@@ -48,7 +48,7 @@ export default function Dashboard({ onBack }: DashboardProps) {
 "tudo top, só trocar o banco scott por outro, nas outras 2 academia ele era melhor, não estou dizendo q é ruim, to dizendo q é legal pegar um melhor, mas ta tudo filé",
 "climatização top agora em, hahhaha",
 "colocar o dalton de modelo",
-"👍👍👍👍👍"
+"👍👍👍👍👍",
 "comprar daqueles elásticos grande, resistentes, para colocar em máquinas, ter mais variações, seria bem legal, é uma das coisas que faltam na academia, e climatização ficou top d+ com o ar!",
 "pedir pros gente boa para de gemer 🤣🤣🤣, top d+",
 "cade as bombas de graça",
