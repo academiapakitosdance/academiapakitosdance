@@ -19,16 +19,16 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Atendimento
   const serviceData = [
-    { option: "Excelente, até indicaria para uma pessoa", votes: 7, color: "bg-green-500" },
-    { option: "Ótimo, excelente trabalho", votes: 2, color: "bg-blue-500" },
+    { option: "Excelente, até indicaria para uma pessoa", votes: 10, color: "bg-green-500" },
+    { option: "Ótimo, excelente trabalho", votes: 5, color: "bg-blue-500" },
     { option: "Bom, mas daria para melhorar", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
   ]
 
   // Infraestrutura
   const infrastructureData = [
-    { option: "Muito bonita, não precisa mudar nada!", votes: 5, color: "bg-green-500" },
-    { option: "Boa, mas poderia ter alguns ajustes", votes: 4, color: "bg-blue-500" },
+    { option: "Muito bonita, não precisa mudar nada!", votes: 10, color: "bg-green-500" },
+    { option: "Boa, mas poderia ter alguns ajustes", votes: 5, color: "bg-blue-500" },
     { option: "Regular, precisa de melhorias em alguns pontos", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de uma reforma urgente", votes: 0, color: "bg-red-500" },
   ]
@@ -36,7 +36,10 @@ export default function Dashboard({ onBack }: DashboardProps) {
   const suggestions = [
 "sugestao de maquina: t-bar - sugestao de infraestruta: lugar unico para terra e stiff - reclamaçao: estao passando muitos bi-sets nos treinos, ai fica estramamente demorando pra liberar 1 unico aparelho",
 "Por mim está tudo ótimo ...mas eu gosto quando o mestre está presente. É mas seguro .não que os professores deixe a desejar são ótimo tbm .",
-
+"Os professores são muito atenciosos",
+"Seria interessante que tivesse aeróbico para o masculino, ou mas atividades la no fundo",
+"Nova playlist de músicas",
+"segustao de maquinas: supino reto sentado com pegada neutra e pronada",
 
   ]
 
