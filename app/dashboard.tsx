@@ -19,22 +19,52 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Atendimento
   const serviceData = [
-    { option: "Excelente, até indicaria para uma pessoa", votes: 0, color: "bg-green-500" },
-    { option: "Ótimo, excelente trabalho", votes: 0, color: "bg-blue-500" },
-    { option: "Bom, mas daria para melhorar", votes: 0, color: "bg-yellow-500" },
+    { option: "Excelente, até indicaria para uma pessoa", votes: 31, color: "bg-green-500" },
+    { option: "Ótimo, excelente trabalho", votes: 24, color: "bg-blue-500" },
+    { option: "Bom, mas daria para melhorar", votes: 4, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
   ]
 
   // Infraestrutura
   const infrastructureData = [
-    { option: "Muito bonita, não precisa mudar nada!", votes: 0, color: "bg-green-500" },
-    { option: "Boa, mas poderia ter alguns ajustes", votes: 0, color: "bg-blue-500" },
-    { option: "Regular, precisa de melhorias em alguns pontos", votes: 0, color: "bg-yellow-500" },
+    { option: "Muito bonita, não precisa mudar nada!", votes: 46, color: "bg-green-500" },
+    { option: "Boa, mas poderia ter alguns ajustes", votes: 11, color: "bg-blue-500" },
+    { option: "Regular, precisa de melhorias em alguns pontos", votes: 2, color: "bg-yellow-500" },
     { option: "Ruim, precisa de uma reforma urgente", votes: 0, color: "bg-red-500" },
   ]
 
   const suggestions = [
-
+"Parabéns pro meu personal",
+"Não tenho que reclamar tudo perfeito",
+"Muito bom são muito atenciosos simpáticos que continue assim",
+"Estão de parabéns, nada a reclamar",
+"Limitar a quantidade de alunos por horário,.principalmente horários que atendam pessoas que trabalham. Muitos meninos e meninas treinam em grupo, demorando nos aparelhos, dificulta do o revezamento.",
+"Excelente estrutura e profissionais atenciosos e capacitados",
+"Tudo perfeito 👍",
+"Um pouco mais de atenção da parte dos professores com a utilização dos aparelhos, pois infelizmente tem horários que os alunos ficam segurando os aparelhos com celular na mao,e ate conversando com outros alunos, dizendo que estão utilizando,e nao dão a vez nem de revezamento,e os professores desatentos nao se dão conta disso...",
+"Excelentes professores estão de parabéns",
+"a academia está ficando muito pequena pra muita gente, a cada vez colocam mais aparelhos e já não tem mais espaço e com mais gente que entra na academia fica difícil até de se locomover-se e se exercitar dentro do local porque fica sempre trombando nas pessoas acho que precisa ampliar o espaço",
+"Maravilhosa a academia, com vários aparelhos super indicaria",
+"Hoje está bem melhor com mais aparelhos duplos sem ter que ficar esperando ou revisando toda a hr com alguém , parabéns",
+"Excelente, professor está de parabéns 👏👏",
+"Elogiar o atendimento dos meninos, eles são muito atenciosos assim como Alisson com todos, não fazem distinção de ninguém e isso é muito bom pra gente.",
+"Os meninos são ótimos quando da atenção. Mais tem momentos que eles esquecem que estão no trabalho e ficam de muita conversinha e acaba não prestando atenção em quem precisa de ajuda. Mais atenção",
+"Super recomendo",
+"Parabéns por tudo",
+"Tudo ótimo, atendimento, espaço, decoração, aparelhos, excelente lugar para conquistar objetivos ! Amo as aulas, as corridas, os professores, todos estão de parabéns !",
+"Excelente o atendimento continue tratando todos igualmente sem destinsao de pessoas",
+"A única coisa que me incomoda é que as pessoas não colocam o peso que usaram no lugar e quem vai usar tem que tirar, acho que precisa conscientizar as pessoas sobre isso, pois muitas pessoas não usam muito peso, atrapalha mulheres que estão começando.",
+"Só gratidão pelo acompanhamento nos exercícios , tds mto atenciosos...Parabéns pelo carinho que tem com os alunos, Deus abençoe tda equipe👏🙏",
+"Sugestão ,no banheiro feminino poderia ter absorventes as vzs somos pegas de surpresa .",
+"Poderia ter absorvente no banheiro feminino!",
+"boa qualidade nos atendimentos e infraestrutura",
+"Horário mais estendido aos sábados seria ótimo 😊",
+"Manter os panos de limpesa com álcool mais limpo",
+"É a melhor academia de Doutor Camargo, equipamentos de qualidade, atendimento nem se fala, toda equipe maravilhosa e atenciosa, super indico para todos…",
+"Sobre o som. Músicas mais animadas ou um pouco mais alto. Música anima mais os treinos",
+"Eu estou muito satisfeita amo os professores",
+"Excelente atendimento, ótimos profissionais,aparelhos bons, ótima localização",
+"Bom parabéns por todos os profssores",
   ]
 
   const totalServiceVotes = serviceData.reduce((sum, item) => sum + item.votes, 0)
