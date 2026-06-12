@@ -19,16 +19,16 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Atendimento
   const serviceData = [
-    { option: "Excelente, até indicaria para uma pessoa", votes: 31, color: "bg-green-500" },
-    { option: "Ótimo, excelente trabalho", votes: 24, color: "bg-blue-500" },
-    { option: "Bom, mas daria para melhorar", votes: 4, color: "bg-yellow-500" },
+    { option: "Excelente, até indicaria para uma pessoa", votes: 41, color: "bg-green-500" },
+    { option: "Ótimo, excelente trabalho", votes: 33, color: "bg-blue-500" },
+    { option: "Bom, mas daria para melhorar", votes: 5, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
   ]
 
   // Infraestrutura
   const infrastructureData = [
-    { option: "Muito bonita, não precisa mudar nada!", votes: 46, color: "bg-green-500" },
-    { option: "Boa, mas poderia ter alguns ajustes", votes: 11, color: "bg-blue-500" },
+    { option: "Muito bonita, não precisa mudar nada!", votes: 64, color: "bg-green-500" },
+    { option: "Boa, mas poderia ter alguns ajustes", votes: 13, color: "bg-blue-500" },
     { option: "Regular, precisa de melhorias em alguns pontos", votes: 2, color: "bg-yellow-500" },
     { option: "Ruim, precisa de uma reforma urgente", votes: 0, color: "bg-red-500" },
   ]
@@ -65,6 +65,20 @@ export default function Dashboard({ onBack }: DashboardProps) {
 "Eu estou muito satisfeita amo os professores",
 "Excelente atendimento, ótimos profissionais,aparelhos bons, ótima localização",
 "Bom parabéns por todos os profssores",
+"O Alisson e um cara mto responsável atento com todos os alunos e faz com vc se sinta em casa melhor academia melhor profissional o Alisson",
+"Ótima",
+"Tudo certinho !",
+"Academia boa, aulao bom, instrutores maravilhosos, e muito Resultado, nada a reclamar",
+"Excelente academia e excelentes profissionais lá dentro.",
+"Gosto muito pois tem respeito dos profissionais que atendem, e estão sempre de prontidão para atender e tirar as dúvidas",
+"No frio, não há necessidade de ligar o climatizador, fica muito frio na academia, principalmente na parte da frente no tapete e nas esteiras.",
+"♥️♥️♥️ melhor da cidade",
+"Excelente trabalho atencioso e sua equipe também está de parabéns",
+"Não posso reclamar de nada, comecei a fazer ai e todos que trabalham no ambiente são ótimos, os aparelhos sempre em ótimas qualidades. Vejo isso, porque ja fiz em outra, e vi q nessa academia ( pakitos dance) tem muito mais estrutura.",
+"Sugestão toldo na frente da academia",
+"Melhor academia gosto muito sempre dispostos a estar ajudando a gente",
+"Muito bom o atendimento os meninos sempre disposto a ajudar,o Alisson mesmo com a academia cheia tenta sempre dar atenção pra todos",
+
   ]
 
   const totalServiceVotes = serviceData.reduce((sum, item) => sum + item.votes, 0)
