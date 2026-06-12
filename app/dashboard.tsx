@@ -19,16 +19,16 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Atendimento
   const serviceData = [
-    { option: "Excelente, até indicaria para uma pessoa", votes: 41, color: "bg-green-500" },
-    { option: "Ótimo, excelente trabalho", votes: 33, color: "bg-blue-500" },
+    { option: "Excelente, até indicaria para uma pessoa", votes: 43, color: "bg-green-500" },
+    { option: "Ótimo, excelente trabalho", votes: 35, color: "bg-blue-500" },
     { option: "Bom, mas daria para melhorar", votes: 5, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
   ]
 
   // Infraestrutura
   const infrastructureData = [
-    { option: "Muito bonita, não precisa mudar nada!", votes: 64, color: "bg-green-500" },
-    { option: "Boa, mas poderia ter alguns ajustes", votes: 13, color: "bg-blue-500" },
+    { option: "Muito bonita, não precisa mudar nada!", votes: 67, color: "bg-green-500" },
+    { option: "Boa, mas poderia ter alguns ajustes", votes: 14, color: "bg-blue-500" },
     { option: "Regular, precisa de melhorias em alguns pontos", votes: 2, color: "bg-yellow-500" },
     { option: "Ruim, precisa de uma reforma urgente", votes: 0, color: "bg-red-500" },
   ]
@@ -78,6 +78,8 @@ export default function Dashboard({ onBack }: DashboardProps) {
 "Sugestão toldo na frente da academia",
 "Melhor academia gosto muito sempre dispostos a estar ajudando a gente",
 "Muito bom o atendimento os meninos sempre disposto a ajudar,o Alisson mesmo com a academia cheia tenta sempre dar atenção pra todos",
+"Eu acho a melhor academia de Dr camargo.muita parceria professor Alison não é bom e extraordinário muito dedicado as alunos .e os meninos são maravilhosos atencioso se melhorar estraga .adoro muito vcs.",
+"Alisson prof de excelência competência.",
 
   ]
 
