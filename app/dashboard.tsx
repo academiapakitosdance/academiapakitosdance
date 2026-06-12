@@ -80,6 +80,15 @@ export default function Dashboard({ onBack }: DashboardProps) {
 "Muito bom o atendimento os meninos sempre disposto a ajudar,o Alisson mesmo com a academia cheia tenta sempre dar atenção pra todos",
 "Eu acho a melhor academia de Dr camargo.muita parceria professor Alison não é bom e extraordinário muito dedicado as alunos .e os meninos são maravilhosos atencioso se melhorar estraga .adoro muito vcs.",
 "Alisson prof de excelência competência.",
+"Tudo perfeito, parabéns Alison!!! Sucesso merecido que Deus continue te abençoando 🙏",
+"Perfeita!!",
+"Parabéns Alisson por tudo que vc faz por nós",
+"Acredito que para melhorar o atendimento, os instrutores poderiam realizar mais orientações em relação à postura correta no uso dos aparelhos, ensinando as técnicas corretas. Pois, percebo que na maioria das vezes, isso não acontece.",
+"Academia top. Profissionais capacitados .estão de parabéns",
+"Sugestão mais atenção dos meninos Reclamação falta um pouco mais de atenção durante os exercícios para correção correta do exercício Elogios, espaço ótimo ,",
+"Melhorar na questão dos instrutores auxiliarem nas orientações em relação dos exercícios corretos",
+"Ótima",
+"Tudo bem organizado parabéns",
 
   ]
 
