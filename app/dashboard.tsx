@@ -19,16 +19,16 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Atendimento
   const serviceData = [
-    { option: "Excelente, até indicaria para uma pessoa", votes: 51, color: "bg-green-500" },
-    { option: "Ótimo, excelente trabalho", votes: 37, color: "bg-blue-500" },
+    { option: "Excelente, até indicaria para uma pessoa", votes: 57, color: "bg-green-500" },
+    { option: "Ótimo, excelente trabalho", votes: 39, color: "bg-blue-500" },
     { option: "Bom, mas daria para melhorar", votes: 7, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
   ]
 
   // Infraestrutura
   const infrastructureData = [
-    { option: "Muito bonita, não precisa mudar nada!", votes: 74, color: "bg-green-500" },
-    { option: "Boa, mas poderia ter alguns ajustes", votes: 19, color: "bg-blue-500" },
+    { option: "Muito bonita, não precisa mudar nada!", votes: 81, color: "bg-green-500" },
+    { option: "Boa, mas poderia ter alguns ajustes", votes: 20, color: "bg-blue-500" },
     { option: "Regular, precisa de melhorias em alguns pontos", votes: 2, color: "bg-yellow-500" },
     { option: "Ruim, precisa de uma reforma urgente", votes: 0, color: "bg-red-500" },
   ]
@@ -89,6 +89,9 @@ export default function Dashboard({ onBack }: DashboardProps) {
 "Melhorar na questão dos instrutores auxiliarem nas orientações em relação dos exercícios corretos",
 "Ótima",
 "Tudo bem organizado parabéns",
+"Tudo lindo e perfeito 👏🏻 amo essa academia ❣️",
+"Continue com o carisma por atender todos com muito carinho, meus parabéns por ser tão atencioso e gente fina!",
+
 
   ]
 
