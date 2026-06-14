@@ -19,15 +19,15 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Atendimento
   const serviceData = [
-    { option: "Excelente, até indicaria para uma pessoa", votes: 3, color: "bg-green-500" },
-    { option: "Ótimo, excelente trabalho", votes: 2, color: "bg-blue-500" },
-    { option: "Bom, mas daria para melhorar", votes: 2, color: "bg-yellow-500" },
+    { option: "Excelente, até indicaria para uma pessoa", votes: 6, color: "bg-green-500" },
+    { option: "Ótimo, excelente trabalho", votes: 4, color: "bg-blue-500" },
+    { option: "Bom, mas daria para melhorar", votes: 5, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
   ]
 
   // Infraestrutura
   const infrastructureData = [
-    { option: "Muito bonita, não precisa mudar nada!", votes: 3, color: "bg-green-500" },
+    { option: "Muito bonita, não precisa mudar nada!", votes: 11, color: "bg-green-500" },
     { option: "Boa, mas poderia ter alguns ajustes", votes: 4, color: "bg-blue-500" },
     { option: "Regular, precisa de melhorias em alguns pontos", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de uma reforma urgente", votes: 0, color: "bg-red-500" },
@@ -38,7 +38,13 @@ export default function Dashboard({ onBack }: DashboardProps) {
 "Excelente ambiente e infraestrutura, top demais, mas alguns treinadores deixam a desejar.",
 "Top demais, melhor academia da região.",
 "sugestao: area somente para exercicios livre de barra do chao/ ex: terra, stiff, rdl, remada curvada etc/novas maquinas como supinos ou tbar/MENOS BI SETS NOS TREINOS DOS ALUNOS PARA NAO TER 1 ALUNO USANDO 2 MAQS",
-  ]
+"A reclamação não é só minha. Está faltando a atenção dos extratores. Mudou muito. Não dão mais a atenção. Temos que ficar atrás para. Alguém dar uma orientação. Só ficão fazendo rodinha e muita conversa. Obrigado.",
+"No quesito atendimento eu avaliei com excelente, porém, nota se que, apenas o Alison passa por um aluno fazendo exercício errado e corrige, já vi outros professores corrigir também, más não são todos. Apenas uma sugestão....",
+"muita falta de atenção dos garotos...",
+"treino sozinho, por mim nao é problema, sei me virar, mas estou vendo uma boa reclamaçao de que, quando o alison nao esta, os meninos estao simplesmente esquecendo de trabalhar, entao, acho que vale uma comversa para acertar isso! mas para mim, esta otimo",
+"bomba de graça",
+"aolictqr as funcinario a maior atensao conoco",
+]
 
   const totalServiceVotes = serviceData.reduce((sum, item) => sum + item.votes, 0)
   const totalInfrastructureVotes = infrastructureData.reduce((sum, item) => sum + item.votes, 0)
