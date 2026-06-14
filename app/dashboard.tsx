@@ -21,14 +21,14 @@ export default function Dashboard({ onBack }: DashboardProps) {
   const serviceData = [
     { option: "Excelente, até indicaria para uma pessoa", votes: 6, color: "bg-green-500" },
     { option: "Ótimo, excelente trabalho", votes: 4, color: "bg-blue-500" },
-    { option: "Bom, mas daria para melhorar", votes: 5, color: "bg-yellow-500" },
+    { option: "Bom, mas daria para melhorar", votes: 6, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
   ]
 
   // Infraestrutura
   const infrastructureData = [
     { option: "Muito bonita, não precisa mudar nada!", votes: 11, color: "bg-green-500" },
-    { option: "Boa, mas poderia ter alguns ajustes", votes: 4, color: "bg-blue-500" },
+    { option: "Boa, mas poderia ter alguns ajustes", votes: 5, color: "bg-blue-500" },
     { option: "Regular, precisa de melhorias em alguns pontos", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de uma reforma urgente", votes: 0, color: "bg-red-500" },
   ]
@@ -44,6 +44,7 @@ export default function Dashboard({ onBack }: DashboardProps) {
 "treino sozinho, por mim nao é problema, sei me virar, mas estou vendo uma boa reclamaçao de que, quando o alison nao esta, os meninos estao simplesmente esquecendo de trabalhar, entao, acho que vale uma comversa para acertar isso! mas para mim, esta otimo",
 "bomba de graça",
 "aolictqr as funcinario a maior atensao conoco",
+"qual o propósito da pesquisa de satisfação se os problemas continuaram os mesmos? se não quer escutar os seus alunos simplesmente não abra mais a pesquisa ou pare de ignorar as críticas construtivas, antes que comece a perder clientes! fica a dica",
 ]
 
   const totalServiceVotes = serviceData.reduce((sum, item) => sum + item.votes, 0)
