@@ -19,15 +19,15 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Atendimento
   const serviceData = [
-    { option: "Excelente, até indicaria para uma pessoa", votes: 6, color: "bg-green-500" },
-    { option: "Ótimo, excelente trabalho", votes: 4, color: "bg-blue-500" },
+    { option: "Excelente, até indicaria para uma pessoa", votes: 7, color: "bg-green-500" },
+    { option: "Ótimo, excelente trabalho", votes: 7, color: "bg-blue-500" },
     { option: "Bom, mas daria para melhorar", votes: 6, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
   ]
 
   // Infraestrutura
   const infrastructureData = [
-    { option: "Muito bonita, não precisa mudar nada!", votes: 11, color: "bg-green-500" },
+    { option: "Muito bonita, não precisa mudar nada!", votes: 13, color: "bg-green-500" },
     { option: "Boa, mas poderia ter alguns ajustes", votes: 5, color: "bg-blue-500" },
     { option: "Regular, precisa de melhorias em alguns pontos", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de uma reforma urgente", votes: 0, color: "bg-red-500" },
