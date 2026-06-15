@@ -45,7 +45,9 @@ export default function Dashboard({ onBack }: DashboardProps) {
 "bomba de graça",
 "aolictqr as funcinario a maior atensao conoco",
 "qual o propósito da pesquisa de satisfação se os problemas continuaram os mesmos? se não quer escutar os seus alunos simplesmente não abra mais a pesquisa ou pare de ignorar as críticas construtivas, antes que comece a perder clientes! fica a dica",
-]
+"Pra mim tá tudo ótimo não tenho nada há reclamar só Elogiar",
+"Para mim, está ótima, os prof, sempre prontos, para tirar dúvidas e incentivar. Muito gentios , educados.",   
+  ]
 
   const totalServiceVotes = serviceData.reduce((sum, item) => sum + item.votes, 0)
   const totalInfrastructureVotes = infrastructureData.reduce((sum, item) => sum + item.votes, 0)
