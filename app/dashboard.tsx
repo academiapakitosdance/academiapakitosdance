@@ -19,15 +19,15 @@ export default function Dashboard({ onBack }: DashboardProps) {
 
   // Atendimento
   const serviceData = [
-    { option: "Excelente, até indicaria para uma pessoa", votes: 7, color: "bg-green-500" },
-    { option: "Ótimo, excelente trabalho", votes: 7, color: "bg-blue-500" },
-    { option: "Bom, mas daria para melhorar", votes: 6, color: "bg-yellow-500" },
+    { option: "Excelente, até indicaria para uma pessoa", votes: 16, color: "bg-green-500" },
+    { option: "Ótimo, excelente trabalho", votes: 9, color: "bg-blue-500" },
+    { option: "Bom, mas daria para melhorar", votes: 9, color: "bg-yellow-500" },
     { option: "Ruim, precisa de melhora", votes: 0, color: "bg-red-500" },
   ]
 
   // Infraestrutura
   const infrastructureData = [
-    { option: "Muito bonita, não precisa mudar nada!", votes: 13, color: "bg-green-500" },
+    { option: "Muito bonita, não precisa mudar nada!", votes: 27, color: "bg-green-500" },
     { option: "Boa, mas poderia ter alguns ajustes", votes: 5, color: "bg-blue-500" },
     { option: "Regular, precisa de melhorias em alguns pontos", votes: 0, color: "bg-yellow-500" },
     { option: "Ruim, precisa de uma reforma urgente", votes: 0, color: "bg-red-500" },
@@ -46,7 +46,16 @@ export default function Dashboard({ onBack }: DashboardProps) {
 "aolictqr as funcinario a maior atensao conoco",
 "qual o propósito da pesquisa de satisfação se os problemas continuaram os mesmos? se não quer escutar os seus alunos simplesmente não abra mais a pesquisa ou pare de ignorar as críticas construtivas, antes que comece a perder clientes! fica a dica",
 "Pra mim tá tudo ótimo não tenho nada há reclamar só Elogiar",
-"Para mim, está ótima, os prof, sempre prontos, para tirar dúvidas e incentivar. Muito gentios , educados.",   
+"Para mim, está ótima, os prof, sempre prontos, para tirar dúvidas e incentivar. Muito gentios , educados.", 
+"Academia top demais, melhorando cada vez mais",
+"Excelente atendimento! Muito top!!!",
+"Mais leds ficaria ainda mais bonita",
+"Academia está como sempre, ótima e o Professor Alisson perder pra mim na queda de braço",
+"exigir mais atenção dos professores, esta muita conversa",
+"A academia oferece um ambiente muito agradável, organizado e motivador.Os funcionários estão trabalhando da maneira correta, sempre demonstrando profissionalismo, educação e atenção com todos os alunos.",
+"Mais equipamentos",
+"pessoal super simpático e dedicado, brincadeiras saudáveis também ajudam a ficar até mais familiarizado com o time, trazendo um bom ambiente as vezes fazendo até ficar mais por ser tão bom o relacionamento entre os profissionais",
+"quando o alison esta, todo mundo trabalha hahahha",
   ]
 
   const totalServiceVotes = serviceData.reduce((sum, item) => sum + item.votes, 0)
